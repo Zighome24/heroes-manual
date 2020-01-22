@@ -39,7 +39,7 @@ class HMAppBar extends AppBar {
         },
         icon: Icon(
           trailingIcon,
-          color: purple,
+          color: purple.shade500,
         ),
         iconSize: 28,
       ) : Container()],
