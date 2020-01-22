@@ -24,6 +24,12 @@ class About extends StatelessWidget {
                   //  or some standardized/uniform font style for the app
                 style: new TextStyle(color: Colors.deepPurpleAccent, fontSize: 20))
             ),
+            Container(
+              padding: const EdgeInsets.all(20.0),
+              child: Text('To Be Included: information about the application, team'
+                  + ' and bibliographical sources',
+              style: new TextStyle(color: Colors.black, fontSize: 17))
+            ),
             RaisedButton(
               onPressed: () {
                 Navigator.pop(context); //return to previous screen
