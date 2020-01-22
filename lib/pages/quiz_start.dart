@@ -34,6 +34,8 @@ class QuizStart extends StatelessWidget {
                 padding: const EdgeInsets.all(30.0),
                 child: new Text(
                   'Economic Impact',
+                  style: new TextStyle(fontSize: 30)
+
                 ),
 
               ),
@@ -50,9 +52,7 @@ class QuizStart extends StatelessWidget {
                 ),
               ),
               RaisedButton(
-                onPressed: () {
-                   //return to previous screen
-                },
+                onPressed: null,
                 child: new Text('Take me to the quiz!', textAlign: TextAlign.center,),
 
               ),
