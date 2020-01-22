@@ -12,9 +12,15 @@ class About extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('App created by Team Helping Our Heroes whose members are '
-            + 'students of the Georgia Institute of Technology.')
+            + 'students of the Georgia Institute of Technology.'),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pop(context); //return to previous screen
+              },
+              child: Text('<'),
+            ),
           ],
-        )
+        ),
       ),
     );
   }
