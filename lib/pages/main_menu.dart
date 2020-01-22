@@ -30,11 +30,11 @@ class MainMenu extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Welcome to Heroes\' Manual',
             ),
             RaisedButton(
               onPressed: () {
-                //Navigate back to main menu
+                Navigator.pushNamed(context, '/about');
               },
               child: Text('About'),
             ),
