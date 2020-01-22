@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/utility/hm_appbar.dart';
+import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
 class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("About")
+      appBar: HMAppBar(
+        showLeading: true,
+        showTrailing: true,
       ),
       body: Center(
         child: Column(
@@ -39,6 +42,7 @@ class About extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: HMBottomNavBar(),
     );
   }
 }
