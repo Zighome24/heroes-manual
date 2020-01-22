@@ -16,30 +16,27 @@ class Screening extends StatelessWidget {
                 Text('Will be a list of things to look for in a potential'
                     + 'victim of family violence.')
               )
-              Container (
-                ListView(
-                  children: <Widget>[
-                    ListTile(
-                      leading: Icon(Icons.label),
-                      title: Text('Sign 1'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.label),
-                      title: Text('Sign 2'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.label),
-                      title: Text('Sign 3'),
-                    ),
-                  ],
-                )
+              ListView(
+                children: <Widget>[
+                  ListTile(
+                    leading: Icon(Icons.label),
+                    title: Text('Sign 1'),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.label),
+                    title: Text('Sign 2'),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.label),
+                    title: Text('Sign 3'),
+                  ),
+                ],
               )
-              Container (
-                RaisedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text('<'),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('<'),
               )
             ],
           )
