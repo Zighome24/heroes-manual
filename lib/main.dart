@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
+import 'package:heroes_manual/pages/lesson_start.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         // All of the navigation routes for the app will go here.
         '/' : (context) => MainMenu()
+        '/lesson_start' : (context) => LessonStart()
       },
     );
   }
