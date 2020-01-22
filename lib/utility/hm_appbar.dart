@@ -6,7 +6,6 @@ class HMAppBar extends AppBar {
   HMAppBar({
     Key key,
     String title = "Heroes Manual",
-    Color titleColor = purple,
     IconData leadingIcon = Icons.arrow_back_ios,
     bool showLeading = false,
     Function leadingAction,
@@ -18,7 +17,7 @@ class HMAppBar extends AppBar {
       title: Text(title),
       textTheme: TextTheme(
         title: TextStyle(
-          color: titleColor,
+          color: purple.shade500,
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
@@ -28,9 +27,9 @@ class HMAppBar extends AppBar {
         onPressed: leadingAction,
         icon: Icon(
           leadingIcon,
-          color: purple,
-          size: 28,
+          color: purple.shade500,
         ),
+        iconSize: 28,
       ) : Container(),
       actions: <Widget>[showTrailing ? IconButton(
         onPressed: () {
@@ -40,10 +39,9 @@ class HMAppBar extends AppBar {
         icon: Icon(
           trailingIcon,
           color: purple,
-          size: 28,
         ),
+        iconSize: 28,
       ) : Container()],
-      bottom: TabBar(tabs: null)
     );
 
 
