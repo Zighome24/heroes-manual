@@ -34,12 +34,6 @@ class About extends StatelessWidget {
                   + ' and bibliographical sources',
               style: new TextStyle(color: accent.shade900, fontSize: 17))
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pop(context); //return to previous screen
-              },
-              child: Text('<'),
-            ),
           ],
         ),
       ),
