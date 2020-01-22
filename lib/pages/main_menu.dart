@@ -32,6 +32,12 @@ class MainMenu extends StatelessWidget {
             Text(
               'You have pushed the button this many times:',
             ),
+            RaisedButton(
+              onPressed: () {
+                //Navigate back to main menu
+              },
+              child: Text('About'),
+            ),
           ],
         ),
       )
