@@ -20,14 +20,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.white38,
-        accentColor: Colors.deepPurple,
         backgroundColor: Color.fromRGBO(244, 244, 244, 1.0)
       ),
       initialRoute: '/',
       routes: {
         // All of the navigation routes for the app will go here.
-        '/' : (context) => MainMenu()
+        '/' : (context) => MainMenu(),
         '/lesson_start' : (context) => LessonStart()
       },
     );

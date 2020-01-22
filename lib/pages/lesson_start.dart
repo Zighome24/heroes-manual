@@ -54,13 +54,6 @@ class LessonStart extends StatelessWidget {
               RaisedButton(
                 onPressed: null,
                 child: new Text('Start the Lesson', textAlign: TextAlign.center,),
-
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.pop(context); //return to previous screen
-                },
-                child: Text('<'),
               ),
             ],
           ),
