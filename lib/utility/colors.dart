@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// **color**.shade500 is the primary color
+
 const MaterialColor purple = MaterialColor(
   0xFF5D497F,
   <int, Color>{
