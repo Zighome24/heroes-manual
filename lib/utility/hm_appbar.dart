@@ -11,6 +11,7 @@ class HMAppBar extends AppBar {
     Function leadingAction,
     IconData trailingIcon = Icons.help_outline,
     bool showTrailing = false,
+    Function trailingAction,
     BuildContext context,
   }) : super(
       key: key,
@@ -38,7 +39,7 @@ class HMAppBar extends AppBar {
         },
         icon: Icon(
           trailingIcon,
-          color: purple,
+          color: purple.shade500,
         ),
         iconSize: 28,
       ) : Container()],

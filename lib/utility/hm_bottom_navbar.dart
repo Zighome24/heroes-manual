@@ -4,7 +4,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 class HMBottomNavBar extends StatelessWidget {
 
-  final bool isHomeSelected, isMatrixSelected, isChecklistSelected;
+  final bool isHomeSelected, isMatrixSelected, isScreeningSelected;
 
   static const double icon_size = 32;
 
@@ -13,7 +13,7 @@ class HMBottomNavBar extends StatelessWidget {
   const HMBottomNavBar({
     this.isHomeSelected = false,
     this.isMatrixSelected = false,
-    this.isChecklistSelected = false});
+    this.isScreeningSelected = false});
 
   static const double spacer_width = 5.0;
 
@@ -66,12 +66,12 @@ class HMBottomNavBar extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: isChecklistSelected ? (){} : () {
+            onPressed: isScreeningSelected ? (){} : () {
               debugPrint("Checklist Selected");
               //Navigator.pushNamed(context, '/checklist');
             },
             icon: Icon(
-              isChecklistSelected ? MdiIcons.checkCircle : MdiIcons.checkCircleOutline,
+              isScreeningSelected ? MdiIcons.checkCircle : MdiIcons.checkCircleOutline,
               color: Colors.white,
               size: icon_size,
             ),
