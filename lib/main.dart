@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // All of the navigation routes for the app will go here.
-        '/' : (context) => MainMenu()
+        '/' : (context) => MainMenu(),
+        '/about' : (context) => About()
       },
     );
   }
