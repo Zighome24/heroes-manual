@@ -32,6 +32,12 @@ class MainMenu extends StatelessWidget {
             Text(
               'You have pushed the button this many times:',
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/quiz_start');
+              },
+              child: Text('Quiz Me!'),
+            ),
           ],
         ),
       )

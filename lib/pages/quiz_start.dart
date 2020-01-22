@@ -28,9 +28,39 @@ class QuizStart extends StatelessWidget {
             // axis because Columns are vertical (the cross axis would be
             // horizontal).
             mainAxisAlignment: MainAxisAlignment.center,
+//            shrinkWrap: true,
             children: <Widget>[
-              Text(
-                'You have pushed the button this many times:',
+              Container(
+                padding: const EdgeInsets.all(30.0),
+                child: new Text(
+                  'Economic Impact',
+                ),
+
+              ),
+              Container(
+                padding: const EdgeInsets.all(30.0),
+                child: new Text(
+                  'This quiz is meant to test your knowledge '
+                  + 'on the economic impacts of domestic violence '
+                  + 'across families and individuals across the '
+                  + 'United States. You can prepare for the quiz '
+                  + 'by studying the Economic Impact lesson in '
+                  + 'the lessons section of the application.',
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              RaisedButton(
+                onPressed: () {
+                   //return to previous screen
+                },
+                child: new Text('Take me to the quiz!', textAlign: TextAlign.center,),
+
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pop(context); //return to previous screen
+                },
+                child: Text('<'),
               ),
             ],
           ),
