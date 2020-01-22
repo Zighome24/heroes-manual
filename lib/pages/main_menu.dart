@@ -38,6 +38,12 @@ class MainMenu extends StatelessWidget {
               },
               child: Text('About'),
             ),
+              RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/perpetrator_present');
+                },
+              child: Text('Perpetrator Present?'),
+            ),
           ],
         ),
       ),
