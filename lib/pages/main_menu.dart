@@ -32,12 +32,6 @@ class MainMenu extends StatelessWidget {
             Text(
               'Welcome to Heroes\' Manual',
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/about');
-              },
-              child: Text('About'),
-            ),
               RaisedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/perpetrator_present');
