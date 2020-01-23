@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/lesson_start.dart';
+import 'package:heroes_manual/utility/colors.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -21,12 +24,15 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         backgroundColor: Color.fromRGBO(244, 244, 244, 1.0)
+        primarySwatch: accent,
+        accentColor: purple,
       ),
       initialRoute: '/',
       routes: {
         // All of the navigation routes for the app will go here.
         '/' : (context) => MainMenu(),
         '/lesson_start' : (context) => LessonStart()
+        '/about' : (context) => About()
       },
     );
   }
