@@ -7,8 +7,9 @@ class Screening extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Text("Screening")
+      appBar: HMAppBar(
+        showLeading: true,
+        showTrailing: true,
       ),
       body: Center(
         child: Column(
