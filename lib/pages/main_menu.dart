@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/utility/hm_appbar.dart';
+import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -40,7 +42,8 @@ class MainMenu extends StatelessWidget {
             ),
           ],
         ),
-      )
+      ),
+      bottomNavigationBar: HMBottomNavBar(isHomeSelected: true),
     );
   }
 }
