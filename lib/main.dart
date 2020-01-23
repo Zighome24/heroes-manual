@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
+import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 
