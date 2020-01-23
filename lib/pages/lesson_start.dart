@@ -54,12 +54,13 @@ class LessonStart extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: null,
-                child: new Text('Start the Lesson', textAlign: TextAlign.center,),
+                child: new Text('Start the Lesson!', textAlign: TextAlign.center,),
+
               ),
             ],
           ),
-        )
-        bottomNavigationBar: HMBottomNavBar(),
+        ),
+      bottomNavigationBar: HMBottomNavBar(),
     );
   }
 }
