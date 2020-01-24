@@ -42,7 +42,8 @@ class MainMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/quiz_start');
               },
-              child: Text('Quiz Me!'),
+              child: Text('Quiz Me!')
+            ),
           RaisedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/lesson_start');
