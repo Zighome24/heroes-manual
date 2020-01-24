@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quiz_start.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         '/' : (context) => MainMenu(),
         '/quiz_start' : (context) => QuizStart(),
         '/lesson_start' : (context) => LessonStart(),
-        '/about' : (context) => About()
+        '/about' : (context) => About(),
+        '/perpetrator_present' : (context) => PerpetratorPresent(),
       },
     );
   }
