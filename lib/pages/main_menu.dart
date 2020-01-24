@@ -49,7 +49,13 @@ class MainMenu extends StatelessWidget {
               Navigator.pushNamed(context, '/lesson_start');
             },
             child: Text('Start the Lesson'),
-            ),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/about');
+            },
+            child: Text('About'),
+          ),
           ],
         ),
       ),
