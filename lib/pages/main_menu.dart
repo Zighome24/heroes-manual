@@ -32,6 +32,12 @@ class MainMenu extends StatelessWidget {
             Text(
               'Welcome to Heroes\' Manual',
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/screening_page');
+              },
+              child: Text('Screening Page'),
+            ),
               RaisedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/perpetrator_present');
