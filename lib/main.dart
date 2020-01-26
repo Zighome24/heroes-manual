@@ -6,7 +6,7 @@ import 'package:heroes_manual/pages/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
-
+import 'package:heroes_manual/pages/screening_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/quiz_start' : (context) => QuizStart()
         '/lesson_start' : (context) => LessonStart(),
         '/about' : (context) => About()
+        '/screening_page' : (context) => Screening(),
       },
     );
   }
