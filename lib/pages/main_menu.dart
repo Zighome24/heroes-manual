@@ -30,8 +30,38 @@ class MainMenu extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many:',
+              'Welcome to Heroes\' Manual',
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/screening_page');
+              },
+              child: Text('Screening Page'),
+            ),
+              RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/perpetrator_present');
+                },
+              child: Text('Perpetrator Present?'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/quiz_start');
+              },
+              child: Text('Quiz Me!')
+            ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/lesson_start');
+            },
+            child: Text('Start the Lesson'),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/about');
+            },
+            child: Text('About'),
+          ),
           ],
         ),
       ),
