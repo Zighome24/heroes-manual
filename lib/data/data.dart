@@ -1,24 +1,26 @@
+import 'dart:convert';
 import 'dart:core';
 import 'package:flutter/services.dart' show rootBundle;
 
-Future<String> loadLessons() async {
-  return await rootBundle.loadString('lib/data/dir/lessons.json');
+Future<String> loadLessons() {
+  return rootBundle.loadString('lib/data/dir/lessons.json');
 }
 
-Future<String> loadQuizzes() async {
-  return await rootBundle.loadString('lib/data/dir/quizzes.json');
+Future<String> loadQuizzes() {
+  return rootBundle.loadString('lib/data/dir/quizzes.json');
 }
 
 class Lesson {
-  final List cards;
+  final List<Card> cards;
 
   Lesson({this.cards});
 
   Lesson.fromJson(Map<String, dynamic> json)
-    : cards = json['cards'];
-  
-  static Lesson lessonFactory(Map<String, dynamic> json, String lessonName) {
-    return Lesson.fromJson(json[lessonName]);
+    : cards = (json['cards'] as List).map((l) => Card.fromJson(l));
+
+  // future which will return
+  static Future<Lesson> lessonFactory(String lessonName) {
+    return loadLessons().then((json) => Lesson.fromJson(jsonDecode(json)[lessonName]));
   }
 }
 
@@ -41,8 +43,8 @@ class Quiz {
   Quiz.fromJson(Map<String, dynamic> json)
     : questions = (json['questions'] as List).map((q) => Question.fromJson(q));
 
-  static Quiz quizFactory(Map<String, dynamic> json, String quizName) {
-    return Quiz.fromJson(json[quizName]);
+  static Future<Quiz> quizFactory(String quizName) {
+    return loadQuizzes().then((json) => Quiz.fromJson(jsonDecode(json)[quizName]));
   }
 }
 
