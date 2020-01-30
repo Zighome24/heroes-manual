@@ -18,9 +18,13 @@ class Lesson {
   Lesson.fromJson(Map<String, dynamic> json)
     : cards = (json['cards'] as List).map((l) => Card.fromJson(l));
 
-  // future which will return
-  static Future<Lesson> lessonFactory(String lessonName) {
-    return loadLessons().then((json) => Lesson.fromJson(jsonDecode(json)[lessonName]));
+
+  static Lesson _lessonFactory(String json, String lessonName) {
+    return Lesson.fromJson(jsonDecode(json)[lessonName]);
+  }
+
+  static Future<Lesson> localLessonFactory(String lessonName) {
+    return loadLessons().then((json) => _lessonFactory(json, lessonName));
   }
 }
 
@@ -43,8 +47,12 @@ class Quiz {
   Quiz.fromJson(Map<String, dynamic> json)
     : questions = (json['questions'] as List).map((q) => Question.fromJson(q));
 
-  static Future<Quiz> quizFactory(String quizName) {
-    return loadQuizzes().then((json) => Quiz.fromJson(jsonDecode(json)[quizName]));
+  static Quiz _quizFactory(String json, String quizName) {
+    return Quiz.fromJson(jsonDecode(json)[quizName]);
+  }
+
+  static Future<Quiz> localQuizFactory(String quizName) {
+    return loadQuizzes().then((json) => _quizFactory(json, quizName));
   }
 }
 
