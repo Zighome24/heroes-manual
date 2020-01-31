@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FillInBlankQuestion extends StatefulWidget {
-  @override
-  
+  final TextEditingController textEditingController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,10 +15,11 @@ class FillInBlankQuestion extends StatefulWidget {
                 hintText: 'type your answer here'),
             onChanged: (text) {
               //validate the answer or pass on to another widget with that responsibility
-            },)
+            },
+            controller: textEditingController,)
           ],
         )
-      )
+      )j  
     );
   }
 }
