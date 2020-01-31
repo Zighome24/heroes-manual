@@ -28,6 +28,10 @@ class Hotlines extends StatelessWidget {
               shrinkWrap: true,
               children: <Widget>[
                 ListTile(
+                  // i have no idea if this works because
+                  // my emulator still isn't running:(
+                  // should work according to stack overflow
+                  // i used my phone number so i could test eventually
                   leading: Icon(Icons.phone),
                   title: new FlatButton(
                       onPressed: () => launch("tel://6789564895"),
@@ -35,11 +39,15 @@ class Hotlines extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(Icons.phone),
-                  title: Text('Sign 2'),
+                  title: new FlatButton(
+                      onPressed: () => launch("tel://6789564895"),
+                      child: new Text("Call me")),
                 ),
                 ListTile(
                   leading: Icon(Icons.phone),
-                  title: Text('Sign 3'),
+                  title: new FlatButton(
+                      onPressed: () => launch("tel://6789564895"),
+                      child: new Text("Call me")),
                 ),
               ],
             ),
