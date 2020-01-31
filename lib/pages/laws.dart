@@ -3,7 +3,7 @@ import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
-class Screening extends StatelessWidget {
+class Laws extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class Screening extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-                'Will Will be a list of things to look for in a potential victim of family violence.',
+                'Will be a list of laws',
                 style: new TextStyle(
                     color: Colors.deepPurpleAccent,
                     fontSize: 20
@@ -28,15 +28,15 @@ class Screening extends StatelessWidget {
               children: <Widget>[
                 ListTile(
                   leading: Icon(Icons.label),
-                  title: Text('Sign 1'),
+                  title: Text('Law 1'),
                 ),
                 ListTile(
                   leading: Icon(Icons.label),
-                  title: Text('Sign 2'),
+                  title: Text('Law 2'),
                 ),
                 ListTile(
                   leading: Icon(Icons.label),
-                  title: Text('Sign 3'),
+                  title: Text('Law 3'),
                 ),
               ],
             ),
