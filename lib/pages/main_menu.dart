@@ -58,13 +58,13 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/screening_page'),
+                Navigator.pushNamed(context, '/screening_page');
               },
               child: Text('Screening Page'),
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/hotlines'),
+                Navigator.pushNamed(context, '/hotlines');
               },
               child: Text('Hotlines'),
             ),

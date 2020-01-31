@@ -8,6 +8,7 @@ import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/pages/hotlines.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         '/' : (context) => MainMenu(),
         '/quiz_start' : (context) => QuizStart(),
         '/lesson_start' : (context) => LessonStart(),
-        '/about' : (context) => About()
+        '/about' : (context) => About(),
         '/screening_page' : (context) => Screening(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
         '/hotlines' : (context) => Hotlines(),
