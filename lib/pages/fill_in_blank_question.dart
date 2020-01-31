@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class FillInBlankQuestion extends StatefulWidget {
+  FillInBlankQuestion() : super();
+
+  @override
+  MyFillInBlank createState() => new MyFillInBlank();
+}
+
+class MyFillInBlank extends State<FillInBlankQuestion> {
   final TextEditingController textEditingController = new TextEditingController();
 
   @override
@@ -13,13 +20,17 @@ class FillInBlankQuestion extends StatefulWidget {
             Text('Question question question question'),
             TextField(decoration: InputDecoration(border: InputBorder.none,
                 hintText: 'type your answer here'),
-            onChanged: (text) {
-              //validate the answer or pass on to another widget with that responsibility
-            },
+            onSubmitted: _submission,
             controller: textEditingController,)
           ],
         )
-      )j  
+      )
     );
+  }
+
+  void _submission(String e) {
+    //need to validate the submitted answer
+    print(textEditingController.text);
+    textEditingController.clear();
   }
 }
