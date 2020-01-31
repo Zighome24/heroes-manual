@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/about' : (context) => About()
         '/screening_page' : (context) => Screening(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
+        '/hotlines' : (context) => Hotlines(),
       },
     );
   }
