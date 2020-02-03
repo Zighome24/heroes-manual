@@ -50,18 +50,18 @@ class MainMenu extends StatelessWidget {
               },
               child: Text('Quiz Me!')
             ),
-          RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/lesson_start');
-            },
-            child: Text('Start the Lesson'),
-          ),
-          RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/about');
-            },
-            child: Text('About'),
-          ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/lesson_start');
+              },
+              child: Text('Start the Lesson'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/about');
+              },
+              child: Text('About'),
+            ),
           ],
         ),
       ),
