@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Heroes Manual',
       theme: ThemeData(
         primarySwatch: accent,
-        accentColor: purple,
+        accentColor: purple.shade500,
       ),
       initialRoute: '/',
       routes: {
