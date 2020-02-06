@@ -1,19 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:loading/indicator/line_scale_indicator.dart';
+import 'package:loading/loading.dart';
 
-class LessonStart extends StatelessWidget {
+class LessonStart extends StatefulWidget {
+
+  @override
+  State<StatefulWidget> createState() => _LessonStartState();
+}
+
+class _LessonStartState extends State<LessonStart> {
+
+  Lesson _lesson = Lesson.emptyLesson;
+
   @override
   Widget build(BuildContext context) {
+    final String lessonName = ModalRoute.of(context).settings.arguments;
+
+    Lesson.localLessonFactory(lessonName).then((value)
+      {
+        setState(() { _lesson = value; });
+      }
+    );
+
     return Scaffold(
-        appBar: HMAppBar(
-          showLeading: true,
-          showTrailing: true,
-        ),
-        body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: Column(
+      appBar: HMAppBar(
+        showLeading: true,
+        leadingAction: () { Navigator.pop(context); },
+        showTrailing: true,
+        trailingAction: null,
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: _lesson == Lesson.emptyLesson ?
+          Loading(
+              indicator: LineScaleIndicator(),
+              size: 50.0,
+              color: purple.shade500
+          ) : Column(
             // Column is also a layout widget. It takes a list of children and
             // arranges them vertically. By default, it sizes itself to fit its
             // children horizontally, and tries to be as tall as its parent.
@@ -29,12 +57,12 @@ class LessonStart extends StatelessWidget {
             // axis because Columns are vertical (the cross axis would be
             // horizontal).
             mainAxisAlignment: MainAxisAlignment.center,
-//            shrinkWrap: true,
+  //            shrinkWrap: true,
             children: <Widget>[
               Container(
                 padding: const EdgeInsets.all(30.0),
                 child: new Text(
-                    'Economic Impact',
+                    lessonName,
                     style: new TextStyle(fontSize: 30)
 
                 ),
@@ -43,24 +71,19 @@ class LessonStart extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(30.0),
                 child: new Text(
-                  'This lesson is meant to teach you about'
-                      + 'the economic impacts of Domestic Violence '
-                      + 'across families and individuals across the '
-                      + 'United States. If you would like to quiz yourself '
-                      + 'on the material covered in this lesson, checkout the '
-                      + 'Economic Impact Quiz in the Quiz section of the app',
+                  _lesson.summary,
                   textAlign: TextAlign.center,
                 ),
               ),
               RaisedButton(
-                onPressed: null,
-                child: new Text('Start the Lesson!', textAlign: TextAlign.center,),
+                onPressed: () { },
+                child: new Text('Start the Lesson!', textAlign: TextAlign.center),
 
               ),
             ],
           ),
-        ),
-      bottomNavigationBar: HMBottomNavBar(),
+      ),
+      bottomNavigationBar: HMBottomNavBar()
     );
   }
 }

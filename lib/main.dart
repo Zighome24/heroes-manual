@@ -4,7 +4,7 @@ import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quiz_start.dart';
-import 'package:heroes_manual/pages/lesson_start.dart';
+import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
 void main() => runApp(MyApp());

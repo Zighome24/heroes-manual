@@ -52,7 +52,7 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/lesson_start');
+                Navigator.pushNamed(context, '/lesson_start', arguments: "Economic Impact");
               },
               child: Text('Start the Lesson'),
             ),
