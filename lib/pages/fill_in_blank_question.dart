@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
+//TODO: merge hm49 into my branch
+//TODO: could merge sprint_2 into my branch each time I work
+//when you do Navigator.pop(), return the boolean of the question result
+//TODO: make submit button
+//TODO: have source (question content source) navigation button
+
 class FillInBlankQuestion extends StatefulWidget {
+  //TODO: expect question as input to this thing - that'll be the question I'll want to render
+  //TODO: also expect two functions - incorrect and correct - as inputs (like leading and trailing functions of HMAppBar)
+
   FillInBlankQuestion() : super();
 
   @override
