@@ -5,6 +5,8 @@ import 'package:heroes_manual/utility/colors.dart';
 
 
 class PerpetratorPresent extends StatelessWidget {
+  static const String route = '/perpetrator_present';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

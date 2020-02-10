@@ -4,6 +4,8 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
 class Screening extends StatelessWidget {
+  static const String route = '/screening_page';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
