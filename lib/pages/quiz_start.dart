@@ -4,6 +4,8 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
 
 class QuizStart extends StatelessWidget {
+  static const String route = '/quiz_start';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
