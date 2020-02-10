@@ -1,45 +1,71 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/data/data.dart';
 
-//TODO: merge hm49 into my branch
-//TODO: could merge sprint_2 into my branch each time I work
 //when you do Navigator.pop(), return the boolean of the question result
-//TODO: make submit button
 //TODO: have source (question content source) navigation button
+// "ValueChanged" callback may be useful to pass data between widgets in same screen
 
 class FillInBlankQuestion extends StatefulWidget {
-  //TODO: expect question as input to this thing - that'll be the question I'll want to render
-  //TODO: also expect two functions - incorrect and correct - as inputs (like leading and trailing functions of HMAppBar)
+  final Question question;
+  final Function correctFunction;
+  final Function incorrectFunction;
 
-  FillInBlankQuestion() : super();
+  const FillInBlankQuestion({
+    Key key,
+    @required this.question,
+    @required this.correctFunction,
+    @required this.incorrectFunction,
+    IconData correctIcon = Icons.check,
+    IconData incorrectIcon = Icons.not_interested,
+    bool correct,
+  }) : super(
+    key: key,
+    //correctAction: correct ? IconButton(
+    //  onPressed: correctFunction,
+    //),
+  ); //TODO: Justin - how to use super in this case?
 
   @override
-  MyFillInBlank createState() => new MyFillInBlank();
+  _FillInBlankState createState() => new _FillInBlankState();
 }
 
-class MyFillInBlank extends State<FillInBlankQuestion> {
+class _FillInBlankState extends State<FillInBlankQuestion> {
   final TextEditingController textEditingController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: new Container(
+        padding: new EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Question question question question'),
-            TextField(decoration: InputDecoration(border: InputBorder.none,
-                hintText: 'type your answer here'),
-            onSubmitted: _submission,
-            controller: textEditingController,)
+            Text(widget.question.text),
+            TextField(
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(border: InputBorder.none,
+                  hintText: 'type your answer here'),
+            controller: textEditingController,
+            ),
+            RaisedButton(
+              child: Text('Submit'),
+              onPressed: _submission(textEditingController.toString()),
+            )
           ],
         )
       )
     );
   }
 
-  void _submission(String e) {
+  Function _submission(String e) {
     //need to validate the submitted answer
     print(textEditingController.text);
     textEditingController.clear();
+    if (e.compareTo(widget.question.answer) == 0) {
+      return widget.correctFunction;
+    } else {
+      return widget.incorrectFunction;
+    }
+    //TODO: should this functions be returned or somehow invoked?
   }
 }
