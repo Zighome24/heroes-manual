@@ -20,10 +20,7 @@ class FillInBlankQuestion extends StatefulWidget {
     bool correct,
   }) : super(
     key: key,
-    //correctAction: correct ? IconButton(
-    //  onPressed: correctFunction,
-    //),
-  ); //TODO: Justin - how to use super in this case?
+  );
 
   @override
   _FillInBlankState createState() => new _FillInBlankState();

@@ -60,6 +60,12 @@ class QuizStart extends StatelessWidget {
                 onPressed: null,
                 child: new Text('Take me to the quiz!', textAlign: TextAlign.center,),
               ),
+              RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/questionTestPage');
+                  },
+                  child: Text('Question Test Page')
+              ),
             ],
           ),
         ),
