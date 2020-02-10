@@ -3,8 +3,6 @@ import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
 class LessonStart extends StatelessWidget {
-  static const String route = '/lesson_start';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

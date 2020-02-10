@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
-import 'package:heroes_manual/pages/quiz_start.dart';
-import 'package:heroes_manual/pages/lesson_start.dart';
-import 'package:heroes_manual/pages/about.dart';
-
-
 
 class MainMenu extends StatelessWidget {
   @override
@@ -41,31 +34,31 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, Screening.route);
+                Navigator.pushNamed(context, '/screening_page');
               },
               child: Text('Screening Page'),
             ),
               RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, PerpetratorPresent.route);
+                Navigator.pushNamed(context, '/perpetrator_present');
                 },
               child: Text('Perpetrator Present?'),
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, QuizStart.route);
+                Navigator.pushNamed(context, '/quiz_start');
               },
               child: Text('Quiz Me!')
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, LessonStart.route);
+                Navigator.pushNamed(context, '/lesson_start');
               },
               child: Text('Start the Lesson'),
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, About.route);
+                Navigator.pushNamed(context, '/about');
               },
               child: Text('About'),
             ),
