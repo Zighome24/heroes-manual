@@ -38,6 +38,7 @@ class ExampleQuizQuestion extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
 //            shrinkWrap: true,
           children: <Widget>[
+            new Text("This is where the example question would be."),
             //TODO: put in my quiz question widget
             new FillInBlankQuestion(
                 //question: new Question.plain('Is this an example question?', 'fill_in_blank', 'this is the correct answer'), correctFunction: (ans) => print(ans), incorrectFunction: (ans) => print(ans)
