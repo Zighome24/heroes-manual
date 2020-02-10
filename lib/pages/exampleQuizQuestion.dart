@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/pages/fill_in_blank_question.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
 
 class ExampleQuizQuestion extends StatelessWidget {
+  static const String route = '/example_quiz_question';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +38,10 @@ class ExampleQuizQuestion extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
 //            shrinkWrap: true,
           children: <Widget>[
-            //TODO: put in my quiz question widet
+            //TODO: put in my quiz question widget
+            new FillInBlankQuestion(
+                //question: new Question.plain('Is this an example question?', 'fill_in_blank', 'this is the correct answer'), correctFunction: (ans) => print(ans), incorrectFunction: (ans) => print(ans)
+            ),
           ],
         ),
       ),

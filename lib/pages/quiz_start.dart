@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
@@ -64,7 +65,7 @@ class QuizStart extends StatelessWidget {
               ),
               RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/questionTestPage');
+                    Navigator.pushNamed(context, ExampleQuizQuestion.route);
                   },
                   child: Text('Question Test Page')
               ),
