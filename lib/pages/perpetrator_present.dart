@@ -13,6 +13,7 @@ class PerpetratorPresent extends StatelessWidget {
           // the App.build method, and use it to set our appbar title.
           showTrailing: true,
           showLeading: true,
+          leadingAction: () => Navigator.pop(context),
         ),
         body: Center(
           // Center is a layout widget. It takes a single child and positions it
@@ -52,12 +53,6 @@ class PerpetratorPresent extends StatelessWidget {
                     onPressed: null,
                   ),
                 ],
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.pop(context); //return to previous screen
-                },
-                child: Text('<'),
               ),
             ],
           ),

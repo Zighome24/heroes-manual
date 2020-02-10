@@ -9,6 +9,7 @@ class LessonStart extends StatelessWidget {
         appBar: HMAppBar(
           showLeading: true,
           showTrailing: true,
+          leadingAction: () => Navigator.pop(context),
         ),
         body: Center(
           // Center is a layout widget. It takes a single child and positions it

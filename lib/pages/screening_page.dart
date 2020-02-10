@@ -10,6 +10,7 @@ class Screening extends StatelessWidget {
       appBar: HMAppBar(
         showLeading: true,
         showTrailing: true,
+        leadingAction: () => Navigator.pop(context),
       ),
       body: Center(
         child: Column(
