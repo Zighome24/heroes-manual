@@ -59,7 +59,6 @@ class QuizStart extends StatelessWidget {
               RaisedButton(
                 onPressed: null,
                 child: new Text('Take me to the quiz!', textAlign: TextAlign.center,),
-
               ),
             ],
           ),
