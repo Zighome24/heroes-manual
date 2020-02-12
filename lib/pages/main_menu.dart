@@ -8,6 +8,7 @@ import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 
+
 class MainMenu extends StatelessWidget {
 
   @override
@@ -59,9 +60,21 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
+                Navigator.pushNamed(context, '/lesson_start');
+              },
+              child: Text('Start the Lesson'),
+            ),
+            RaisedButton(
+              onPressed: () {
                 Navigator.pushNamed(context, Organizations.route);
               },
               child: Text('Organizations'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/about');
+              },
+              child: Text('About'),
             ),
             RaisedButton(
               onPressed: () {
