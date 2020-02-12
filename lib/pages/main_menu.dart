@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/organizations.dart';
+import 'package:heroes_manual/pages/quiz_start.dart';
+import 'package:heroes_manual/pages/lesson_start.dart';
+import 'package:heroes_manual/pages/perpetrator_present.dart';
+import 'package:heroes_manual/pages/about.dart';
+import 'package:heroes_manual/pages/screening_page.dart';
 
 
 class MainMenu extends StatelessWidget {
@@ -36,22 +41,23 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/screening_page');
+                Navigator.pushNamed(context, Screening.route);
               },
               child: Text('Screening Page'),
             ),
               RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/perpetrator_present');
+                Navigator.pushNamed(context, PerpetratorPresent.route);
                 },
               child: Text('Perpetrator Present?'),
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/quiz_start');
+                Navigator.pushNamed(context, QuizStart.route);
               },
               child: Text('Quiz Me!')
             ),
+
           RaisedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/lesson_start');
@@ -70,6 +76,18 @@ class MainMenu extends StatelessWidget {
             },
             child: Text('About'),
           ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, LessonStart.route);
+              },
+              child: Text('Start the Lesson'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, About.route);
+              },
+              child: Text('About'),
+            ),
           ],
         ),
       ),
