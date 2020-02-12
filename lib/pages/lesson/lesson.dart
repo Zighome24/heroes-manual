@@ -116,7 +116,7 @@ class _LessonState extends State<LessonPage> {
                 ]
               )
             ),
-            Padding(
+            (_card + 1) == _lesson.cards.length ? Padding(
               padding: EdgeInsets.only(bottom: 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -150,7 +150,7 @@ class _LessonState extends State<LessonPage> {
                   )
                 ],
               )
-            )
+            ) : Container()
           ]
         ),
         bottomNavigationBar: HMBottomNavBar()
