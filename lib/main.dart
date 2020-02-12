@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
+import 'package:heroes_manual/pages/lesson/lesson.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quiz_start.dart';
-import 'package:heroes_manual/pages/lesson_start.dart';
+import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/organizations.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Heroes Manual',
       theme: ThemeData(
         primarySwatch: accent,
-        accentColor: purple,
+        accentColor: purple.shade500,
       ),
       initialRoute: '/',
       routes: {
@@ -26,11 +27,12 @@ class MyApp extends StatelessWidget {
         '/' : (context) => MainMenu(),
         '/screening_page' : (context) => Screening(),
         '/quiz_start' : (context) => QuizStart(),
-        '/lesson_start' : (context) => LessonStart(),
+        LessonStart.route : (context) => LessonStart(),
         '/about' : (context) => About(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
         '/organizations' : (context) => Organizations(),
         Organizations.route : (context) => Organizations(),
+        LessonPage.route : (context) => LessonPage(),
       },
     );
   }
