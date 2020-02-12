@@ -38,6 +38,7 @@ class _FillInBlankState extends State<FillInBlankQuestion> {
             child: Column(
               children: <Widget>[
                 Container(
+                  constraints: BoxConstraints(),
                   padding: EdgeInsets.all(20.0),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
