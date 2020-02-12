@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
+import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         '/lesson_start' : (context) => LessonStart(),
         '/about' : (context) => About(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
-      },
+        '/example_quiz_question' : (context) => ExampleQuizQuestion(),
+    },
     );
   }
 }
