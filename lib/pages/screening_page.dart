@@ -22,8 +22,8 @@ class Screening extends StatelessWidget {
             Text(
               'Will be a list of things to look for in a potential victim of family violence.',
               style: new TextStyle(
-                  color: purple.shade500,
-                  fontSize: 20
+                color: purple.shade500,
+                fontSize: 20
               )
             ),
             ListView(
