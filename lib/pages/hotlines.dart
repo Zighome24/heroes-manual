@@ -5,6 +5,8 @@ import 'package:heroes_manual/utility/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Hotlines extends StatelessWidget {
+  static const String route = '/hotlines';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

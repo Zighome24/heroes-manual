@@ -32,39 +32,39 @@ class MainMenu extends StatelessWidget {
             Text(
               'Welcome to Heroes\' Manual',
             ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Screening.route);
+          },
+          child: Text('Screening Page'),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, PerpetratorPresent.route);
+          },
+          child: Text('Perpetrator Present?'),
+        ),
+        RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, QuizStart.route);
+            },
+            child: Text('Quiz Me!')
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, LessonStart.route);
+          },
+          child: Text('Start the Lesson'),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, About.route);
+          },
+          child: Text('About'),
+        ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/perpetrator_present');
-                },
-              child: Text('Perpetrator Present?'),
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/quiz_start');
-              },
-              child: Text('Quiz Me!')
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/lesson_start');
-              },
-              child: Text('Start the Lesson'),
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/about');
-              },
-              child: Text('About'),
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/screening_page');
-              },
-              child: Text('Screening Page'),
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/hotlines');
+                Navigator.pushNamed(context, Hotlines.route);
               },
               child: Text('Hotlines'),
             ),
