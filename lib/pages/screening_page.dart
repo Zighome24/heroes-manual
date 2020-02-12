@@ -17,7 +17,7 @@ class Screening extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-                'Will Will be a list of things to look for in a potential victim of family violence.',
+                'Will be a list of things to look for in a potential victim of family violence.',
                 style: new TextStyle(
                     color: Colors.deepPurpleAccent,
                     fontSize: 20

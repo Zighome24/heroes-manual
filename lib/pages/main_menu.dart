@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:heroes_manual/pages/laws.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -59,6 +60,7 @@ class MainMenu extends StatelessWidget {
             RaisedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/laws');
+                Navigator.pushNamed(context, Laws.route);
               },
               child: Text('Laws'),
             ),

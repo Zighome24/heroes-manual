@@ -4,12 +4,15 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
 class Laws extends StatelessWidget {
+  static const String route = '/laws';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HMAppBar(
         showLeading: true,
         showTrailing: true,
+        leadingAction: () => Navigator.pop(context),
+          trailingAction: () => debugPrint("something goes here, check task in Zenhub"),
       ),
       body: Center(
         child: Column(
