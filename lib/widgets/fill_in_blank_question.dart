@@ -55,25 +55,25 @@ class _FillInBlankState extends State<FillInBlankQuestion> {
                           child: Text(
                               'Submit'
                           ),
-                          onPressed: _submission(textEditingController.toString()),
+                          onPressed: () => _validate(textEditingController.toString()),
                         )
                       ]
                   ),
-                )
+                ),
               ],
-            )
-        )
+            ),
+        ),
     );
   }
 
-  Function _submission(String e) {
+  void _validate(String e) {
     //need to validate the submitted answer
     print(textEditingController.text);
     textEditingController.clear();
     if (e.compareTo(widget.question.answer) == 0) {
-      return widget.correctFunction;
+      widget.correctFunction(e);
     } else {
-      return widget.incorrectFunction;
+      widget.incorrectFunction(e);
     }
     //TODO: should this functions be returned or somehow invoked?
   }
