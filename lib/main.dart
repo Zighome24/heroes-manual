@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/perpetrator_present' : (context) => PerpetratorPresent(),
         '/laws' : (context) => Laws(),
         LessonPage.route : (context) => LessonPage(),
+        Laws.route : (context) => Laws(),
 
       },
     );
