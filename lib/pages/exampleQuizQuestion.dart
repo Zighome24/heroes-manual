@@ -26,7 +26,7 @@ class ExampleQuizQuestion extends StatelessWidget {
                   'type': 'fill_in_blank',
                   'answer': 'this is the correct answer'
                 }), correctFunction: print,
-                incorrectFunction: print
+                incorrectFunction: print,
             ),
           )
       ),
