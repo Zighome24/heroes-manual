@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/quiz_start.dart';
-import 'package:heroes_manual/pages/lesson_start.dart';
+import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
@@ -57,7 +57,7 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, LessonStart.route);
+                Navigator.pushNamed(context, LessonStart.route, arguments: "Economic Impact");
               },
               child: Text('Start the Lesson'),
             ),
