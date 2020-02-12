@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
-import 'package:heroes_manual/pages/fill_in_blank_question.dart';
+import 'package:heroes_manual/widgets/fill_in_blank_question.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
@@ -18,33 +18,17 @@ class ExampleQuizQuestion extends StatelessWidget {
         leadingAction: () => Navigator.pop(context),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-//            shrinkWrap: true,
-          children: <Widget>[
-            new Text("This is where the example question would be."),
-            //TODO: put in my quiz question widget
-            new FillInBlankQuestion(
-                //question: new Question.plain('Is this an example question?', 'fill_in_blank', 'this is the correct answer'), correctFunction: (ans) => print(ans), incorrectFunction: (ans) => print(ans)
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: FillInBlankQuestion(
+                question: Question.fromJson({
+                  'text':  'Is this an example question?',
+                  'type': 'fill_in_blank',
+                  'answer': 'this is the correct answer'
+                }), correctFunction: print,
+                incorrectFunction: print
             ),
-          ],
-        ),
+          )
       ),
       bottomNavigationBar: HMBottomNavBar(),
     );
