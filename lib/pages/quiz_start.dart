@@ -4,6 +4,8 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
 
 class QuizStart extends StatelessWidget {
+  static const String route = '/quiz_start';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,6 +14,7 @@ class QuizStart extends StatelessWidget {
           // the App.build method, and use it to set our appbar title.
           showLeading: true,
           showTrailing: true,
+          leadingAction: () => Navigator.pop(context),
         ),
         body: Center(
           // Center is a layout widget. It takes a single child and positions it
@@ -58,13 +61,6 @@ class QuizStart extends StatelessWidget {
               RaisedButton(
                 onPressed: null,
                 child: new Text('Take me to the quiz!', textAlign: TextAlign.center,),
-
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.pop(context); //return to previous screen
-                },
-                child: Text('<'),
               ),
             ],
           ),

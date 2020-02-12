@@ -30,7 +30,7 @@ class _LessonStartState extends State<LessonStart> {
     return Scaffold(
       appBar: HMAppBar(
         showLeading: true,
-        leadingAction: () { Navigator.pop(context); },
+        leadingAction: () => Navigator.pop(context),
         showTrailing: true,
         trailingAction: null,
         title: lessonName,
