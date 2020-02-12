@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/pages/lesson/lesson.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
-import 'package:loading/indicator/line_scale_indicator.dart';
-import 'package:loading/loading.dart';
 
 class LessonStart extends StatefulWidget {
+
+  static const String route = '/lesson_start';
 
   @override
   State<StatefulWidget> createState() => _LessonStartState();
@@ -32,16 +33,18 @@ class _LessonStartState extends State<LessonStart> {
         leadingAction: () { Navigator.pop(context); },
         showTrailing: true,
         trailingAction: null,
+        title: lessonName,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: _lesson == Lesson.emptyLesson ?
-          Loading(
+          // Un-comment this and remove Container()
+          /* Loading(
               indicator: LineScaleIndicator(),
               size: 50.0,
               color: purple.shade500
-          ) : Column(
+          ) */ Container() : Column(
             // Column is also a layout widget. It takes a list of children and
             // arranges them vertically. By default, it sizes itself to fit its
             // children horizontally, and tries to be as tall as its parent.
@@ -76,7 +79,9 @@ class _LessonStartState extends State<LessonStart> {
                 ),
               ),
               RaisedButton(
-                onPressed: () { },
+                onPressed: () {
+                  Navigator.pushNamed(context, LessonPage.route, arguments: _lesson);
+                },
                 child: new Text('Start the Lesson!', textAlign: TextAlign.center),
 
               ),

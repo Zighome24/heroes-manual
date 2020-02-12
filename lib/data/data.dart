@@ -13,16 +13,18 @@ Future<String> loadQuizzes() {
 class Lesson {
   final List<Card> cards;
   final String summary;
+  final String title;
 
-  Lesson({this.cards, this.summary});
+  Lesson({this.cards, this.summary, this.title});
 
-  Lesson.fromJson(Map<String, dynamic> json)
+  Lesson.fromJson(Map<String, dynamic> json, String lessonName)
     : cards = ((json['cards']) as List).map((l) => Card.fromJson(l)).toList(),
-      summary = (json['summary'] as String);
+      summary = (json['summary'] as String),
+      title = lessonName;
 
 
   static Lesson _lessonFactory(String json, String lessonName) {
-    return Lesson.fromJson((jsonDecode(json))[lessonName]);
+    return Lesson.fromJson((jsonDecode(json))[lessonName], lessonName);
   }
 
   static Future<Lesson> localLessonFactory(String lessonName) {
