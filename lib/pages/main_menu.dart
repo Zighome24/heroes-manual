@@ -59,7 +59,6 @@ class MainMenu extends StatelessWidget {
           ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/laws');
                 Navigator.pushNamed(context, Laws.route);
               },
               child: Text('Laws'),
