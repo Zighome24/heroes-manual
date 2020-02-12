@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
 
-//when you do Navigator.pop(), return the boolean of the question result
 //TODO: have source (question content source) navigation button
 // "ValueChanged" callback may be useful to pass data between widgets in same screen
 
@@ -10,7 +9,7 @@ class FillInBlankQuestion extends StatefulWidget {
   final Function correctFunction;
   final Function incorrectFunction;
 
-  const FillInBlankQuestion({
+  FillInBlankQuestion({
     Key key,
     @required this.question,
     @required this.correctFunction,
