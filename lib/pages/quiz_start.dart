@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -68,6 +69,12 @@ class QuizStart extends StatelessWidget {
                     Navigator.pushNamed(context, ExampleQuizQuestion.route);
                   },
                   child: Text('Question Test Page')
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, ExampleMCQuizQuestion.route);
+                },
+                child: Text('MC Question Test Page')
               ),
             ],
           ),

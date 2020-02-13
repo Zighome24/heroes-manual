@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 //TODO: add source (question content source) navigation button
 // "ValueChanged" callback may be useful to pass data between widgets in same screen
 
-class FillInBlankQuestion extends StatefulWidget {
+class MultipleChoiceQuestion extends StatefulWidget {
   final Question question;
 
   //TODO: types of functions below may need to be VoidCallback
@@ -12,7 +12,7 @@ class FillInBlankQuestion extends StatefulWidget {
   final Function(String) correctFunction;
   final Function(String) incorrectFunction;
 
-  FillInBlankQuestion({
+  MultipleChoiceQuestion({
     Key key,
     @required this.question,
     @required this.correctFunction,
@@ -25,44 +25,44 @@ class FillInBlankQuestion extends StatefulWidget {
   );
 
   @override
-  _FillInBlankState createState() => new _FillInBlankState();
+  _MultipleChoiceState createState() => new _MultipleChoiceState();
 }
 
-class _FillInBlankState extends State<FillInBlankQuestion> {
+class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
   final TextEditingController textEditingController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(widget.question.text),
-                        TextField(
-                          keyboardType: TextInputType.text,
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'type your answer here'
-                          ),
-                          controller: textEditingController,
-                        ),
-                        RaisedButton(
-                          child: Text(
-                              'Submit'
-                          ),
-                          onPressed: () => _validate(textEditingController.toString()),
-                        )
-                      ]
-                  ),
-                ),
-              ],
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(widget.question.text),
+                    TextField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'type your answer here'
+                      ),
+                      controller: textEditingController,
+                    ),
+                    RaisedButton(
+                      child: Text(
+                          'Submit'
+                      ),
+                      onPressed: () => _validate(textEditingController.toString()),
+                    )
+                  ]
+              ),
             ),
+          ],
         ),
+      ),
     );
   }
 
