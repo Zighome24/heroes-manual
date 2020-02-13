@@ -17,18 +17,39 @@ class ExampleQuizQuestion extends StatelessWidget {
         showTrailing: true,
         leadingAction: () => Navigator.pop(context),
       ),
-      body: Center(
-          child: Padding(
-            padding: EdgeInsets.all(20.0),
-            child: FillInBlankQuestion(
-                question: Question.fromJson({
-                  'text':  'Is this an example question?',
-                  'type': 'fill_in_blank',
-                  'answer': 'this is the correct answer'
-                }), correctFunction: print,
-                incorrectFunction: print,
+      body: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+                flex: 1,
+                child: Column(
+                  children: <Widget>[
+                    Flexible(
+                        flex: 1,
+                        child: Center(
+                          child: FractionallySizedBox(
+                            alignment: Alignment.center,
+                            heightFactor: 0.4,
+                            widthFactor: 1.0,
+                            child: FillInBlankQuestion(
+                              question: Question.fromJson({
+                                'text':  'Does the safety plan include the concepts: protect '
+                                    'plan from abuser, share with trusted person, and save'
+                                    'time in emergencies?',
+                                'type': 'fill_in_blank',
+                                'answer': 'yes'
+                              }), correctFunction: print,
+                              incorrectFunction: print,
+                            ),
+                          ),
+                        )
+                    ),
+                  ],
+                ),
             ),
-          )
+          ],
+        ),
       ),
       bottomNavigationBar: HMBottomNavBar(),
     );
