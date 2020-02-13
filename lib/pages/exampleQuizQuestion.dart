@@ -26,22 +26,17 @@ class ExampleQuizQuestion extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Column(
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   Expanded(
-                    flex: 4,
+                    flex: 1,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: accent,
+                        color: accent.shade100,
                         border: Border.all(
                           width: 2.0,
                           color: accent,
                         ),
                       ),
-                      //child: FractionallySizedBox(
-                        //alignment: Alignment.topCenter,
-                        //heightFactor: 0.4,
-                        //widthFactor: 1.0,
                         child: FillInBlankQuestion(
                           question: Question.fromJson({
                             'text':  'Does the safety plan include the concepts: protect '
