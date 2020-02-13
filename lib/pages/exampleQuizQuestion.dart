@@ -21,14 +21,15 @@ class ExampleQuizQuestion extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(
               flex: 1,
-
-              child: Row(
+              child: Column(
+                //crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Flexible(
-                    flex: 1,
+                  Expanded(
+                    flex: 4,
                     child: Container(
                       decoration: BoxDecoration(
                         color: accent,
@@ -37,10 +38,10 @@ class ExampleQuizQuestion extends StatelessWidget {
                           color: accent,
                         ),
                       ),
-                      child: FractionallySizedBox(
-                        alignment: Alignment.center,
-                        heightFactor: 0.4,
-                        widthFactor: 1.0,
+                      //child: FractionallySizedBox(
+                        //alignment: Alignment.topCenter,
+                        //heightFactor: 0.4,
+                        //widthFactor: 1.0,
                         child: FillInBlankQuestion(
                           question: Question.fromJson({
                             'text':  'Does the safety plan include the concepts: protect '
@@ -51,7 +52,7 @@ class ExampleQuizQuestion extends StatelessWidget {
                           }), correctFunction: print,
                           incorrectFunction: print,
                         ),
-                      ),
+                      //),
                     ),
                   ),
                 ],
