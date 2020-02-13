@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/utility/colors.dart';
 
 //TODO: add source (question content source) navigation button
 // "ValueChanged" callback may be useful to pass data between widgets in same screen
@@ -38,10 +39,10 @@ class _FillInBlankState extends State<FillInBlankQuestion> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
-            /*child: Container(
+            child: Container(
                   decoration: BoxDecoration(
-                    color: accent,
-                  ),*/
+                    color: accent.shade500,
+                  ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,7 +53,6 @@ class _FillInBlankState extends State<FillInBlankQuestion> {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
-
                         children: <Widget>[
                           Text(widget.question.text),
                           TextField(
@@ -74,6 +74,7 @@ class _FillInBlankState extends State<FillInBlankQuestion> {
                 )
               ],
             ),
+          ),
           ),
         ],
       ),
