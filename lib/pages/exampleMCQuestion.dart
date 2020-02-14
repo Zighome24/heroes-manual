@@ -25,12 +25,7 @@ class ExampleMCQuizQuestion extends StatelessWidget {
                 question: Question.fromJson({
                   'text':  'Is this an example question?',
                   'type': 'multiple_choice',
-                  'answer':
-                  [
-                    'this is the correct answer',
-                    'this is an incorrect answer',
-                    'this is another incorrect answer',
-                    'this is the last incorrect answer']
+                  'answer': 'this is the correct answer'
                 }), correctFunction: print,
                 incorrectFunction: print
             ),

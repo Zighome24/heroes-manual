@@ -41,19 +41,22 @@ class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
               padding: EdgeInsets.all(20.0),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(widget.question.text),
                     RaisedButton(
                       child: Text(
-                          'Incorrect Choice',
+                        'Incorrect Choice',
                       ),
-                      onPressed: () => widget.incorrectFunction('Incorrect Choice'),
+                      onPressed: () =>
+                          widget.incorrectFunction('Incorrect Choice'),
                     ),
                     RaisedButton(
                       child: Text(
                         'Incorrect Choice',
                       ),
-                      onPressed: () => widget.incorrectFunction('Incorrect Choice'),
+                      onPressed: () =>
+                          widget.incorrectFunction('Incorrect Choice'),
                     ),
                     RaisedButton(
                       child: Text(
@@ -65,7 +68,8 @@ class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
                       child: Text(
                         'Incorrect Choice',
                       ),
-                      onPressed: () => widget.incorrectFunction('Incorrect Choice'),
+                      onPressed: () =>
+                          widget.incorrectFunction('Incorrect Choice'),
                     )
                   ]
               ),
@@ -74,16 +78,5 @@ class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
         ),
       ),
     );
-  }
-
-  void _validate(String e) {
-    //need to validate the submitted answer
-    print(e);
-    if (e.compareTo(widget.question.answer) == 0) {
-      widget.correctFunction(e);
-    } else {
-      widget.incorrectFunction(e);
-    }
-    //TODO: should this functions be returned or somehow invoked?
   }
 }
