@@ -29,7 +29,7 @@ class MultipleChoiceQuestion extends StatefulWidget {
 }
 
 class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
-  final TextEditingController textEditingController = new TextEditingController();
+//  final TextEditingController textEditingController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,19 +43,29 @@ class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(widget.question.text),
-                    TextField(
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'type your answer here'
+                    RaisedButton(
+                      child: Text(
+                          'Incorrect Choice',
                       ),
-                      controller: textEditingController,
+                      onPressed: () => widget.incorrectFunction('Incorrect Choice'),
                     ),
                     RaisedButton(
                       child: Text(
-                          'Submit'
+                        'Incorrect Choice',
                       ),
-                      onPressed: () => _validate(textEditingController.toString()),
+                      onPressed: () => widget.incorrectFunction('Incorrect Choice'),
+                    ),
+                    RaisedButton(
+                      child: Text(
+                        'Correct Choice',
+                      ),
+                      onPressed: () => widget.correctFunction('Correct Choice'),
+                    ),
+                    RaisedButton(
+                      child: Text(
+                        'Incorrect Choice',
+                      ),
+                      onPressed: () => widget.incorrectFunction('Incorrect Choice'),
                     )
                   ]
               ),
@@ -68,8 +78,7 @@ class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
 
   void _validate(String e) {
     //need to validate the submitted answer
-    print(textEditingController.text);
-    textEditingController.clear();
+    print(e);
     if (e.compareTo(widget.question.answer) == 0) {
       widget.correctFunction(e);
     } else {
