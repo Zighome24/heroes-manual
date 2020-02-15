@@ -41,7 +41,6 @@ class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
               padding: EdgeInsets.all(20.0),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(widget.question.text),
                     RaisedButton(
