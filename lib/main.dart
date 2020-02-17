@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
+import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/lesson/lesson.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         Screening.route : (context) => Screening(),
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
         ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
+        ExampleMCQuizQuestion.route : (context) => ExampleMCQuizQuestion(),
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         LessonPage.route : (context) => LessonPage(),
