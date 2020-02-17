@@ -94,6 +94,12 @@ class Question {
   final dynamic answer;
 
   Question({this.text, this.type, this.answer});
+  //TODO: remove plain constructor, as it is simply for testing
+  /*Question.plain(String text, String type, String answer) {
+    this.text = text;
+    this.type = type;
+    this.answer = answer;
+  }*/
 
   Question.fromJson(Map<String, dynamic> json)
     : text = (json['text'] as String),
