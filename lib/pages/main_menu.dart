@@ -8,7 +8,7 @@ import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
-
+import 'package:heroes_manual/pages/laws.dart';
 
 class MainMenu extends StatelessWidget {
 
@@ -55,7 +55,12 @@ class MainMenu extends StatelessWidget {
               },
               child: Text('Hotlines'),
             ),
-
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, Laws.route);
+              },
+              child: Text('Laws'),
+            ),
             RaisedButton(
               onPressed: () {
                 Navigator.pushNamed(context, Organizations.route);

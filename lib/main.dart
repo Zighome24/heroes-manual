@@ -11,6 +11,7 @@ import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/organizations.dart';
+import 'package:heroes_manual/pages/laws.dart';
 
 void main() => runApp(MyApp());
 
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         LessonPage.route : (context) => LessonPage(),
+        Laws.route : (context) => Laws(),
       },
     );
   }
