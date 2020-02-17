@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
+import 'package:heroes_manual/pages/lesson/lesson.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quiz_start.dart';
-import 'package:heroes_manual/pages/lesson_start.dart';
+import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
+import 'package:heroes_manual/pages/organizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,12 +29,15 @@ class MyApp extends StatelessWidget {
         '/' : (context) => MainMenu(),
         '/screening_page' : (context) => Screening(),
         '/quiz_start' : (context) => QuizStart(),
-        '/lesson_start' : (context) => LessonStart(),
+        LessonStart.route : (context) => LessonStart(),
         '/about' : (context) => About(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
         '/example_quiz_question' : (context) => ExampleQuizQuestion(),
         '/example_mc_quiz_question' : (context) => ExampleMCQuizQuestion(),
-    },
+        '/organizations' : (context) => Organizations(),
+        Organizations.route : (context) => Organizations(),
+        LessonPage.route : (context) => LessonPage(),
+      },
     );
   }
 }

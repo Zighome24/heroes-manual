@@ -9,8 +9,8 @@ class MultipleChoiceQuestion extends StatefulWidget {
 
   //TODO: types of functions below may need to be VoidCallback
   //TODO: do the two functions below need to take in Strings? For example? For actual production?
-  final Function(String) correctFunction;
-  final Function(String) incorrectFunction;
+  final Function correctFunction;
+  final Function incorrectFunction;
 
   MultipleChoiceQuestion({
     Key key,
