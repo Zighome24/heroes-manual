@@ -27,12 +27,12 @@ class MyApp extends StatelessWidget {
       routes: {
         // All of the navigation routes for the app will go here.
         '/' : (context) => MainMenu(),
-        '/screening_page' : (context) => Screening(),
-        '/quiz_start' : (context) => QuizStart(),
+        Screening.route : (context) => Screening(),
+        QuizStart.route : (context) => QuizStart(),
         LessonStart.route : (context) => LessonStart(),
-        '/about' : (context) => About(),
-        '/screening_page' : (context) => Screening(),
-        '/perpetrator_present' : (context) => PerpetratorPresent(),
+        About.route : (context) => About(),
+        Screening.route : (context) => Screening(),
+        PerpetratorPresent.route : (context) => PerpetratorPresent(),
         ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
