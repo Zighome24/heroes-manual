@@ -3,9 +3,8 @@ import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
-class Screening extends StatelessWidget {
-  static const String route = '/screening_page';
-
+class Organizations extends StatelessWidget {
+  static const String route = '/organizations';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +12,7 @@ class Screening extends StatelessWidget {
         showLeading: true,
         showTrailing: true,
         leadingAction: () => Navigator.pop(context),
+        trailingAction: () => debugPrint("something goes here, check task in Zenhub"),
       ),
       body: Center(
         child: Column(
@@ -20,26 +20,26 @@ class Screening extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Will be a list of things to look for in a potential victim of family violence.',
-              style: new TextStyle(
-                color: purple.shade500,
-                fontSize: 20
-              )
+                'Will be a list of organizations',
+                style: new TextStyle(
+                    color: Colors.deepPurpleAccent,
+                    fontSize: 20
+                )
             ),
             ListView(
               shrinkWrap: true,
               children: <Widget>[
                 ListTile(
                   leading: Icon(Icons.label),
-                  title: Text('Sign 1'),
+                  title: Text('Organization 1'),
                 ),
                 ListTile(
                   leading: Icon(Icons.label),
-                  title: Text('Sign 2'),
+                  title: Text('Organization 2'),
                 ),
                 ListTile(
                   leading: Icon(Icons.label),
-                  title: Text('Sign 3'),
+                  title: Text('Organization 3'),
                 ),
               ],
             ),
