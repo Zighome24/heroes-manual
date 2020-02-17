@@ -25,32 +25,18 @@ class ExampleQuizQuestion extends StatelessWidget {
           children: <Widget>[
             Expanded(
               flex: 1,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: accent.shade100,
-                        border: Border.all(
-                          width: 2.0,
-                          color: accent,
-                        ),
-                      ),
-                        child: FillInBlankQuestion(
-                          question: Question.fromJson({
-                            'text':  'Does the safety plan include the concepts: protect '
-                                'plan from abuser, share with trusted person, and save'
-                                'time in emergencies?',
-                            'type': 'fill_in_blank',
-                            'answer': 'yes'
-                          }), correctFunction: print,
-                          incorrectFunction: print,
-                        ),
-                      //),
-                    ),
-                  ),
-                ],
+              child: Container(
+                child: FillInBlankQuestion(
+                  question: Question.fromJson({
+                    'text':  'Does the safety plan include the concepts: protect '
+                        'plan from abuser, share with trusted person, and save'
+                        'time in emergencies?',
+                    'type': 'fill_in_blank',
+                    'answer': 'yes'
+                  }), correctFunction: print,
+                  incorrectFunction: print,
+                ),
+                //),
               ),
             ),
           ],
