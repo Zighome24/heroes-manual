@@ -4,7 +4,7 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
 class Laws extends StatelessWidget {
-  static const String route = '/organizations';
+  static const String route = '/laws';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
