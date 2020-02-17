@@ -8,7 +8,7 @@ import 'package:heroes_manual/pages/quiz_start.dart';
 import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/laws.dart';
-
+import 'package:heroes_manual/pages/organizations.dart';
 
 
 void main() => runApp(MyApp());
@@ -33,6 +33,8 @@ class MyApp extends StatelessWidget {
         '/about' : (context) => About(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
         '/laws' : (context) => Laws(),
+        '/organizations' : (context) => Organizations(),
+        Organizations.route : (context) => Organizations(),
         LessonPage.route : (context) => LessonPage(),
         Laws.route : (context) => Laws(),
 
