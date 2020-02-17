@@ -9,6 +9,7 @@ import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quiz_start.dart';
 import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
+import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/organizations.dart';
 
 void main() => runApp(MyApp());
@@ -27,14 +28,15 @@ class MyApp extends StatelessWidget {
       routes: {
         // All of the navigation routes for the app will go here.
         '/' : (context) => MainMenu(),
-        '/screening_page' : (context) => Screening(),
-        '/quiz_start' : (context) => QuizStart(),
+        Screening.route : (context) => Screening(),
+        QuizStart.route : (context) => QuizStart(),
         LessonStart.route : (context) => LessonStart(),
-        '/about' : (context) => About(),
-        '/perpetrator_present' : (context) => PerpetratorPresent(),
-        '/example_quiz_question' : (context) => ExampleQuizQuestion(),
-        '/example_mc_quiz_question' : (context) => ExampleMCQuizQuestion(),
-        '/organizations' : (context) => Organizations(),
+        About.route : (context) => About(),
+        Screening.route : (context) => Screening(),
+        PerpetratorPresent.route : (context) => PerpetratorPresent(),
+        ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
+        ExampleMCQuizQuestion.route : (context) => ExampleQuizQuestion(),
+        Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         LessonPage.route : (context) => LessonPage(),
       },
