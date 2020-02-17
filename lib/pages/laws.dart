@@ -22,7 +22,7 @@ class Laws extends StatelessWidget {
             Text(
                 'Will be a list of laws',
                 style: new TextStyle(
-                    color: Colors.deepPurpleAccent,
+                    color: purple.shade500,
                     fontSize: 20
                 )
             ),
