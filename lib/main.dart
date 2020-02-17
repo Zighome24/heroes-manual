@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
+import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/lesson/lesson.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
@@ -32,8 +33,8 @@ class MyApp extends StatelessWidget {
         '/about' : (context) => About(),
         '/screening_page' : (context) => Screening(),
         '/perpetrator_present' : (context) => PerpetratorPresent(),
+        ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
         Hotlines.route : (context) => Hotlines(),
-        '/organizations' : (context) => Organizations(),
         Organizations.route : (context) => Organizations(),
         LessonPage.route : (context) => LessonPage(),
       },
