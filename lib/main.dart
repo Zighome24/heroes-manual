@@ -3,6 +3,7 @@ import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/lesson/lesson.dart';
+import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
@@ -28,7 +29,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // All of the navigation routes for the app will go here.
-        '/' : (context) => MainMenu(),
+        //todo: change root route to MainMenu and get rid of DevMainMenu
+        '/' : (context) => DevMainMenu(),
+        MainMenu.route : (context) => MainMenu(),
         Screening.route : (context) => Screening(),
         QuizStart.route : (context) => QuizStart(),
         LessonStart.route : (context) => LessonStart(),

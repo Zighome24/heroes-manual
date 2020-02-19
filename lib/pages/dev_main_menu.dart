@@ -9,8 +9,9 @@ import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/laws.dart';
+import 'package:heroes_manual/pages/main_menu.dart';
 
-class MainMenu extends StatelessWidget {
+class DevMainMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,11 @@ class MainMenu extends StatelessWidget {
           children: <Widget>[
             Text(
               'Welcome to Heroes\' Manual',
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, MainMenu.route);
+              },
             ),
             RaisedButton(
               onPressed: () {
