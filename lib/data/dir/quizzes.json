@@ -14,6 +14,11 @@
           "All of the above"
         ],
         "correct": "All of the above"
+      },
+      {
+        "text": "2 + 2 = ?",
+        "type": "f",
+        "correct": "4"
       }
     ]
   },
@@ -24,8 +29,7 @@
       {
         "text": "At what number can you reach the organization?",
         "type": "f",
-        "answer": "999",
-        "correct": "All of the above"
+        "correct": "999"
       }
     ]
   }

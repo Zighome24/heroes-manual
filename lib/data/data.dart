@@ -10,6 +10,10 @@ Future<String> loadQuizzes() {
   return rootBundle.loadString('lib/data/dir/quizzes.json');
 }
 
+// ---------------------------------------------
+// TRAINING
+// ---------------------------------------------
+
 class Lesson {
   final List<Card> cards;
   final String summary;
@@ -43,7 +47,7 @@ class Lesson {
     return this.summary.hashCode * (this.cards.length + 1);
   }
 
-  static final emptyLesson = Lesson(cards: [], summary: "");
+  static final emptyLesson = Lesson(cards: [], title: "", summary: "");
 }
 
 class Card {
@@ -57,14 +61,20 @@ class Card {
       source = (json['source'] as String);
 }
 
+// ---------------------------------------------
+// QUIZZES
+// ---------------------------------------------
+
 class Quiz {
   final List<Question> questions;
+  final String title;
   final String summary;
 
-  Quiz({this.questions, this.summary});
+  Quiz({this.questions, this.title, this.summary});
 
   Quiz.fromJson(Map<String, dynamic> json)
     : questions = (json['questions'] as List).map((q) => Question.fromJson(q)),
+      title = (json['title'] as String),
       summary = (json['summary'] as String);
 
   static Quiz _quizFactory(String json, String quizName) {
@@ -86,14 +96,19 @@ class Quiz {
   int get hashCode {
     return this.summary.hashCode * (this.questions.length + 1);
   }
+
+  static final emptyQuiz = Quiz(questions: [], title: "", summary: "");
 }
 
+/// @Question This represents the Question model, including its representative types
+/// the type 'mc' will have options filled, the type 'f' will not use options, just correct
 class Question {
   final String text;
   final String type;
-  final dynamic answer;
+  final List<String> options;
+  final String correct;
 
-  Question({this.text, this.type, this.answer});
+  Question({this.text, this.type, this.options, this.correct});
   //TODO: remove plain constructor, as it is simply for testing
   /*Question.plain(String text, String type, String answer) {
     this.text = text;
@@ -104,5 +119,6 @@ class Question {
   Question.fromJson(Map<String, dynamic> json)
     : text = (json['text'] as String),
       type = (json['type'] as String),
-      answer = json['answer'];
+      options = (json['answer'] as List<String>),
+      correct = (json['correct'] as String);
 }

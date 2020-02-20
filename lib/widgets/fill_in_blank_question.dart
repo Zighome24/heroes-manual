@@ -87,7 +87,7 @@ class _FillInBlankState extends State<FillInBlankQuestion> {
     //need to validate the submitted answer
     print(textEditingController.text);
     textEditingController.clear();
-    if (e.compareTo(widget.question.answer) == 0) {
+    if (e.compareTo(widget.question.correct) == 0) {
       widget.correctFunction(e);
     } else {
       widget.incorrectFunction(e);
