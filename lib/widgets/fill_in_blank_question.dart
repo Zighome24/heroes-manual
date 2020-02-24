@@ -80,6 +80,7 @@ class FillInBlankQuestion extends StatelessWidget {
   void _validate(String e) {
     //need to validate the submitted answer
     textEditingController.clear();
+    WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
     if (e == question.correct) {
       correctFunction();
     } else {
