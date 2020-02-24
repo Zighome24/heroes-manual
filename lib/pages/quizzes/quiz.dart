@@ -53,8 +53,8 @@ class _QuizState extends State<QuizPage> {
                       flex: 3,
                       child: SingleChildScrollView(
                         child: Text(
-                          correct
-                              ? "Well done!" : quiz.questions[_question].text, //TODO: update quiz to include lesson information in the quiz file
+                          correct ? "Well done!"
+                              : quiz.questions[_question].informativeMessage,
                           style: TextStyle(
                             fontSize: 18.0,
                             color: purple.shade500),

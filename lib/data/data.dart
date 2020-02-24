@@ -105,10 +105,11 @@ class Quiz {
 class Question {
   final String text;
   final String type;
-  final List<String> options;
+  final List<String> options; //used if the type of question is 'mc'
   final String correct;
+  final String informativeMessage;
 
-  Question({this.text, this.type, this.options, this.correct});
+  Question({this.text, this.type, this.options, this.correct, this.informativeMessage});
   //TODO: remove plain constructor, as it is simply for testing
   /*Question.plain(String text, String type, String answer) {
     this.text = text;
@@ -120,5 +121,6 @@ class Question {
     : text = (json['text'] as String),
       type = (json['type'] as String),
       options = (json['options'] as List)?.map((str) => str as String)?.toList(),
-      correct = (json['correct'] as String).trim();
+      correct = (json['correct'] as String).trim(),
+      informativeMessage = (json['info'] as String);
 }
