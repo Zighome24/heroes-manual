@@ -6,7 +6,7 @@
       {
         "text": "What is the cost of domestic violence?",
         "type": "mc",
-        "answer":
+        "options":
         [
           "Human Lives",
           "Money",
@@ -20,7 +20,8 @@
         "type": "f",
         "correct": "4"
       }
-    ]
+    ],
+    "summary": "A quiz on the economic impact of DV."
   },
   "Organizations":
   {
@@ -31,6 +32,7 @@
         "type": "f",
         "correct": "999"
       }
-    ]
+    ],
+    "summary": "A quiz on the organizations that help DV."
   }
 }

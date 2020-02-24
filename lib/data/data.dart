@@ -119,6 +119,6 @@ class Question {
   Question.fromJson(Map<String, dynamic> json)
     : text = (json['text'] as String),
       type = (json['type'] as String),
-      options = (json['answer'] as List<String>),
+      options = (json['options'] as List<String>),
       correct = (json['correct'] as String);
 }
