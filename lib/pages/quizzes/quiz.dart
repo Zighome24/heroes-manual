@@ -18,6 +18,14 @@ class _QuizState extends State<QuizPage> {
 
   List<bool> _answers = List();
 
+  correct() {
+    debugPrint("correct");
+  }
+
+  incorrect() {
+    debugPrint("incorrect");
+  }
+
   @override
   Widget build(BuildContext context) {
     final Quiz _quiz = ModalRoute.of(context).settings.arguments as Quiz;
@@ -27,15 +35,15 @@ class _QuizState extends State<QuizPage> {
       case "f": question =
           FillInBlankQuestion(
             question: _quiz.questions[_question],
-            correctFunction: () {debugPrint("correct");},
-            incorrectFunction: () {debugPrint("incorrect");}
+            correctFunction: correct,
+            incorrectFunction: incorrect
           );
           break;
       case "mc": question =
           MultipleChoiceQuestion(
             question: _quiz.questions[_question],
-            correctFunction: () {debugPrint("correct");},
-            incorrectFunction: () {debugPrint("incorrect");}
+            correctFunction: correct,
+            incorrectFunction: incorrect
           );
           break;
       default:
@@ -48,21 +56,15 @@ class _QuizState extends State<QuizPage> {
     return Scaffold(
       appBar: HMAppBar(
         showLeading: true,
-        leadingAction: (context) => Navigator.pop(context),
+        leadingAction: () => Navigator.pop(context),
         showTrailing: true,
         trailingAction: null,
         title: _quiz.title,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Spacer(),
-          question,
-          Spacer(),
-        ],
+      body: Center(
+        child: question,
       ),
-      bottomNavigationBar: HMBottomNavBar(),
+      bottomNavigationBar: HMBottomNavBar()
     );
   }
 }

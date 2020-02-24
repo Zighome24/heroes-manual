@@ -72,13 +72,13 @@ class Quiz {
 
   Quiz({this.questions, this.title, this.summary});
 
-  Quiz.fromJson(Map<String, dynamic> json)
-    : questions = (json['questions'] as List).map((q) => Question.fromJson(q)),
-      title = (json['title'] as String),
+  Quiz.fromJson(Map<String, dynamic> json, String quizName)
+    : questions = (json['questions'] as List).map((q) => Question.fromJson(q)).toList(),
+      title = quizName,
       summary = (json['summary'] as String);
 
   static Quiz _quizFactory(String json, String quizName) {
-    return Quiz.fromJson(jsonDecode(json)[quizName]);
+    return Quiz.fromJson(jsonDecode(json)[quizName], quizName);
   }
 
   static Future<Quiz> localQuizFactory(String quizName) {
@@ -119,6 +119,6 @@ class Question {
   Question.fromJson(Map<String, dynamic> json)
     : text = (json['text'] as String),
       type = (json['type'] as String),
-      options = (json['options'] as List<String>),
-      correct = (json['correct'] as String);
+      options = (json['options'] as List)?.map((str) => str as String)?.toList(),
+      correct = (json['correct'] as String).trim();
 }
