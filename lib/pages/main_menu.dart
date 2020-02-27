@@ -17,6 +17,9 @@ class MainMenu extends StatelessWidget {
     return Scaffold(
       appBar: HMAppBar(
         showTrailing: true,
+        showLeading: true,
+        leadingAction: () => Navigator.pushNamed(context, About.route),
+        leadingIcon: Icons.info_outline,
       ),
       body: Center(
         child: Column(
