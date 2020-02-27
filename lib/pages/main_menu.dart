@@ -48,12 +48,6 @@ class MainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, About.route);
-              },
-              child: Text('About'),
-            ),
-            RaisedButton(
-              onPressed: () {
                 Navigator.pushNamed(context, Hotlines.route);
               },
               child: Text('Hotlines'),
