@@ -24,8 +24,8 @@ class _LessonState extends State<LessonPage> {
     return Scaffold(
         appBar: HMAppBar(
           showLeading: true,
-          leadingAction: () { Navigator.pop(context); },
-          showTrailing: true,
+          leadingAction: () => Navigator.pop(context),
+          showTrailing: false,
           trailingAction: null, // put source navigation here
           title: _lesson.title,
         ),

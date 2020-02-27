@@ -1,28 +1,30 @@
 {
-  "Economic Impact":
-  {
-    "cards":
-    [
-      {
-        "text": "The economic impact of DV is hard on the US.",
-        "source": "Justin Ziegler"
-      },
-      {
-        "text": "DV is bad because it is.",
-        "source": "Justin Ziegler"
-      }
-    ],
-    "summary": "Economic Impact on DV."
-  },
-  "Organizations":
-  {
-    "summary": "Organizations helping DV victims.",
-    "cards":
-    [
-      {
-        "text": "You can reach the organization at 999",
-        "source": "Justin Ziegler"
-      }
-    ]
-  }
+  "trainings": [
+    {
+      "title": "Economic Impact",
+      "summary": "Economic Impact on DV.",
+      "cards":
+      [
+        {
+          "text": "The economic impact of DV is hard on the US.",
+          "source": "Justin Ziegler"
+        },
+        {
+          "text": "DV is bad because it is.",
+          "source": "Justin Ziegler"
+        }
+      ]
+    },
+    {
+      "title": "Organizations",
+      "summary": "Organizations helping DV victims.",
+      "cards":
+      [
+        {
+          "text": "You can reach the organization at 999",
+          "source": "Justin Ziegler"
+        }
+      ]
+    }
+  ]
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/organizations.dart';
-import 'package:heroes_manual/pages/quiz_start.dart';
+import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/about.dart';
@@ -28,11 +28,6 @@ class DevMainMenu extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, MainMenu.route);
-              },
-            ),
-            RaisedButton(
-              onPressed: () {
                 Navigator.pushNamed(context, Screening.route);
               },
               child: Text('Screening Page'),
@@ -45,7 +40,7 @@ class DevMainMenu extends StatelessWidget {
             ),
             RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, QuizStart.route);
+                  Navigator.pushNamed(context, QuizStart.route, arguments: "Economic Impact");
                 },
                 child: Text('Quiz')
             ),

@@ -1,32 +1,43 @@
 {
-  "Economic Impact":
-  {
-    "questions":
-    [
-      {
-        "text": "What is the cost of domestic violence?",
-        "type": "mc",
-        "answer":
-        [
-          "Human Lives",
-          "Money",
-          "Relationships",
-          "All of the above"
-        ],
-        "correct": "All of the above"
-      }
-    ]
-  },
-  "Organizations":
-  {
-    "questions":
-    [
-      {
-        "text": "At what number can you reach the organization?",
-        "type": "f",
-        "answer": "999",
-        "correct": "All of the above"
-      }
-    ]
-  }
+  "quizzes": [
+    {
+      "title": "Economic Impact",
+      "questions":
+      [
+        {
+          "text": "What is the cost of domestic violence?",
+          "type": "mc",
+          "options":
+          [
+            "Human Lives",
+            "Money",
+            "Relationships",
+            "All of the above"
+          ],
+          "correct": "All of the above",
+          "info": "All parties involved in domestic violence are affected in some way or another."
+        },
+        {
+          "text": "2 + 2 = ?",
+          "type": "f",
+          "correct": "4",
+          "info": "Just do the math, duh."
+        }
+      ],
+      "summary": "A quiz on the economic impact of DV."
+    },
+    {
+      "title": "Organizations",
+      "questions":
+      [
+        {
+          "text": "At what number can you reach the organization?",
+          "type": "f",
+          "correct": "999",
+          "info": "Its the number of the organization, they can be reached at."
+        }
+      ],
+      "summary": "A quiz on the organizations that help DV."
+    }
+  ]
 }
