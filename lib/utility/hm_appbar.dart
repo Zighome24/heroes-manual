@@ -33,10 +33,7 @@ class HMAppBar extends AppBar {
         iconSize: 28,
       ) : Container(),
       actions: <Widget>[showTrailing ? IconButton(
-        onPressed: () {
-          //Navigator.pushNamed(context, "/tutorial");
-          debugPrint("Tutorial Navigation, uncomment line above when tutorial made");
-        },
+        onPressed: trailingAction,
         icon: Icon(
           trailingIcon,
           color: purple.shade500,
