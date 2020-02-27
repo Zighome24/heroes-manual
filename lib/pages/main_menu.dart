@@ -16,7 +16,7 @@ class MainMenu extends StatefulWidget {
 }
 
 class _MainMenuState extends State<MainMenu> {
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +24,26 @@ class _MainMenuState extends State<MainMenu> {
         showTrailing: true,
       ),
       body: SafeArea(
+        // TODO: consider using ListView.separated
         child: ListView(
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             Container(
-
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  // little cards for each thing
+                ],
+              ),
             ),
+            Container(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  // little cards for things
+                ],
+              )
+            )
           ]
         ),
       ),
