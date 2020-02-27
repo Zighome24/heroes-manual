@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:core';
 import 'package:flutter/services.dart' show rootBundle;
 
-Future<String> loadLessons() {
+Future<String> loadLessonString() {
   return rootBundle.loadString('lib/data/dir/lessons.json');
 }
 
@@ -26,7 +26,8 @@ class Lesson {
       summary = (json['summary'] as String),
       title = (json['title'] as String);
 
-  static List<Lesson> _loadLessons(String json) {
+  // TODO: use this one to pull lesson names -> [].map(lesson -> lesson.title)
+  static List<Lesson> loadLessons(String json) {
     return ((jsonDecode(json))["trainings"] as List<dynamic>)
         .map((obj) => Lesson.fromJson(obj as Map<String, dynamic>)).toList();
   }
@@ -36,8 +37,8 @@ class Lesson {
   }
 
   static Future<Lesson> localLessonFactory(String lessonName) {
-    return loadLessons().then((json) =>
-        _loadLessons(json).firstWhere((training) => training.title == lessonName));
+    return loadLessonString().then((json) =>
+        loadLessons(json).firstWhere((training) => training.title == lessonName));
   }
 
   @override
