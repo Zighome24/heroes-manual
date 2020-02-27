@@ -21,18 +21,23 @@ class Lesson {
 
   Lesson({this.cards, this.summary, this.title});
 
-  Lesson.fromJson(Map<String, dynamic> json, String lessonName)
+  Lesson.fromJson(Map<String, dynamic> json)
     : cards = ((json['cards']) as List).map((l) => Card.fromJson(l)).toList(),
       summary = (json['summary'] as String),
-      title = lessonName;
+      title = (json['title'] as String);
 
+  static List<Lesson> _loadLessons(String json) {
+    return ((jsonDecode(json))["trainings"] as List<dynamic>)
+        .map((obj) => Lesson.fromJson(obj as Map<String, dynamic>)).toList();
+  }
 
-  static Lesson _lessonFactory(String json, String lessonName) {
-    return Lesson.fromJson((jsonDecode(json))[lessonName], lessonName);
+  static Lesson _lessonFactory(String json) {
+    return Lesson.fromJson(jsonDecode(json));
   }
 
   static Future<Lesson> localLessonFactory(String lessonName) {
-    return loadLessons().then((json) => _lessonFactory(json, lessonName));
+    return loadLessons().then((json) =>
+        _loadLessons(json).firstWhere((training) => training.title == lessonName));
   }
 
   @override
@@ -72,17 +77,23 @@ class Quiz {
 
   Quiz({this.questions, this.title, this.summary});
 
-  Quiz.fromJson(Map<String, dynamic> json, String quizName)
+  Quiz.fromJson(Map<String, dynamic> json)
     : questions = (json['questions'] as List).map((q) => Question.fromJson(q)).toList(),
-      title = quizName,
+      title = (json['title'] as String),
       summary = (json['summary'] as String);
 
-  static Quiz _quizFactory(String json, String quizName) {
-    return Quiz.fromJson(jsonDecode(json)[quizName], quizName);
+  static List<Quiz> _loadQuizzes(String json) {
+    return ((jsonDecode(json))["quizzes"] as List<dynamic>)
+        .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
+  }
+
+  static Quiz _quizFactory(String json) {
+    return Quiz.fromJson(jsonDecode(json));
   }
 
   static Future<Quiz> localQuizFactory(String quizName) {
-    return loadQuizzes().then((json) => _quizFactory(json, quizName));
+    return loadQuizzes().then((json) =>
+        _loadQuizzes(json).firstWhere((quiz) => quiz.title == quizName));
   }
 
   @override
