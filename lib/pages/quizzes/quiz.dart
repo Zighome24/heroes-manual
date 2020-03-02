@@ -209,7 +209,7 @@ class _QuizState extends State<QuizPage> {
                             onPressed: () { Navigator.popAndPushNamed(context, LessonStart.route, arguments: _quiz.title); },
                             color: purple.shade500,
                             child: Text(
-                                "Return to training",
+                                "Go to training",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16
