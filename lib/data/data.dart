@@ -18,13 +18,15 @@ class Lesson {
   final List<Card> cards;
   final String summary;
   final String title;
+  final String sources;
 
-  Lesson({this.cards, this.summary, this.title});
+  Lesson({this.cards, this.summary, this.title, this.sources});
 
   Lesson.fromJson(Map<String, dynamic> json)
     : cards = ((json['cards']) as List).map((l) => Card.fromJson(l)).toList(),
       summary = (json['summary'] as String),
-      title = (json['title'] as String);
+      title = (json['title'] as String),
+      sources = (json['sources'] as String);
 
   static List<Lesson> _loadLessons(String json) {
     return ((jsonDecode(json))["trainings"] as List<dynamic>)
@@ -44,6 +46,8 @@ class Lesson {
   bool operator ==(other) {
     return (other is Lesson)
         && this.summary == other.summary
+        && this.title == other.title
+        && this.sources == other.sources
         && this.cards.length == other.cards.length;
   }
 
@@ -52,18 +56,16 @@ class Lesson {
     return this.summary.hashCode * (this.cards.length + 1);
   }
 
-  static final emptyLesson = Lesson(cards: [], title: "", summary: "");
+  static final emptyLesson = Lesson(cards: [], title: "", summary: "", sources: "");
 }
 
 class Card {
   final String text;
-  final String source;
 
-  Card({this.text, this.source});
+  Card({this.text});
 
   Card.fromJson(Map<String, dynamic> json)
-    : text = (json['text'] as String),
-      source = (json['source'] as String);
+    : text = (json['text'] as String);
 }
 
 // ---------------------------------------------
@@ -74,13 +76,15 @@ class Quiz {
   final List<Question> questions;
   final String title;
   final String summary;
+  final String sources;
 
-  Quiz({this.questions, this.title, this.summary});
+  Quiz({this.questions, this.title, this.summary, this.sources});
 
   Quiz.fromJson(Map<String, dynamic> json)
     : questions = (json['questions'] as List).map((q) => Question.fromJson(q)).toList(),
       title = (json['title'] as String),
-      summary = (json['summary'] as String);
+      summary = (json['summary'] as String),
+      sources = (json['sources'] as String);
 
   static List<Quiz> _loadQuizzes(String json) {
     return ((jsonDecode(json))["quizzes"] as List<dynamic>)
@@ -108,7 +112,7 @@ class Quiz {
     return this.summary.hashCode * (this.questions.length + 1);
   }
 
-  static final emptyQuiz = Quiz(questions: [], title: "", summary: "");
+  static final emptyQuiz = Quiz(questions: [], title: "", summary: "", sources: "");
 }
 
 /// @Question This represents the Question model, including its representative types
@@ -121,12 +125,6 @@ class Question {
   final String informativeMessage;
 
   Question({this.text, this.type, this.options, this.correct, this.informativeMessage});
-  //TODO: remove plain constructor, as it is simply for testing
-  /*Question.plain(String text, String type, String answer) {
-    this.text = text;
-    this.type = type;
-    this.answer = answer;
-  }*/
 
   Question.fromJson(Map<String, dynamic> json)
     : text = (json['text'] as String),
