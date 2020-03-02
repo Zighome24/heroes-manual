@@ -136,6 +136,7 @@ class _LessonState extends State<LessonPage> {
                   MaterialButton(
                     onPressed: () {
                       setState(() {
+                        _lesson.cards.shuffle();
                         _card = 0;
                       });
                     },
