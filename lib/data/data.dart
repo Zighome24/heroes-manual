@@ -39,7 +39,8 @@ class Lesson {
 
   static Future<Lesson> localLessonFactory(String lessonName) {
     return loadLessons().then((json) =>
-        _loadLessons(json).firstWhere((training) => training.title == lessonName));
+        _loadLessons(json).firstWhere((training) => training.title == lessonName)
+    );
   }
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/pages/lesson/lesson_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -205,7 +206,7 @@ class _QuizState extends State<QuizPage> {
                             )
                         ),
                         MaterialButton(
-                            onPressed: () { debugPrint("Navigate to Lesson"); },
+                            onPressed: () { Navigator.popAndPushNamed(context, LessonStart.route, arguments: _quiz.title); },
                             color: purple.shade500,
                             child: Text(
                                 "Return to training",

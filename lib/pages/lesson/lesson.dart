@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -123,7 +124,7 @@ class _LessonState extends State<LessonPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   MaterialButton(
-                    onPressed: () { debugPrint("Navigate to quiz."); },
+                    onPressed: () { Navigator.popAndPushNamed(context, QuizStart.route, arguments: _lesson.title); },
                     color: purple.shade500,
                     child: Text(
                       "Quiz me!",
