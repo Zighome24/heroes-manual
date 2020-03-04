@@ -52,7 +52,7 @@ class _MainMenuState extends State<MainMenu> {
                      exampleElements);
                   },
                 separatorBuilder: (BuildContext context, int index) => Divider(
-                  color: Colors.black,
+                  color: Colors.white,
                   height: 10,
                   thickness: 10,
                 ),

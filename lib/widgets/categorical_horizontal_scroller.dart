@@ -5,15 +5,16 @@ import 'package:heroes_manual/utility/colors.dart';
 
 class CategoricalHorizontalScroller extends StatelessWidget {
   // TODO: have the number of boxies passed in as constructor argument
-  static const List<String> elements = <String>['A', 'B', 'C', 'D', 'E', 'F',
-    'G', 'H', 'I'];
   static const String section_name = 'Organizations';
   List<String> elementTitlesOrRoutes;
   String categoryTitle;
   bool routes;
 
-  CategoricalHorizontalScroller(this.categoryTitle, this.routes,
-      this.elementTitlesOrRoutes);
+  CategoricalHorizontalScroller(categoryTitle, routes, elementTitlesOrRoutes) {
+    this.categoryTitle = categoryTitle;
+    this.routes = routes;
+    this.elementTitlesOrRoutes = elementTitlesOrRoutes;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
             child: Align(
               alignment: Alignment.center,
               child: Text(
-                  section_name,
+                categoryTitle,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white
@@ -48,7 +49,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
               physics: ScrollPhysics(),
               padding: const EdgeInsets.all(8),
 
-              itemCount: elements.length,
+              itemCount: elementTitlesOrRoutes.length,
               itemBuilder: (BuildContext context, int index) {
                 return ClipRect(
                   child: Container(
@@ -60,7 +61,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                       alignment: Alignment.bottomLeft,
                         padding: EdgeInsets.all(3),
                         child: Text(
-                            'Entry ${elements[index]}',
+                            'Entry ${elementTitlesOrRoutes[index]}',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
