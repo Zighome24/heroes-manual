@@ -35,12 +35,10 @@ class _MainMenuState extends State<MainMenu> {
       ),
       body: SafeArea(
         // TODO: consider using ListView.separated
-        child: Row(
-          children: <Widget>[
-            CategoricalHorizontalScroller()
-          ],
+        child: ClipRect(
+          child: CategoricalHorizontalScroller()
+          ),
         ),
-      ),
       bottomNavigationBar: HMBottomNavBar(isHomeSelected: true),
     );
   }

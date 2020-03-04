@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,31 +9,37 @@ class CategoricalHorizontalScroller extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      child: ListView.separated(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        physics: ScrollPhysics(),
-        padding: const EdgeInsets.all(8),
-        itemCount: elements.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 10,
-              color: Colors.amber[colorCodes[index]],
-            padding: EdgeInsets.all(3),
-            child: Center(
-                child: Text(
-                    'Entry ${elements[index]}'
+    return ClipRect(
+      child: Container(
+        height: 50,
+        child: ListView.separated(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          physics: ScrollPhysics(),
+          padding: const EdgeInsets.all(8),
+          itemCount: elements.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ClipRect(
+              child: Container(
+                margin: const EdgeInsets.all(2),
+                height: 10,
+                  color: Colors.amber[colorCodes[index]],
+                padding: EdgeInsets.all(3),
+                child: Center(
+                    child: Text(
+                        'Entry ${elements[index]}'
+                    ),
                 ),
-            ),
-          );
-        },
-        separatorBuilder: (BuildContext context, int index) => Divider(
-          color: Colors.white,
-          thickness: 3,
-        ),
-      )
+              ),
+            );
+          },
+          separatorBuilder: (BuildContext context, int index) => Divider(
+            color: Colors.black,
+            height: 10,
+            thickness: 10,
+          ),
+        )
+      ),
     );
   }
 }
