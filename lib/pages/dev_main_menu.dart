@@ -74,6 +74,12 @@ class DevMainMenu extends StatelessWidget {
               },
               child: Text('Start the Lesson'),
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, MainMenu.route);
+              },
+              child: Text('Main Menu'),
+            )
           ],
         ),
       ),

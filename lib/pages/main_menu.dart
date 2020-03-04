@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
-
+import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/widgets/categorical_horizontal_scroller.dart';
 
 class MainMenu extends StatefulWidget {
   static const String route = '/fancy_main_menu';
@@ -17,38 +18,30 @@ class MainMenu extends StatefulWidget {
 }
 
 class _MainMenuState extends State<MainMenu> {
+// going to set the state after loading is done
+  List<String> _trainings = new List<String>();
 
   @override
   Widget build(BuildContext context) {
+    Lesson.loadLessonNames().then((lessonNames) {
+      setState(() {
+        _trainings = lessonNames;
+      });
+    });
+
     return Scaffold(
       appBar: HMAppBar(
         showTrailing: true,
       ),
       body: SafeArea(
         // TODO: consider using ListView.separated
-        child: ListView(
-          scrollDirection: Axis.vertical,
+        child: Row(
           children: <Widget>[
-            Container(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  // little cards for each thing
-                ],
-              ),
-            ),
-            Container(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  // little cards for things
-                ],
-              )
-            )
-          ]
+            CategoricalHorizontalScroller()
+          ],
         ),
       ),
-      bottomNavigationBar: HMBottomNavBar(isHomeSelected: true,),
+      bottomNavigationBar: HMBottomNavBar(isHomeSelected: true),
     );
   }
 }

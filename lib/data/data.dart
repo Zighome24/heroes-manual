@@ -41,6 +41,11 @@ class Lesson {
         loadLessons(json).firstWhere((training) => training.title == lessonName));
   }
 
+  static Future<List<String>> loadLessonNames() {
+    return loadLessonString().then((value)
+    => Lesson.loadLessons(value).map((lesson) => lesson.title).toList());
+  }
+
   @override
   bool operator ==(other) {
     return (other is Lesson)

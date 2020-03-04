@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
 import 'package:heroes_manual/pages/lesson/lesson.dart';
-import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
