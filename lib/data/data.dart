@@ -6,7 +6,7 @@ Future<String> loadLessonString() {
   return rootBundle.loadString('lib/data/dir/lessons.json');
 }
 
-Future<String> loadQuizzes() {
+Future<String> loadQuizzesString() {
   return rootBundle.loadString('lib/data/dir/quizzes.json');
 }
 
@@ -41,6 +41,7 @@ class Lesson {
         loadLessons(json).firstWhere((training) => training.title == lessonName));
   }
 
+  // TODO: write similar method for Quizzes
   static Future<List<String>> loadLessonNames() {
     return loadLessonString().then((value)
     => Lesson.loadLessons(value).map((lesson) => lesson.title).toList());
@@ -93,14 +94,25 @@ class Quiz {
         .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
   }
 
+  static List<Quiz> loadQuizzes(String json) {
+    return ((jsonDecode(json))["quizzes"] as List<dynamic>)
+        .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
+  }
+
+  static Future<List<String>> loadQuizNames() {
+    return loadQuizzesString().then((value)
+    => Quiz.loadQuizzes(value).map((quiz) => quiz.title).toList());
+  }
+  
   static Quiz _quizFactory(String json) {
     return Quiz.fromJson(jsonDecode(json));
   }
 
   static Future<Quiz> localQuizFactory(String quizName) {
-    return loadQuizzes().then((json) =>
+    return loadQuizzesString().then((json) =>
         _loadQuizzes(json).firstWhere((quiz) => quiz.title == quizName));
   }
+  
 
   @override
   bool operator ==(other) {
