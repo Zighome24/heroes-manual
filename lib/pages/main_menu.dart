@@ -87,7 +87,6 @@ class _MainMenuState extends State<MainMenu> {
                   ),
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Roles',
-                    elementTitlesOrRoutes: rolesNames,
                     routes: false,
                   )
                 ],
