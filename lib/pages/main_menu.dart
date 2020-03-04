@@ -20,6 +20,10 @@ class MainMenu extends StatefulWidget {
 class _MainMenuState extends State<MainMenu> {
 // going to set the state after loading is done
   List<String> _trainings = new List<String>();
+  List<String> categories = <String>['Organizations', 'Laws', 'Trainings',
+    'Quizzes', 'Roles'];
+  List<String> exampleElements = <String>['Element1', 'Element2', 'Element3',
+  'Element4', 'Element5', 'Element6', 'Element7', 'Element8'];
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +34,31 @@ class _MainMenuState extends State<MainMenu> {
     });
 
     return Scaffold(
-      appBar: HMAppBar(
-        showTrailing: true,
-      ),
+        appBar: HMAppBar(
+          showTrailing: true,
+        ),
       body: SafeArea(
         // TODO: consider using ListView.separated
-        child: ClipRect(
-          child: CategoricalHorizontalScroller()
-          ),
-        ),
+          child: ClipRect(
+            // TODO: pass arguments into CategoricalHoriz to say which
+              child: ListView.separated(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  physics: ScrollPhysics(),
+                  padding: const EdgeInsets.all(8),
+                  itemCount: categories.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return CategoricalHorizontalScroller(categories[index], false,
+                     exampleElements);
+                  },
+                separatorBuilder: (BuildContext context, int index) => Divider(
+                  color: Colors.black,
+                  height: 10,
+                  thickness: 10,
+                ),
+              )
+          )
+      ),
       bottomNavigationBar: HMBottomNavBar(isHomeSelected: true),
     );
   }
