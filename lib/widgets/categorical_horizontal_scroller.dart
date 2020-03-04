@@ -6,15 +6,12 @@ import 'package:heroes_manual/utility/colors.dart';
 class CategoricalHorizontalScroller extends StatelessWidget {
   // TODO: have the number of boxies passed in as constructor argument
   static const String section_name = 'Organizations';
-  List<String> elementTitlesOrRoutes;
-  String categoryTitle;
-  bool routes;
+  final List<String> elementTitlesOrRoutes;
+  final String categoryTitle;
+  final bool routes;
+  final String routeName;
 
-  CategoricalHorizontalScroller(categoryTitle, routes, elementTitlesOrRoutes) {
-    this.categoryTitle = categoryTitle;
-    this.routes = routes;
-    this.elementTitlesOrRoutes = elementTitlesOrRoutes;
-  }
+  CategoricalHorizontalScroller({this.categoryTitle, this.routes, this.elementTitlesOrRoutes, this.routeName});
 
   @override
   Widget build(BuildContext context) {
@@ -26,80 +23,66 @@ class CategoricalHorizontalScroller extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
-            height: 50,
-            color: purple.shade200,
-            child: Align(
-              alignment: Alignment.center,
-              child: Text(
-                categoryTitle,
+              height: 50,
+              color: purple.shade200,
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  categoryTitle,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white
                   ),
-                textAlign: TextAlign.center,
-                textScaleFactor: 2,
-              ),
-            )
+                  textAlign: TextAlign.center,
+                  textScaleFactor: 2,
+                ),
+              )
           ),
           Container(
-            height: scrollingSectionHeight,
-            child: ListView.separated(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              physics: ScrollPhysics(),
-              padding: const EdgeInsets.all(8),
+              height: scrollingSectionHeight,
+              child: ListView.separated(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                physics: ScrollPhysics(),
+                padding: const EdgeInsets.all(8),
 
-              itemCount: elementTitlesOrRoutes.length,
-              itemBuilder: (BuildContext context, int index) {
-                return ClipRect(
-                  child: Container(
-                    width: elementalWidth,
-                    margin: const EdgeInsets.all(2),
+                itemCount: elementTitlesOrRoutes.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ClipRect(
+                    child: Container(
+                      width: elementalWidth,
+                      margin: const EdgeInsets.all(2),
                       color: purple.shade500,
                       padding: EdgeInsets.all(3),
-                    child: Container(
-                      alignment: Alignment.bottomLeft,
-                        padding: EdgeInsets.all(3),
-                        child: Text(
+                      child: GestureDetector(
+                        onTap: () => this.routes ?
+                        Navigator.push(context, elementTitlesOrRoutes[index])
+                            : Navigator.pushNamed(context, routeName, arguments: elementTitlesOrRoutes[index]),
+                        child: Container(
+                          alignment: Alignment.bottomLeft,
+                          padding: EdgeInsets.all(3),
+                          child: Text(
                             'Entry ${elementTitlesOrRoutes[index]}',
-                          style: TextStyle(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
-                            fontSize: 20,
+                              fontSize: 20,
+                            ),
                           ),
                         ),
+                      ),
                     ),
-                  ),
-                );
-              },
-              separatorBuilder: (BuildContext context, int index) => Divider(
-                color: Colors.black,
-                height: 10,
-                thickness: 10,
-              ),
-            )
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) => Divider(
+                  color: Colors.black,
+                  height: 10,
+                  thickness: 10,
+                ),
+              )
           ),
         ],
       ),
     );
   }
 }
-
-/*class ListElement extends StatelessWidget {
-  int r;
-  int g;
-  int b;
-
-  ListElement({this.r, this.g, this.b});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-//      height: 50,
-//      padding: EdgeInsets.fromLTRB(10,10,0,0),
-      margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
-      color: Color.fromRGBO(r, g, b, 1),
-    );
-  }
-}*/
