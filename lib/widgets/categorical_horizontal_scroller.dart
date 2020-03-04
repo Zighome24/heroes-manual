@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/utility/colors.dart';
 
 class CategoricalHorizontalScroller extends StatelessWidget {
   // TODO: have the number of boxies passed in as constructor argument
@@ -23,8 +24,8 @@ class CategoricalHorizontalScroller extends StatelessWidget {
               child: Container(
                 margin: const EdgeInsets.all(2),
                 height: 10,
-                  color: Colors.amber[colorCodes[index]],
-                padding: EdgeInsets.all(3),
+                  color: purple.shade500,
+                  padding: EdgeInsets.all(3),
                 child: Center(
                     child: Text(
                         'Entry ${elements[index]}'
