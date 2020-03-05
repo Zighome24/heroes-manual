@@ -24,7 +24,8 @@
           "info": "Just do the math, duh."
         }
       ],
-      "summary": "A quiz on the economic impact of DV."
+      "summary": "A quiz on the economic impact of DV.",
+      "sources": "Sources go here"
     },
     {
       "title": "Organizations",
@@ -37,7 +38,8 @@
           "info": "Its the number of the organization, they can be reached at."
         }
       ],
-      "summary": "A quiz on the organizations that help DV."
+      "summary": "A quiz on the organizations that help DV.",
+      "sources": "Sources go here"
     }
   ]
 }

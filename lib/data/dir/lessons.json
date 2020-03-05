@@ -6,14 +6,13 @@
       "cards":
       [
         {
-          "text": "The economic impact of DV is hard on the US.",
-          "source": "Justin Ziegler"
+          "text": "The economic impact of DV is hard on the US."
         },
         {
-          "text": "DV is bad because it is.",
-          "source": "Justin Ziegler"
+          "text": "DV is bad because it is."
         }
-      ]
+      ],
+      "sources": "Sources go here"
     },
     {
       "title": "Organizations",
@@ -21,10 +20,10 @@
       "cards":
       [
         {
-          "text": "You can reach the organization at 999",
-          "source": "Justin Ziegler"
+          "text": "You can reach the organization at 999"
         }
-      ]
+      ],
+      "sources": "Sources go here"
     }
   ]
 }
