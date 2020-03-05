@@ -21,9 +21,7 @@ class About extends StatelessWidget {
             Container(
               //TODO: standardize edge insets throughout project
                 padding: const EdgeInsets.all(30.0),
-                child: Text('Created by Team Helping Our Heroes, whose members '
-                    + 'are students of the Georgia Institute of Technology, our '
-                    + 'project, Heroes\' Manual, aims to serve as a quick, '
+                child: Text('Our project, Heroes\' Manual, aims to serve as a quick, '
                     + 'intuitive guide that law enforcement officers and other '
                     + 'service providers can use for resources and instruction '
                     + 'on handling domestic violence situations.',
@@ -32,10 +30,15 @@ class About extends StatelessWidget {
                     style: new TextStyle(color: purple.shade500, fontSize: 20))
             ),
             Container(
-                padding: const EdgeInsets.all(20.0),
-                child: Text('To Be Included: information about the application, team'
-                    + ' and bibliographical sources',
-                    style: new TextStyle(color: accent.shade900, fontSize: 17))
+                padding: const EdgeInsets.all(30.0),
+                child: Text('Junior Design Team 9317: Alex Levine, Sophie Marcus'
+                    + ', Sirila Padi, Paula Ruiz, Justin Ziegler',
+                    style: new TextStyle(color: purple.shade500, fontSize: 20))
+            ),
+            Container(
+                padding: const EdgeInsets.all(30.0),
+                child: Text('Sources',
+                    style: new TextStyle(color: purple.shade500, fontSize: 20))
             ),
           ],
         ),
