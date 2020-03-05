@@ -19,13 +19,11 @@ class About extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              //TODO: standardize edge insets throughout project
                 padding: const EdgeInsets.all(30.0),
                 child: Text('Our project, Heroes\' Manual, aims to serve as a quick, '
                     + 'intuitive guide that law enforcement officers and other '
                     + 'service providers can use for resources and instruction '
                     + 'on handling domestic violence situations.',
-                    //TODO: change the source of the purple color and style to main
                     //  or some standardized/uniform font style for the app
                     style: new TextStyle(color: purple.shade500, fontSize: 20))
             ),

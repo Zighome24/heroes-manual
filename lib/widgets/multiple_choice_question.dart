@@ -1,10 +1,11 @@
 import 'package:heroes_manual/data/data.dart';
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/utility/colors.dart';
 
 //TODO: add source (question content source) navigation button
 // "ValueChanged" callback may be useful to pass data between widgets in same screen
 
-class MultipleChoiceQuestion extends StatefulWidget {
+class MultipleChoiceQuestion extends StatelessWidget {
   final Question question;
 
   //TODO: types of functions below may need to be VoidCallback
@@ -20,61 +21,46 @@ class MultipleChoiceQuestion extends StatefulWidget {
     IconData correctIcon = Icons.check,
     IconData incorrectIcon = Icons.not_interested,
     bool correct,
-  }) : super(
-    key: key,
-  );
-
-  @override
-  _MultipleChoiceState createState() => new _MultipleChoiceState();
-}
-
-class _MultipleChoiceState extends State<MultipleChoiceQuestion> {
-//  final TextEditingController textEditingController = new TextEditingController();
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(20.0),
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(widget.question.text),
-                    RaisedButton(
-                      child: Text(
-                        'Incorrect Choice',
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Spacer(),
+          Expanded(
+            flex: 4,
+              child: SingleChildScrollView(
+                  child: Text(
+                      question.text,
+                      style: TextStyle(
+                          color: purple.shade500,
+                          fontSize: 20.0
                       ),
-                      onPressed: () =>
-                          widget.incorrectFunction('Incorrect Choice'),
+                      softWrap: true,
+                      textAlign: TextAlign.center
+                  )
+              )
+          ),
+          Spacer(),
+          Flexible(
+            flex: 3,
+              child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: question.options.length,
+                itemBuilder: (_, index) =>
+                    RaisedButton(
+                      onPressed: question.options[index] == question.correct ?
+                        correctFunction : incorrectFunction,
+                      child: Text(question.options[index]),
                     ),
-                    RaisedButton(
-                      child: Text(
-                        'Incorrect Choice',
-                      ),
-                      onPressed: () =>
-                          widget.incorrectFunction('Incorrect Choice'),
-                    ),
-                    RaisedButton(
-                      child: Text(
-                        'Correct Choice',
-                      ),
-                      onPressed: () => widget.correctFunction('Correct Choice'),
-                    ),
-                    RaisedButton(
-                      child: Text(
-                        'Incorrect Choice',
-                      ),
-                      onPressed: () =>
-                          widget.incorrectFunction('Incorrect Choice'),
-                    )
-                  ]
-              ),
-            ),
-          ],
-        ),
+              )
+          ),
+        ],
       ),
     );
   }

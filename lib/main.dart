@@ -3,11 +3,13 @@ import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/training/training.dart';
+import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
-import 'package:heroes_manual/pages/quiz_start.dart';
+import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/pages/training/training_start.dart';
+import 'package:heroes_manual/pages/quizzes/quiz.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/organizations.dart';
@@ -29,6 +31,9 @@ class MyApp extends StatelessWidget {
       routes: {
         // All of the navigation routes for the app will go here.
         '/' : (context) => MainMenu(),
+        MainMenu.route : (context) => MainMenu(),
+        //TODO: remove dev main menu
+        DevMainMenu.route : (context) => DevMainMenu(),
         Screening.route : (context) => Screening(),
         QuizStart.route : (context) => QuizStart(),
         TrainingStart.route : (context) => TrainingStart(),
@@ -40,6 +45,7 @@ class MyApp extends StatelessWidget {
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         TrainingPage.route : (context) => TrainingPage(),
+        QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
       },
     );

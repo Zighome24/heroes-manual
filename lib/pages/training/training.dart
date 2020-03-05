@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
+import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -24,8 +25,8 @@ class _TrainingState extends State<TrainingPage> {
     return Scaffold(
         appBar: HMAppBar(
           showLeading: true,
-          leadingAction: () { Navigator.pop(context); },
-          showTrailing: true,
+          leadingAction: () => Navigator.pop(context),
+          showTrailing: false,
           trailingAction: null, // put source navigation here
           title: _training.title,
         ),
@@ -123,7 +124,7 @@ class _TrainingState extends State<TrainingPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   MaterialButton(
-                    onPressed: () { debugPrint("Navigate to quiz."); },
+                    onPressed: () { Navigator.popAndPushNamed(context, QuizStart.route, arguments: _training.title); },
                     color: purple.shade500,
                     child: Text(
                       "Quiz me!",
@@ -136,6 +137,7 @@ class _TrainingState extends State<TrainingPage> {
                   MaterialButton(
                     onPressed: () {
                       setState(() {
+                        _training.cards.shuffle();
                         _card = 0;
                       });
                     },
