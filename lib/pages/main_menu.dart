@@ -79,45 +79,64 @@ class MainMenu extends StatelessWidget {
   }
 
   showOverlay(BuildContext context) {
-    return Overlay.of(context).insert(
-        OverlayEntry(
-            builder: (context) => Material(
-                type: MaterialType.transparency,
-                child: Container(
-                    constraints: BoxConstraints.expand(),
-                    color: Colors.grey.withOpacity(0.6),
-                    child: Padding(
-                        padding: EdgeInsets.only(top: 85.0, bottom: 65.0, right: 15.0, left: 15.0),
-                        child: Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                            child: Padding(
-                                padding: EdgeInsets.all(15.0),
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Flexible(
-                                          flex: 3,
-                                          child: Text('Created by Team Helping Our Heroes, whose members '
-                                              + 'are students of the Georgia Institute of Technology, our '
-                                              + 'project, Heroes\' Manual, aims to serve as a quick, '
-                                              + 'intuitive guide that law enforcement officers and other '
-                                              + 'service providers can use for resources and instruction '
-                                              + 'on handling domestic violence situations.',
-                                              //TODO: change the source of the purple color and style to main
-                                              //  or some standardized/uniform font style for the app
-                                              style: new TextStyle(color: purple.shade500, fontSize: 20))
-                                      ),
-                                    ]
-                                )
-                            )
+    OverlayState overlayState = Overlay.of(context);
+    OverlayEntry overlayEntry;
+    overlayEntry =
+//    return Overlay.of(context).insert(
+      OverlayEntry(
+        builder: (context) => Material(
+          type: MaterialType.transparency,
+          child: Container(
+            constraints: BoxConstraints.expand(),
+            color: Colors.grey.withOpacity(0.6),
+            child: Padding(
+              padding: EdgeInsets.only(top: 85.0, bottom: 65.0, right: 15.0, left: 15.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                child: Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Flexible(
+                        flex: 1,
+                        child: Row(
+                          children: <Widget>[
+                            IconButton(
+                            onPressed: () => overlayEntry.remove(),
+                              icon: Icon(
+                                Icons.arrow_back_ios,
+                                color: purple.shade500,
+                              ),
+                              iconSize: 28,
+                            ),
+                            Spacer()
+                          ]
                         )
-                    )
+                      ),
+                      Expanded(
+                        flex: 7,
+                        child: Text('Created by Team Helping Our Heroes, whose members '
+                            + 'are students of the Georgia Institute of Technology, our '
+                            + 'project, Heroes\' Manual, aims to serve as a quick, '
+                            + 'intuitive guide that law enforcement officers and other '
+                            + 'service providers can use for resources and instruction '
+                            + 'on handling domestic violence situations.',
+                            //TODO: change the source of the purple color and style to main
+                            //  or some standardized/uniform font style for the app
+                            style: new TextStyle(color: purple.shade500, fontSize: 20))
+                      ),
+                    ]
+                  )
                 )
+              )
             )
+          )
         )
-    );
+      );
+    overlayState.insert(overlayEntry);
   }
 }
