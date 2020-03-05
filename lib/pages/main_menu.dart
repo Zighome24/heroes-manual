@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/lesson/lesson_start.dart';
+import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -13,8 +14,6 @@ class MainMenu extends StatefulWidget {
 
   // TODO: add flutter loading icon for app startup - might throw an error if the waiting is so short
   // look at LessonStart for example with empty lesson, if empty - show empty container, that's where the load icon would be I think. Once it loads, set the state
-  // TODO: it will just be loading quiz and lesson names - comes in as a map, just need to get the keys
-  // TODO: ignore icons for cards for now
 
   @override
   State createState() => _MainMenuState();
@@ -44,31 +43,31 @@ class _MainMenuState extends State<MainMenu> {
         showTrailing: true,
       ),
       body: SafeArea(
-        // TODO: consider using ListView.separated
           child: ClipRect(
-            // TODO: pass arguments into CategoricalHoriz to say which
               child: ListView(
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 physics: ScrollPhysics(),
                 padding: const EdgeInsets.all(8),
                 children: <Widget>[
+                  _trainings.length == 0 ? Container() :
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Trainings',
                     routes: false,
                     elementTitlesOrRoutes: _trainings,
-                    routeName: LessonStart.route,
+                    routeTo: LessonStart.route,
                   ),
                   Divider(
                     color: Colors.white,
                     height: 10,
                     thickness: 10,
                   ),
+                  _quizzes.length == 0 ? Container() :
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Quizzes',
                     routes: false,
                     elementTitlesOrRoutes: _quizzes,
-                    routeName: QuizStart.route,
+                    routeTo: QuizStart.route,
                   ),
                   Divider(
                     color: Colors.white,
@@ -87,7 +86,8 @@ class _MainMenuState extends State<MainMenu> {
                   ),
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Roles',
-                    routes: false,
+                    routes: true,
+                    elementTitlesOrRoutes: resourceRoutes,
                   )
                 ],
               )

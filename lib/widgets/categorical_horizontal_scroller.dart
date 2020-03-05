@@ -4,14 +4,13 @@ import 'package:flutter/widgets.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
 class CategoricalHorizontalScroller extends StatelessWidget {
-  // TODO: have the number of boxies passed in as constructor argument
   static const String section_name = 'Organizations';
   final List<String> elementTitlesOrRoutes;
   final String categoryTitle;
   final bool routes;
-  final String routeName;
+  final String routeTo;
 
-  CategoricalHorizontalScroller({this.categoryTitle, this.routes, this.elementTitlesOrRoutes, this.routeName});
+  CategoricalHorizontalScroller({this.categoryTitle, this.routes, this.elementTitlesOrRoutes, this.routeTo});
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +55,14 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                       padding: EdgeInsets.all(3),
                       child: GestureDetector(
                         onTap: () => this.routes ?
-                        Navigator.push(context, elementTitlesOrRoutes[index])
-                            : Navigator.pushNamed(context, routeName, arguments: elementTitlesOrRoutes[index]),
+                        Navigator.pushNamed(context, elementTitlesOrRoutes[index])
+                            : Navigator.pushNamed(context, routeTo,
+                            arguments: elementTitlesOrRoutes[index]),
                         child: Container(
                           alignment: Alignment.bottomLeft,
                           padding: EdgeInsets.all(3),
                           child: Text(
-                            'Entry ${elementTitlesOrRoutes[index]}',
+                            elementTitlesOrRoutes[index].toString(),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -85,4 +85,4 @@ class CategoricalHorizontalScroller extends StatelessWidget {
       ),
     );
   }
-}
+ }
