@@ -12,9 +12,6 @@ import 'package:heroes_manual/utility/main_menu_resc.dart';
 class MainMenu extends StatefulWidget {
   static const String route = '/fancy_main_menu';
 
-  // TODO: add flutter loading icon for app startup - might throw an error if the waiting is so short
-  // look at LessonStart for example with empty lesson, if empty - show empty container, that's where the load icon would be I think. Once it loads, set the state
-
   @override
   State createState() => _MainMenuState();
 }

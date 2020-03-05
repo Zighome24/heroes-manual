@@ -30,9 +30,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // All of the navigation routes for the app will go here.
-        //todo: change root route to MainMenu and get rid of DevMainMenu
         '/' : (context) => MainMenu(),
         MainMenu.route : (context) => MainMenu(),
+        //TODO: remove dev main menu
+        DevMainMenu.route : (context) => DevMainMenu(),
         Screening.route : (context) => Screening(),
         QuizStart.route : (context) => QuizStart(),
         LessonStart.route : (context) => LessonStart(),

@@ -28,7 +28,6 @@ class Lesson {
       title = (json['title'] as String),
       sources = (json['sources'] as String);
 
-  // TODO: use this one to pull lesson names -> [].map(lesson -> lesson.title)
   static List<Lesson> loadLessons(String json) {
     return ((jsonDecode(json))["trainings"] as List<dynamic>)
         .map((obj) => Lesson.fromJson(obj as Map<String, dynamic>)).toList();
@@ -43,7 +42,6 @@ class Lesson {
         loadLessons(json).firstWhere((training) => training.title == lessonName));
   }
 
-  // TODO: write similar method for Quizzes
   static Future<List<String>> loadLessonNames() {
     return loadLessonString().then((value)
     => Lesson.loadLessons(value).map((lesson) => lesson.title).toList());

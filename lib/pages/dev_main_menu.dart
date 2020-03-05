@@ -12,6 +12,7 @@ import 'package:heroes_manual/pages/laws.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 
 class DevMainMenu extends StatelessWidget {
+  static const String route = '/dev_main_menu';
 
   @override
   Widget build(BuildContext context) {
