@@ -2,38 +2,38 @@ import 'dart:convert';
 import 'dart:core';
 import 'package:flutter/services.dart' show rootBundle;
 
-Future<String> loadLessons() {
-  return rootBundle.loadString('lib/data/dir/lessons.json');
+Future<String> loadTrainings() {
+  return rootBundle.loadString('lib/data/dir/trainings.json');
 }
 
 Future<String> loadQuizzes() {
   return rootBundle.loadString('lib/data/dir/quizzes.json');
 }
 
-class Lesson {
+class Training {
   final List<Card> cards;
   final String summary;
   final String title;
 
-  Lesson({this.cards, this.summary, this.title});
+  Training({this.cards, this.summary, this.title});
 
-  Lesson.fromJson(Map<String, dynamic> json, String lessonName)
+  Training.fromJson(Map<String, dynamic> json, String trainingName)
     : cards = ((json['cards']) as List).map((l) => Card.fromJson(l)).toList(),
       summary = (json['summary'] as String),
-      title = lessonName;
+      title = trainingName;
 
 
-  static Lesson _lessonFactory(String json, String lessonName) {
-    return Lesson.fromJson((jsonDecode(json))[lessonName], lessonName);
+  static Training _trainingFactory(String json, String trainingName) {
+    return Training.fromJson((jsonDecode(json))[trainingName], trainingName);
   }
 
-  static Future<Lesson> localLessonFactory(String lessonName) {
-    return loadLessons().then((json) => _lessonFactory(json, lessonName));
+  static Future<Training> localTrainingFactory(String trainingName) {
+    return loadTrainings().then((json) => _trainingFactory(json, trainingName));
   }
 
   @override
   bool operator ==(other) {
-    return (other is Lesson)
+    return (other is Training)
         && this.summary == other.summary
         && this.cards.length == other.cards.length;
   }
@@ -43,7 +43,7 @@ class Lesson {
     return this.summary.hashCode * (this.cards.length + 1);
   }
 
-  static final emptyLesson = Lesson(cards: [], summary: "");
+  static final emptyTraining = Training(cards: [], summary: "");
 }
 
 class Card {
@@ -77,7 +77,7 @@ class Quiz {
 
   @override
   bool operator ==(other) {
-    return (other is Lesson)
+    return (other is Training)
         && this.summary == other.summary
         && this.questions.length == other.cards.length;
   }
