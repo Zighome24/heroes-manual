@@ -55,8 +55,8 @@ class QuizStart extends StatelessWidget {
                   + 'on the economic impacts of domestic violence '
                   + 'across families and individuals across the '
                   + 'United States. You can prepare for the quiz '
-                  + 'by studying the Economic Impact lesson in '
-                  + 'the lessons section of the application.',
+                  + 'by studying the Economic Impact training in '
+                  + 'the training section of the application.',
                   textAlign: TextAlign.center,
                 ),
               ),
