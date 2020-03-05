@@ -8,4 +8,5 @@ import 'package:heroes_manual/pages/about.dart';
 
 const resourceRoutes = [Organizations.route, Hotlines.route, Laws.route];
 // TODO: debug routes for screening - remove for production
-const debugScreenRoutes = [Screening.route, PerpetratorPresent.route, About.route, DevMainMenu.route];
+const debugScreenRoutes = [Screening.route, PerpetratorPresent.route,
+  About.route, DevMainMenu.route];

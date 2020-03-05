@@ -10,7 +10,12 @@ class CategoricalHorizontalScroller extends StatelessWidget {
   final bool routes;
   final String routeTo;
 
-  CategoricalHorizontalScroller({this.categoryTitle, this.routes, this.elementTitlesOrRoutes, this.routeTo});
+  CategoricalHorizontalScroller(
+      {this.categoryTitle,
+        this.routes,
+        this.elementTitlesOrRoutes,
+        this.routeTo}
+      );
 
   @override
   Widget build(BuildContext context) {
