@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
-import 'package:heroes_manual/widgets/fill_in_blank_question.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/widgets/multiple_choice_question.dart';
