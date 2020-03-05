@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:heroes_manual/pages/lesson/lesson_start.dart';
+import 'package:heroes_manual/pages/training/training_start.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
@@ -23,7 +23,7 @@ class _MainMenuState extends State<MainMenu> {
 
   @override
   Widget build(BuildContext context) {
-    Lesson.loadLessonNames().then((lessonNames) {
+    Training.loadTrainingNames().then((lessonNames) {
       setState(() {
         _trainings = lessonNames;
       });
@@ -52,7 +52,7 @@ class _MainMenuState extends State<MainMenu> {
                     categoryTitle: 'Trainings',
                     routes: false,
                     elementTitlesOrRoutes: _trainings,
-                    routeTo: LessonStart.route,
+                    routeTo: TrainingStart.route,
                   ),
                   Divider(
                     color: Colors.white,

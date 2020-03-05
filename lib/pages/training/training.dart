@@ -5,14 +5,14 @@ import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
-class LessonPage extends StatefulWidget {
-  static const String route = '/lesson';
+class TrainingPage extends StatefulWidget {
+  static const String route = '/training';
 
   @override
-  State createState() => _LessonState();
+  State createState() => _TrainingState();
 }
 
-class _LessonState extends State<LessonPage> {
+class _TrainingState extends State<TrainingPage> {
 
   static const double iconSize = 32;
 
@@ -20,7 +20,7 @@ class _LessonState extends State<LessonPage> {
 
   @override
   Widget build(BuildContext context) {
-    final Lesson _lesson = ModalRoute.of(context).settings.arguments as Lesson;
+    final Training _training = ModalRoute.of(context).settings.arguments as Training;
 
     return Scaffold(
         appBar: HMAppBar(
@@ -28,7 +28,7 @@ class _LessonState extends State<LessonPage> {
           leadingAction: () => Navigator.pop(context),
           showTrailing: false,
           trailingAction: null, // put source navigation here
-          title: _lesson.title,
+          title: _training.title,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +70,7 @@ class _LessonState extends State<LessonPage> {
                               padding: EdgeInsets.only(top: 30, bottom: 30),
                               child: SingleChildScrollView(
                                 child: Text(
-                                  _lesson.cards[_card].text,
+                                  _training.cards[_card].text,
                                   softWrap: true,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -84,7 +84,7 @@ class _LessonState extends State<LessonPage> {
                         Padding(
                             padding: EdgeInsets.only(bottom: 20.0),
                             child: Text(
-                                "${_card + 1}/${_lesson.cards.length}",
+                                "${_card + 1}/${_training.cards.length}",
                                 style: TextStyle(
                                     fontSize: 28.0,
                                     color: purple.shade500,
@@ -98,7 +98,7 @@ class _LessonState extends State<LessonPage> {
                   Flexible(
                     flex: 1,
                     child: Center(
-                      child: _card == (_lesson.cards.length - 1) ? Container() : MaterialButton(
+                      child: _card == (_training.cards.length - 1) ? Container() : MaterialButton(
                         onPressed: () {
                           setState(() {
                             _card++;
@@ -117,14 +117,14 @@ class _LessonState extends State<LessonPage> {
                 ]
               )
             ),
-            (_card + 1) == _lesson.cards.length ? Padding(
+            (_card + 1) == _training.cards.length ? Padding(
               padding: EdgeInsets.only(bottom: 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   MaterialButton(
-                    onPressed: () { Navigator.popAndPushNamed(context, QuizStart.route, arguments: _lesson.title); },
+                    onPressed: () { Navigator.popAndPushNamed(context, QuizStart.route, arguments: _training.title); },
                     color: purple.shade500,
                     child: Text(
                       "Quiz me!",
@@ -137,7 +137,7 @@ class _LessonState extends State<LessonPage> {
                   MaterialButton(
                     onPressed: () {
                       setState(() {
-                        _lesson.cards.shuffle();
+                        _training.cards.shuffle();
                         _card = 0;
                       });
                     },

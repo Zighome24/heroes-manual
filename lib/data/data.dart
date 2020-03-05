@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:core';
 import 'package:flutter/services.dart' show rootBundle;
 
-Future<String> loadLessonString() {
-  return rootBundle.loadString('lib/data/dir/lessons.json');
+Future<String> loadTrainingString() {
+  return rootBundle.loadString('lib/data/dir/trainings.json');
 }
 
 Future<String> loadQuizzesString() {
@@ -14,42 +14,42 @@ Future<String> loadQuizzesString() {
 // TRAINING
 // ---------------------------------------------
 
-class Lesson {
+class Training {
   final List<Card> cards;
   final String summary;
   final String title;
   final String sources;
 
-  Lesson({this.cards, this.summary, this.title, this.sources});
+  Training({this.cards, this.summary, this.title, this.sources});
 
-  Lesson.fromJson(Map<String, dynamic> json)
+  Training.fromJson(Map<String, dynamic> json)
     : cards = ((json['cards']) as List).map((l) => Card.fromJson(l)).toList(),
       summary = (json['summary'] as String),
       title = (json['title'] as String),
       sources = (json['sources'] as String);
 
-  static List<Lesson> loadLessons(String json) {
+  static List<Training> loadTrainings(String json) {
     return ((jsonDecode(json))["trainings"] as List<dynamic>)
-        .map((obj) => Lesson.fromJson(obj as Map<String, dynamic>)).toList();
+        .map((obj) => Training.fromJson(obj as Map<String, dynamic>)).toList();
   }
 
-  static Lesson _lessonFactory(String json) {
-    return Lesson.fromJson(jsonDecode(json));
+  static Training _trainingFactory(String json) {
+    return Training.fromJson(jsonDecode(json));
   }
 
-  static Future<Lesson> localLessonFactory(String lessonName) {
-    return loadLessonString().then((json) =>
-        loadLessons(json).firstWhere((training) => training.title == lessonName));
+  static Future<Training> localTrainingFactory(String trainingName) {
+    return loadTrainingString().then((json) =>
+        loadTrainings(json).firstWhere((training) => training.title == trainingName));
   }
 
-  static Future<List<String>> loadLessonNames() {
-    return loadLessonString().then((value)
-    => Lesson.loadLessons(value).map((lesson) => lesson.title).toList());
+  static Future<List<String>> loadTrainingNames() {
+    return loadTrainingString().then((value)
+    => Training.loadTrainings(value).map((training) => training.title).toList());
   }
 
   @override
   bool operator ==(other) {
-    return (other is Lesson)
+    return (other is Training)
         && this.summary == other.summary
         && this.title == other.title
         && this.sources == other.sources
@@ -61,7 +61,7 @@ class Lesson {
     return this.summary.hashCode * (this.cards.length + 1);
   }
 
-  static final emptyLesson = Lesson(cards: [], title: "", summary: "", sources: "");
+  static final emptyTraining = Training(cards: [], title: "", summary: "", sources: "");
 }
 
 class Card {
@@ -118,7 +118,7 @@ class Quiz {
 
   @override
   bool operator ==(other) {
-    return (other is Lesson)
+    return (other is Training)
         && this.summary == other.summary
         && this.questions.length == other.cards.length;
   }
