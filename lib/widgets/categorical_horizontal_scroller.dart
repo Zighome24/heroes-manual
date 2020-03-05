@@ -15,7 +15,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double scrollingSectionHeight = 100;
-    final double elementalWidth = 100;
+    final double elementalWidth = 140;
 
     return ClipRect(
       child: Column(
@@ -61,8 +61,10 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                         child: Container(
                           alignment: Alignment.bottomLeft,
                           padding: EdgeInsets.all(3),
-                          child: Text(
-                            elementTitlesOrRoutes[index].toString(),
+                          child: Text(routes ?
+                          '${elementTitlesOrRoutes[index][1].toUpperCase()}'
+                              '${elementTitlesOrRoutes[index].substring(2)}'
+                              : elementTitlesOrRoutes[index].toString(),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
