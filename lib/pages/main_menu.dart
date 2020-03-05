@@ -85,6 +85,11 @@ class _MainMenuState extends State<MainMenu> {
                     thickness: 10,
                   ),
                   CategoricalHorizontalScroller(
+                    categoryTitle: 'Screenings',
+                    routes: true,
+                    elementTitlesOrRoutes: debugScreenRoutes,
+                  ),
+                  CategoricalHorizontalScroller(
                     categoryTitle: 'Roles',
                     routes: true,
                     elementTitlesOrRoutes: resourceRoutes,
