@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/pages/screening_tips.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -59,7 +60,8 @@ class PerpetratorPresent extends StatelessWidget {
                     'Tips to Separte',
                     style: TextStyle(fontSize: 20, color: purple),
                   ),
-                  onPressed: null,
+                  onPressed: () => Navigator.pushNamed(context,
+                      ScreeningTips.route),
                 ),
               ],
             ),
