@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
+import 'package:heroes_manual/pages/screening_tips.dart';
 import 'package:heroes_manual/pages/training/training.dart';
 import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         QuizStart.route : (context) => QuizStart(),
         TrainingStart.route : (context) => TrainingStart(),
         About.route : (context) => About(),
+        ScreeningTips.route: (context) => ScreeningTips(),
         Screening.route : (context) => Screening(),
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
         ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
