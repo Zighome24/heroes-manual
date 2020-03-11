@@ -45,14 +45,14 @@ class Hotlines extends StatelessWidget {
               children: <Widget>[
                 Align(
                   alignment: Alignment.center,
-                  child: ListView.separated(
+                  child: ListView.builder(
                     padding: const EdgeInsets.fromLTRB(20.0, 10.0, 10.0, 10.0),
                     shrinkWrap: true,
                     itemCount: hotlineNumbers.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
                         alignment: Alignment.center,
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(20.0),
                         child: GestureDetector(
                           onTap: () => launch(hotlineNumbers[index]),
                           child: Padding(
@@ -76,12 +76,6 @@ class Hotlines extends StatelessWidget {
                         ),
                       );
                     },
-                    separatorBuilder: (BuildContext context, int index) =>
-                        Divider(
-                            height: 10,
-                            thickness: 10,
-                            color: background,
-                        ),
                   ),
                 ),
               ],
