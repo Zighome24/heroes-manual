@@ -30,19 +30,39 @@ class ScreeningTips extends StatelessWidget {
       body: Center(
         child: ClipRect(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
                 padding: const EdgeInsets.all(30.0),
-                alignment: Alignment.topCenter,
-                child: Text(
-                  'ScreeningTips',
-                  style: TextStyle(color: purple.shade500, fontSize: 30),
+                alignment: Alignment.center,
+                child: Stack(
+                  children: <Widget>[
+                    // may need to switch order of these children as render
+                    // order of stacks affects click-ability
+                    Center(
+                      child: Text(
+                        'Screening Tips',
+                        style: TextStyle(color: purple.shade500, fontSize: 30),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: IconButton(
+                        //onPressed: leadingAction,
+                        icon: Icon(
+                          Icons.info_outline,
+                          color: purple.shade500,
+                        ),
+                        iconSize: 28,
+                      ),
+                    )
+                  ],
                 ),
               ),
-              ClipRect(
+              Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
                   child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
@@ -62,11 +82,13 @@ class ScreeningTips extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Text('Sources',
-                      style:
-                          new TextStyle(color: purple.shade500, fontSize: 20))),
+              /*Container(
+                padding: const EdgeInsets.all(30.0),
+                child: Text(
+                  'Sources',
+                  style: TextStyle(color: purple.shade500, fontSize: 20),
+                ),
+              ),*/
             ],
           ),
         ),
