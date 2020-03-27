@@ -37,7 +37,7 @@ class FillInBlankQuestion extends StatelessWidget {
           children: <Widget>[
             Spacer(),
             Expanded(
-              flex: 2,
+              flex: 8,
                 child: SingleChildScrollView(
                     child: Text(
                         question.text,
@@ -52,26 +52,27 @@ class FillInBlankQuestion extends StatelessWidget {
             ),
             Spacer(),
             Flexible(
-              flex: 2,
-                child: Column(
-                    children: <Widget>[
-                      TextField(
-                        keyboardType: TextInputType.text,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Type your answer here'
-                        ),
-                        controller: textEditingController,
-                      ),
-                      RaisedButton(
-                        child: Text(
-                            'Submit'
-                        ),
-                        onPressed: () => _validate(textEditingController.text),
-                      )
-                    ]
-                )
-            )
+              flex: 8,
+              child: Column(
+                children: <Widget>[
+                  TextField(
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'Type your answer here'
+                    ),
+                    controller: textEditingController,
+                  ),
+                  RaisedButton(
+                    child: Text(
+                        'Submit'
+                    ),
+                    onPressed: () => _validate(textEditingController.text),
+                  )
+                ]
+              )
+            ),
+            Spacer()
           ]
       )
     );
