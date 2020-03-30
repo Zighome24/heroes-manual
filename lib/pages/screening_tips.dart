@@ -46,20 +46,10 @@ class ScreeningTips extends StatelessWidget {
                         style: TextStyle(color: purple.shade500, fontSize: 30),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: IconButton(
-                        //onPressed: leadingAction,
-                        icon: Icon(
-                          Icons.info_outline,
-                          color: purple.shade500,
-                        ),
-                        iconSize: 28,
-                      ),
-                    )
                   ],
                 ),
               ),
+
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
@@ -75,7 +65,7 @@ class ScreeningTips extends StatelessWidget {
                         child: Text(
                           screening_tips[index],
                           style:
-                              TextStyle(color: purple.shade500, fontSize: 20),
+                          TextStyle(color: purple.shade500, fontSize: 20),
                         ),
                       );
                     },
