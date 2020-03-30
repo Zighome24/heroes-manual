@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
-import 'package:heroes_manual/pages/screening_tips.dart';
-import 'package:heroes_manual/utility/colors.dart';
+
+import 'package:flutter/widgets.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:heroes_manual/pages/screening_page.dart';
 
 class PerpetratorPresent extends StatelessWidget {
   static const String route = '/perpetrator_present';
@@ -39,36 +39,31 @@ class PerpetratorPresent extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: const EdgeInsets.all(30.0),
-              child: Text('Have the perpetrator and victim been separated?',
-                  style: TextStyle(fontSize: 25)),
+              child: Text(
+                  'Is the perpetrator present?',
+                  style: new TextStyle(fontSize: 25)
+              ),
             ),
             ButtonBar(
               mainAxisSize: MainAxisSize.min,
-              // this will take space as minimum as posible(to center)
+              alignment: MainAxisAlignment.center,
               children: <Widget>[
                 new RaisedButton(
-                  child: Text(
-                    'Yes',
-                    style: TextStyle(fontSize: 20, color: purple),
-                  ),
-                  onPressed: () =>
-                      Navigator.pushNamed(context, Screening.route),
+                  child: new Text('Yes, show tips to separate perpetrator and victim.'),
+                  onPressed: null,
                 ),
                 new RaisedButton(
-                  child: Text(
-                    'Tips to Separte',
-                    style: TextStyle(fontSize: 20, color: purple),
-                  ),
-                  onPressed: () => Navigator.pushNamed(context,
-                      ScreeningTips.route),
+                  child: new Text('No'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, Screening.route);
+                  },
                 ),
               ],
             ),
           ],
         ),
       ),
-      bottomNavigationBar: HMBottomNavBar(),
+      bottomNavigationBar: HMBottomNavBar(isScreeningSelected: true),
     );
   }
 }
