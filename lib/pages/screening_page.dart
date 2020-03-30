@@ -63,6 +63,12 @@ class _ScreeningState extends State<Screening> {
                   height: 5.0,
                   thickness: 5.0,
                 ),
+                FlatButton(
+                  child: Text('Clear'),
+                  onPressed: () => {
+                   Screening.screeningTips.forEach((tip) => tip.selected = false)
+                  },
+                ),
                 ListView.builder(
                   scrollDirection: Axis.vertical,
                   physics: ScrollPhysics(),
