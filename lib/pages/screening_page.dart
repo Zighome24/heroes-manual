@@ -6,11 +6,18 @@ import 'package:heroes_manual/utility/colors.dart';
 
 class Screening extends StatefulWidget {
   static const String route = '/screening_page';
-  static var screeningTips = [ScreeningTip('Does your partner hit, kick or otherwise hurt you?'), ScreeningTip('Does your partner try to run your life, or tell you what you can do or say?'),
-    ScreeningTip('Does your partner stalk you, follow you around, or check up on you a lot?'),
-    ScreeningTip('Does your partner put you down, call you names, or embarrass you in public?'),
-    ScreeningTip('Does your partner make threats (e.g., to kick you out, report you to immigration, or out you) or try to intimidate you?'),
-    ScreeningTip('Does your partner demand sexual activity that you don’t want; force you to have sex?'),
+  static var screeningTips = [ScreeningTip('Does your partner hit, kick or '
+      'otherwise hurt you?'),
+    ScreeningTip('Does your partner try to run your life, or tell you what '
+        'you can do or say?'),
+    ScreeningTip('Does your partner stalk you, follow you around, or check up '
+        'on you a lot?'),
+    ScreeningTip('Does your partner put you down, call you names, or embarrass '
+        'you in public?'),
+    ScreeningTip('Does your partner make threats (e.g., to kick you out, report'
+        ' you to immigration, or out you) or try to intimidate you?'),
+    ScreeningTip('Does your partner demand sexual activity that you don’t want;'
+        ' force you to have sex?'),
     ScreeningTip('Does your partner control all the money in your family?')];
 
   @override
@@ -42,7 +49,9 @@ class _ScreeningState extends State<Screening> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Here is a list of questions to ask someone to determine if the person may have been a victim of domestic violence.',
+                    'Here is a list of questions to ask someone to determine '
+                        'if the person may have been a victim of domestic'
+                        ' violence.',
                     style: new TextStyle(
                       color: purple.shade500,
                       fontSize: 20,
