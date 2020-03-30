@@ -34,55 +34,57 @@ class _ScreeningState extends State<Screening> {
         leadingAction: () => Navigator.pop(context),
       ),
       body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Here is a list of questions to ask someone to determine if the person may have been a victim of domestic violence.',
-                  style: new TextStyle(
-                    color: purple.shade500,
-                    fontSize: 20,
-                  )
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Here is a list of questions to ask someone to determine if the person may have been a victim of domestic violence.',
+                    style: new TextStyle(
+                      color: purple.shade500,
+                      fontSize: 20,
+                    )
+                  ),
                 ),
-              ),
-              ListView.builder(
-                scrollDirection: Axis.vertical,
-                physics: ScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: Screening.screeningTips.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ClipRect(
-                    child: Container(
-                      padding: EdgeInsets.all(2.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          new Card(
-                            child: CheckboxListTile(
-                              title: Text(
-                                Screening.screeningTips[index].name,
-                                style: TextStyle(
-                                  fontSize: 20.0,
+                ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  physics: ScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: Screening.screeningTips.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ClipRect(
+                      child: Container(
+                        padding: EdgeInsets.all(2.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            new Card(
+                              child: CheckboxListTile(
+                                title: Text(
+                                  Screening.screeningTips[index].name,
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                  ),
                                 ),
+                                value: Screening.screeningTips[index].selected,
+                                onChanged: (val) {
+                                  setState(() {
+                                    Screening.screeningTips[index].selected = val;
+                                  });
+                                },
                               ),
-                              value: Screening.screeningTips[index].selected,
-                              onChanged: (val) {
-                                setState(() {
-                                  Screening.screeningTips[index].selected = val;
-                                });
-                              },
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  );
-                },
-              ),
-            ],
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       
