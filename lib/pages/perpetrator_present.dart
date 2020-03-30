@@ -56,7 +56,7 @@ class PerpetratorPresent extends StatelessWidget {
                 ),
                 new RaisedButton(
                   child: Text(
-                    'Tips to Separte',
+                    'Tips to Separate',
                     style: TextStyle(fontSize: 20, color: purple),
                   ),
                   onPressed: null,
