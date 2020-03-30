@@ -37,7 +37,7 @@ class Hotlines extends StatelessWidget {
               child: Text(
                 'Important Hotlines',
                 style:
-                new TextStyle(color: Colors.deepPurpleAccent, fontSize: 20),
+                new TextStyle(color: Colors.deepPurpleAccent, fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
             Column(
