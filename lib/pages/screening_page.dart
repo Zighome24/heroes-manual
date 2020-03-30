@@ -47,16 +47,21 @@ class _ScreeningState extends State<Screening> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Here is a list of questions to ask someone to determine '
                         'if the person may have been a victim of domestic'
                         ' violence.',
                     style: new TextStyle(
                       color: purple.shade500,
-                      fontSize: 20,
-                    )
+                      fontSize: 25,
+                    ),
                   ),
+                ),
+                Divider(
+                  color: purple.shade500,
+                  height: 5.0,
+                  thickness: 5.0,
                 ),
                 ListView.builder(
                   scrollDirection: Axis.vertical,
@@ -97,7 +102,7 @@ class _ScreeningState extends State<Screening> {
           ),
         ),
       
-      bottomNavigationBar: HMBottomNavBar(),
+      bottomNavigationBar: HMBottomNavBar(isScreeningSelected: true),
     );
   }
 }
