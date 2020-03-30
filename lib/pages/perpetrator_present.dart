@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter/widgets.dart';
+import 'package:heroes_manual/pages/screening_tips.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
@@ -50,7 +51,9 @@ class PerpetratorPresent extends StatelessWidget {
               children: <Widget>[
                 new RaisedButton(
                   child: new Text('Yes, show tips to separate perpetrator and victim.'),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pushNamed(context, ScreeningTips.route);
+                  },
                 ),
                 new RaisedButton(
                   child: new Text('No'),
