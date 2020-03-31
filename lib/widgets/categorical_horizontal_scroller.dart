@@ -28,14 +28,15 @@ class CategoricalHorizontalScroller extends StatelessWidget {
         children: <Widget>[
           Container(
               height: 50,
-              color: purple.shade200,
+              padding: EdgeInsets.only(top: 15),
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
                   categoryTitle,
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
+//                      fontWeight: FontWeight.bold,
+                      color: purple.shade500,
+                      fontSize: 15
                   ),
                   textAlign: TextAlign.center,
                   textScaleFactor: 2,
@@ -58,11 +59,21 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                       Navigator.pushNamed(context, elementTitlesOrRoutes[index])
                           : Navigator.pushNamed(context, routeTo,
                           arguments: elementTitlesOrRoutes[index]),
+
                       child: Container(
                         width: elementalWidth,
                         margin: const EdgeInsets.all(2),
-                        color: purple.shade500,
                         padding: EdgeInsets.all(3),
+                        decoration: new BoxDecoration(
+                          borderRadius: new BorderRadius.all(
+                            const Radius.circular(6.0),
+                          ),
+                          gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                          ),
+                        ),
                         child: Container(
                           alignment: Alignment.bottomLeft,
                           padding: EdgeInsets.all(3),

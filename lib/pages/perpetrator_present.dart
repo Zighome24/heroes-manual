@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/utility/colors.dart';
+import 'package:flutter/widgets.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:heroes_manual/pages/screening_page.dart';
 
 class PerpetratorPresent extends StatelessWidget {
   static const String route = '/perpetrator_present';
@@ -66,7 +68,7 @@ class PerpetratorPresent extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: HMBottomNavBar(),
+      bottomNavigationBar: HMBottomNavBar(isScreeningSelected: true),
     );
   }
 }

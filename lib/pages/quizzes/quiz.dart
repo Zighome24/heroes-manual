@@ -142,7 +142,7 @@ class _QuizState extends State<QuizPage> {
                         textAlign: TextAlign.center,
                       ),
                       Padding(
-                        padding: EdgeInsets.all(20.0),
+                        padding: EdgeInsets.only(top: 10.0),
                         child: Text(
                           "${_answers.fold(0, (count, answer) => answer ? count + 1 : count)} / ${_answers.length}",
                           style: TextStyle(
