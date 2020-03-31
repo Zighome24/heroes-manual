@@ -58,8 +58,15 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                     child: Container(
                       width: elementalWidth,
                       margin: const EdgeInsets.all(2),
-                      color: purple.shade500,
                       padding: EdgeInsets.all(3),
+                      decoration: new BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          const Radius.circular(6.0),
+                        ),
+                        color: purple.shade500,
+
+                      ),
+
                       child: GestureDetector(
                         onTap: () => this.routes ?
                         Navigator.pushNamed(context, elementTitlesOrRoutes[index])
