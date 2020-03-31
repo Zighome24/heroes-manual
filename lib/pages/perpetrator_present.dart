@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter/widgets.dart';
-import 'package:heroes_manual/pages/screening_tips.dart';
+import 'package:heroes_manual/pages/tips_to_separate.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
@@ -65,7 +65,7 @@ class PerpetratorPresent extends StatelessWidget {
                     style: TextStyle(fontSize: 20, color: purple.shade500),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, ScreeningTips.route);
+                    Navigator.pushNamed(context, TipsToSeparate.route);
                   },
                 ),
               ],

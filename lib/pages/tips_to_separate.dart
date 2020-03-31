@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 
-class ScreeningTips extends StatelessWidget {
-  static const String route = '/screening_tips';
+class TipsToSeparate extends StatelessWidget {
+  static const String route = '/tips_to_separate';
   static const List<String> screening_tips = [
     "This is the first example tip. It's a little longer so we can properly"
         "test out the length of a tip, how it looks when it is longer, "
@@ -46,8 +47,9 @@ class ScreeningTips extends StatelessWidget {
                     // order of stacks affects click-ability
                     Center(
                       child: Text(
-                        'Screening Tips',
+                        'Tips to Separate Victim and Perpetrator',
                         style: TextStyle(color: purple.shade500, fontSize: 30),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
