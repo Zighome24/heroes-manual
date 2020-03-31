@@ -39,7 +39,7 @@ class PerpetratorPresent extends StatelessWidget {
           children: <Widget>[
             Container(
               padding: const EdgeInsets.all(30.0),
-              child: Text('Have the perpetrator and victim been separated?',
+              child: Text('Are the perpetrator and victim separate?',
                   style: TextStyle(fontSize: 25)),
             ),
             ButtonBar(
