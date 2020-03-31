@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/tips_to_separate.dart';
