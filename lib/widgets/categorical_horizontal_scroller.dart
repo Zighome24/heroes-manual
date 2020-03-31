@@ -70,7 +70,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                             const Radius.circular(6.0),
                           ),
                           gradient: LinearGradient(
-                            colors: [purple.shade800, Colors.deepPurple[400]],
+                            colors: [purple.shade600, Colors.deepPurple[400]],
                             begin: Alignment.bottomRight,
                             end: Alignment.topLeft
                           ),
