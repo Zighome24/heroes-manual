@@ -55,27 +55,26 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                 itemCount: elementTitlesOrRoutes.length,
                 itemBuilder: (BuildContext context, int index) {
                   return ClipRect(
-                    child: Container(
-                      width: elementalWidth,
-                      margin: const EdgeInsets.all(2),
-                      padding: EdgeInsets.all(3),
-                      decoration: new BoxDecoration(
-                        borderRadius: new BorderRadius.all(
-                          const Radius.circular(6.0),
-                        ),
-                        gradient: LinearGradient(
-                          colors: [purple.shade800, Colors.deepPurple[400]],
-                          begin: Alignment.bottomRight,
-                          end: Alignment.topLeft
-                        ),
+                    child: GestureDetector(
+                      onTap: () => this.routes ?
+                      Navigator.pushNamed(context, elementTitlesOrRoutes[index])
+                          : Navigator.pushNamed(context, routeTo,
+                          arguments: elementTitlesOrRoutes[index]),
 
-                      ),
-
-                      child: GestureDetector(
-                        onTap: () => this.routes ?
-                        Navigator.pushNamed(context, elementTitlesOrRoutes[index])
-                            : Navigator.pushNamed(context, routeTo,
-                            arguments: elementTitlesOrRoutes[index]),
+                      child: Container(
+                        width: elementalWidth,
+                        margin: const EdgeInsets.all(2),
+                        padding: EdgeInsets.all(3),
+                        decoration: new BoxDecoration(
+                          borderRadius: new BorderRadius.all(
+                            const Radius.circular(6.0),
+                          ),
+                          gradient: LinearGradient(
+                            colors: [purple.shade800, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                          ),
+                        ),
                         child: Container(
                           alignment: Alignment.bottomLeft,
                           padding: EdgeInsets.all(3),
