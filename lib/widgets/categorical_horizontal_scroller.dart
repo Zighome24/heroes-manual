@@ -68,7 +68,6 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                           begin: Alignment.bottomRight,
                           end: Alignment.topLeft
                         ),
-//                        color: purple.shade500,
 
                       ),
 

@@ -5,7 +5,6 @@ import 'package:heroes_manual/pages/organizations.dart';
 import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
 import 'package:heroes_manual/pages/training/training_start.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
-import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/laws.dart';
@@ -45,12 +44,12 @@ class DevMainMenu extends StatelessWidget {
                 },
                 child: Text('Quiz')
             ),
-            RaisedButton(
+            /*RaisedButton(
               onPressed: () {
                 Navigator.pushNamed(context, About.route);
               },
               child: Text('About'),
-            ),
+            ),*/
             RaisedButton(
               onPressed: () {
                 Navigator.pushNamed(context, Hotlines.route);
