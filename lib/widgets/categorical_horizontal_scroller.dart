@@ -27,15 +27,17 @@ class CategoricalHorizontalScroller extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
-              height: 50,
-              color: purple.shade200,
+              height: 40,
+//              color: purple.shade200,
+              padding: EdgeInsets.only(top: 10),
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
                   categoryTitle,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.white
+                      color: purple.shade500,
+                      fontSize: 12
                   ),
                   textAlign: TextAlign.center,
                   textScaleFactor: 2,
