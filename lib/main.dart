@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
+import 'package:heroes_manual/pages/safety_plan.dart';
 import 'package:heroes_manual/pages/training/training.dart';
 import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         TrainingPage.route : (context) => TrainingPage(),
         QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
+        SafetyPlan.route : (context) => SafetyPlan(),
       },
     );
   }
