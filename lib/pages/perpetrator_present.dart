@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/utility/colors.dart';
 import 'package:flutter/widgets.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
-
 
 class PerpetratorPresent extends StatelessWidget {
   static const String route = '/perpetrator_present';
@@ -39,24 +40,28 @@ class PerpetratorPresent extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Text(
-                  'Is the perpetrator present?',
-                  style: new TextStyle(fontSize: 25)
-              ),
+              padding: const EdgeInsets.all(30.0),
+              child: Text('Are the perpetrator and victim separate?',
+                  style: TextStyle(fontSize: 25)),
             ),
             ButtonBar(
               mainAxisSize: MainAxisSize.min,
-              alignment: MainAxisAlignment.center,
+              // this will take space as minimum as posible(to center)
               children: <Widget>[
                 new RaisedButton(
-                  child: new Text('Yes, show tips to separate perpetrator and victim.'),
-                  onPressed: null,
+                  child: Text(
+                    'Yes',
+                    style: TextStyle(fontSize: 20, color: purple),
+                  ),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, Screening.route),
                 ),
                 new RaisedButton(
-                  child: new Text('No'),
-                  onPressed: () {
-                    Navigator.pushNamed(context, Screening.route);
-                  },
+                  child: Text(
+                    'Tips to Separate',
+                    style: TextStyle(fontSize: 20, color: purple),
+                  ),
+                  onPressed: null,
                 ),
               ],
             ),
