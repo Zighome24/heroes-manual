@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:heroes_manual/pages/tips_to_separate.dart';
+import 'package:heroes_manual/utility/hm_appbar.dart';
+import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:flutter/widgets.dart';
@@ -46,22 +52,26 @@ class PerpetratorPresent extends StatelessWidget {
             ),
             ButtonBar(
               mainAxisSize: MainAxisSize.min,
-              // this will take space as minimum as posible(to center)
+              alignment: MainAxisAlignment.center,
               children: <Widget>[
                 new RaisedButton(
-                  child: Text(
+                  child: new Text(
                     'Yes',
-                    style: TextStyle(fontSize: 20, color: purple),
+                    style: TextStyle(fontSize: 20, color: purple.shade500),
                   ),
-                  onPressed: () =>
-                      Navigator.pushNamed(context, Screening.route),
+                  onPressed: () {
+                    Navigator.pushNamed(context, Screening.route);
+                  },
                 ),
                 new RaisedButton(
+
                   child: Text(
                     'Tips to Separate',
-                    style: TextStyle(fontSize: 20, color: purple),
+                    style: TextStyle(fontSize: 20, color: purple.shade500),
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pushNamed(context, TipsToSeparate.route);
+                  },
                 ),
               ],
             ),
