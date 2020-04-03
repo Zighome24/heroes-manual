@@ -35,7 +35,7 @@ class NotSeparateScreening extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
               Divider(
                 color: background.shade600,
                 thickness: 3.0,
