@@ -16,3 +16,6 @@ const List<String> screening_tips = [
   "This is the tenth example tip.",
   "This is the eleventh example tip."
 ];
+
+//TODO: fill in content for not separate screening tips
+const List<String> not_separate_screening_tips = [];
