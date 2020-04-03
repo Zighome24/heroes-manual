@@ -68,7 +68,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                           padding: EdgeInsets.all(3),
                           child: Text(routes ?
                           '${elementTitlesOrRoutes[index][1].toUpperCase()}'
-                              '${elementTitlesOrRoutes[index].substring(2)}'
+                              '${elementTitlesOrRoutes[index].substring(2)}'.replaceAll("_", " ")
                               : elementTitlesOrRoutes[index].toString(),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
