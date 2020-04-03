@@ -54,7 +54,7 @@ class PerpetratorPresent extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               alignment: MainAxisAlignment.center,
               children: <Widget>[
-                new RaisedButton(
+                RaisedButton(
                   child: new Text(
                     'Yes',
                     style: TextStyle(fontSize: 20, color: purple.shade500),
@@ -63,14 +63,22 @@ class PerpetratorPresent extends StatelessWidget {
                     Navigator.pushNamed(context, Screening.route);
                   },
                 ),
-                new RaisedButton(
-
+                RaisedButton(
                   child: Text(
                     'Tips to Separate',
                     style: TextStyle(fontSize: 20, color: purple.shade500),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, TipsToSeparate.route);
+                  },
+                ),
+                RaisedButton(
+                  child: Text(
+                    'Cannot Separate',
+                    style: TextStyle(fontSize: 20, color: purple.shade500),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, NotSeparateScreening.route);
                   },
                 ),
               ],
