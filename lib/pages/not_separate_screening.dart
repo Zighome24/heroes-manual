@@ -55,7 +55,7 @@ class NotSeparateScreening extends StatelessWidget {
                             child: Text(
                               not_separate_screening_tips[index],
                               style: TextStyle(
-                                color: purple.shade500,
+                                color: purple.shade600,
                                 fontSize: 20,
                               ),
                             ),

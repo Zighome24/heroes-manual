@@ -17,5 +17,20 @@ const List<String> screening_tips = [
   "This is the eleventh example tip."
 ];
 
-//TODO: fill in content for not separate screening tips
-const List<String> not_separate_screening_tips = [];
+const List<String> not_separate_screening_tips = ["Be careful not to induce "
+    "conflict between the victim and the abuser, as this may increase his or "
+    "her risk of being harmed.",
+"Tell the abuser that it is a standard procedure for each patient to be "
+    "examined alone.",
+"Have a sign stating ""Patients only beyond this point.""",
+"Screen the patient during a time of privacy following a urine test or when "
+    "he or she is being weighed.",
+"Request that the suspected abuser complete some administrative forms while the"
+    " patient is screened in a separate room.",
+"The practitioner could speak to the suspected abuser concerning a routine "
+    "health issue while another member of staff screens the victim.",
+"Use a key word that will indicate the presence of a potential domestic "
+    "violence situation to a staff member. The victim would then be called out "
+    "of the examination room to discuss the possibility of domestic violence,"
+    " while the practitioner remains with the abuser. The abuser is less likely"
+    " to be suspicious if the practitioner remains with him."];
