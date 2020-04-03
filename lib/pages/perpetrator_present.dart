@@ -5,12 +5,8 @@ import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/utility/colors.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
-import 'package:heroes_manual/utility/colors.dart';
-import 'package:flutter/widgets.dart';
-import 'package:heroes_manual/utility/hm_appbar.dart';
-import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/pages/not_separate_screening.dart';
+
 
 class PerpetratorPresent extends StatelessWidget {
   static const String route = '/perpetrator_present';

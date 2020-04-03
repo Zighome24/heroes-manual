@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         TrainingStart.route : (context) => TrainingStart(),
         TipsToSeparate.route: (context) => TipsToSeparate(),
         Screening.route : (context) => Screening(),
-        NotSeparateScreening.route : (context) => NotSeparateScreening(),m
+        NotSeparateScreening.route : (context) => NotSeparateScreening(),
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
         ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
         ExampleMCQuizQuestion.route : (context) => ExampleMCQuizQuestion(),
