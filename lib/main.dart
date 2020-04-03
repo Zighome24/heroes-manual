@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
+import 'package:heroes_manual/pages/not_separate_screening.dart';
 import 'package:heroes_manual/pages/tips_to_separate.dart';
+import 'package:heroes_manual/pages/safety_plan.dart';
 import 'package:heroes_manual/pages/training/training.dart';
 import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
@@ -39,6 +41,7 @@ class MyApp extends StatelessWidget {
         TrainingStart.route : (context) => TrainingStart(),
         TipsToSeparate.route: (context) => TipsToSeparate(),
         Screening.route : (context) => Screening(),
+        NotSeparateScreening.route : (context) => NotSeparateScreening(),m
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
         ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
         ExampleMCQuizQuestion.route : (context) => ExampleMCQuizQuestion(),
@@ -47,6 +50,7 @@ class MyApp extends StatelessWidget {
         TrainingPage.route : (context) => TrainingPage(),
         QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
+        SafetyPlan.route : (context) => SafetyPlan(),
       },
     );
   }
