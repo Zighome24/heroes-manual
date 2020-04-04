@@ -7,10 +7,12 @@ class SimpleVerticalTitledList extends StatelessWidget {
   final String pageTitle;
   final List<String> listItems;
   final String source;
+  final String pageSubTitle;
 
   SimpleVerticalTitledList(
       {
         this.pageTitle,
+        this.pageSubTitle,
         this.listItems,
         this.source}
       );
@@ -30,6 +32,12 @@ class SimpleVerticalTitledList extends StatelessWidget {
                     color: purple.shade500,
                     fontSize: 20
                 )
+            ),
+            Text(pageSubTitle,
+              style: TextStyle(
+                color: purple.shade600,
+                fontSize: 17,
+              ),
             ),
             ListView.separated(
               shrinkWrap: true,
