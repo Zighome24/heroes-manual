@@ -34,3 +34,6 @@ const List<String> not_separate_screening_tips = ["Be careful not to induce "
     "of the examination room to discuss the possibility of domestic violence,"
     " while the practitioner remains with the abuser. The abuser is less likely"
     " to be suspicious if the practitioner remains with him."];
+const String source_not_separate_screening_tips = "Bloomberg, M. R. (2004). "
+    "Medical Providers’Guide to Managing the Care of Domestic Violence Patients"
+    " within a Cultural Context.";
