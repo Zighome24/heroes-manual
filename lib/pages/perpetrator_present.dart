@@ -5,12 +5,8 @@ import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/utility/colors.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
-import 'package:heroes_manual/utility/colors.dart';
-import 'package:flutter/widgets.dart';
-import 'package:heroes_manual/utility/hm_appbar.dart';
-import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/pages/not_separate_screening.dart';
+
 
 class PerpetratorPresent extends StatelessWidget {
   static const String route = '/perpetrator_present';
@@ -54,7 +50,7 @@ class PerpetratorPresent extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               alignment: MainAxisAlignment.center,
               children: <Widget>[
-                new RaisedButton(
+                RaisedButton(
                   child: new Text(
                     'Yes',
                     style: TextStyle(fontSize: 20, color: purple.shade500),
@@ -63,14 +59,22 @@ class PerpetratorPresent extends StatelessWidget {
                     Navigator.pushNamed(context, Screening.route);
                   },
                 ),
-                new RaisedButton(
-
+                RaisedButton(
                   child: Text(
                     'Tips to Separate',
                     style: TextStyle(fontSize: 20, color: purple.shade500),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, TipsToSeparate.route);
+                  },
+                ),
+                RaisedButton(
+                  child: Text(
+                    'Cannot Separate',
+                    style: TextStyle(fontSize: 20, color: purple.shade500),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, NotSeparateScreening.route);
                   },
                 ),
               ],
