@@ -18,6 +18,7 @@ import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/organizations.dart';
 import 'package:heroes_manual/pages/laws.dart';
+import 'package:heroes_manual/pages/red_flags.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         TrainingPage.route : (context) => TrainingPage(),
+        RedFlags.route : (context) => RedFlags(),
         QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
         SafetyPlan.route : (context) => SafetyPlan(),
