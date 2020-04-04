@@ -73,7 +73,7 @@ const List<String> red_flags = ["Jealous",
   "Is bossy",
   "Is jobless",
   "Is a drug/alcohol user and uses that as an excuse for their behavior",
-  "Was abusive in a previous relationship",`
+  "Was abusive in a previous relationship",
   "Has to know about your business but is secretive about his own",
   "Smiles too much (sneaky)",
   "Is always argumentative",
