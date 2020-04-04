@@ -20,11 +20,6 @@ class SimpleVerticalTitledList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HMAppBar(
-        showLeading: true,
-        showTrailing: true,
-        leadingAction: () => Navigator.pop(context),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -40,7 +35,8 @@ class SimpleVerticalTitledList extends StatelessWidget {
               shrinkWrap: true,
               itemCount: listItems.length,
               scrollDirection: Axis.vertical,
-              physics: ScrollPhysics(),c
+              physics: ScrollPhysics(),
+              separatorBuilder: (BuildContext context, int index) => Divider(),
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   leading: Icon(Icons.label),
@@ -51,7 +47,6 @@ class SimpleVerticalTitledList extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: HMBottomNavBar(),
     );
   }
 }
