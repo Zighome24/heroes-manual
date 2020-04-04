@@ -67,8 +67,7 @@ class CategoricalHorizontalScroller extends StatelessWidget {
                           alignment: Alignment.bottomLeft,
                           padding: EdgeInsets.all(3),
                           child: Text(routes ?
-                          '${elementTitlesOrRoutes[index][1].toUpperCase()}'
-                              '${elementTitlesOrRoutes[index].substring(2)}'.replaceAll("_", " ")
+                          routeToTitle(elementTitlesOrRoutes[index])
                               : elementTitlesOrRoutes[index].toString(),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -91,5 +90,15 @@ class CategoricalHorizontalScroller extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String routeToTitle(String route) {
+    route = route.replaceAll("/", "");
+    List<String> split_words = route.split("_");
+    for(int i = 0; i < split_words.length; i++){
+      split_words[i] = split_words[i][0].toUpperCase() + split_words[i].substring(1);
+    }
+    String title = split_words.join(" ");
+    return title;
   }
  }
