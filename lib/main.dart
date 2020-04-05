@@ -14,6 +14,7 @@ import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/organizations.dart';
 import 'package:heroes_manual/pages/laws.dart';
+import 'package:heroes_manual/pages/generaltipstoseparate.dart';
 
 void main() => runApp(MyApp());
 
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         TrainingPage.route : (context) => TrainingPage(),
         QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
+        GeneralTipsToSeparate.route : (context) => GeneralTipsToSeparate(),
       },
     );
   }
