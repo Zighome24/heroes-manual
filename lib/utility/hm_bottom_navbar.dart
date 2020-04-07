@@ -29,15 +29,17 @@ class HMBottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          IconButton(
-            onPressed: isHomeSelected ? (){ debugPrint('Already Home'); } : () {
-              Navigator.pushNamed(context, '/');
-            },
-            icon: Icon(
-              isHomeSelected ? MdiIcons.home : MdiIcons.homeOutline,
-              color: Colors.white,
-              size: icon_size,
-            ),
+          Expanded(
+            child: IconButton(
+              onPressed: isHomeSelected ? (){ debugPrint('Already Home'); } : () {
+                Navigator.pushNamed(context, '/');
+              },
+              icon: Icon(
+                isHomeSelected ? MdiIcons.home : MdiIcons.homeOutline,
+                color: Colors.white,
+                size: icon_size,
+              ),
+            )
           ),
           Container(
             color: Colors.white,
@@ -47,17 +49,19 @@ class HMBottomNavBar extends StatelessWidget {
               maxHeight: navbar_height - 4,
             ),
           ),
-          IconButton(
-            onPressed: isMatrixSelected ? () {
-              debugPrint("Already in the matrix");
-            } : () {
-              Navigator.pushNamed(context, MatrixPage.route);
-            },
-            icon: Icon(
-              isMatrixSelected ? MdiIcons.viewDashboard : MdiIcons.viewDashboardOutline,
-              color: Colors.white,
-              size: icon_size,
-            ),
+          Expanded(
+            child: IconButton(
+              onPressed: isMatrixSelected ? () {
+                debugPrint("Already in the matrix");
+              } : () {
+                Navigator.pushNamed(context, MatrixPage.route);
+              },
+              icon: Icon(
+                isMatrixSelected ? MdiIcons.viewDashboard : MdiIcons.viewDashboardOutline,
+                color: Colors.white,
+                size: icon_size,
+              ),
+            )
           ),
           Container(
             color: Colors.white,
@@ -67,16 +71,18 @@ class HMBottomNavBar extends StatelessWidget {
               maxHeight: navbar_height - 4,
             ),
           ),
-          IconButton(
-            onPressed: isScreeningSelected ? (){} : () {
-              debugPrint("Checklist Selected");
-              //Navigator.pushNamed(context, Screening.route);
-            },
-            icon: Icon(
-              isScreeningSelected ? MdiIcons.checkCircle : MdiIcons.checkCircleOutline,
-              color: Colors.white,
-              size: icon_size,
-            ),
+          Expanded(
+            child: IconButton(
+              onPressed: isScreeningSelected ? (){} : () {
+                debugPrint("Checklist Selected");
+                //Navigator.pushNamed(context, Screening.route);
+              },
+              icon: Icon(
+                isScreeningSelected ? MdiIcons.checkCircle : MdiIcons.checkCircleOutline,
+                color: Colors.white,
+                size: icon_size,
+              ),
+            )
           )
         ],
       ),
