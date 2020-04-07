@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/pages/matrix/matrix.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:heroes_manual/pages/screening_page.dart';
 
 class HMBottomNavBar extends StatelessWidget {
 
@@ -48,9 +48,10 @@ class HMBottomNavBar extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: isMatrixSelected ? (){} : () {
-              debugPrint("Matrix Selected");
-              //Navigator.pushNamed(context, '/matrix');
+            onPressed: isMatrixSelected ? () {
+              debugPrint("Already in the matrix");
+            } : () {
+              Navigator.pushNamed(context, MatrixPage.route);
             },
             icon: Icon(
               isMatrixSelected ? MdiIcons.viewDashboard : MdiIcons.viewDashboardOutline,
