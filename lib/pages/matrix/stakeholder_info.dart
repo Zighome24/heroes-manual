@@ -43,41 +43,38 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Flexible(
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Spacer(),
-                                        Flexible(
-                                          flex: 6,
-                                          child: Text(
-                                            "Sources",
-                                            style: TextStyle(
-                                              fontSize: 28.0,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold
-                                            )
-                                          ),
-                                        ),
-                                        Flexible(
-                                          flex: 1,
-                                          child: IconButton(
-                                            onPressed: () => overlayEntry.remove(),
-                                            icon: Icon(
-                                              Icons.close,
-                                              color: purple.shade500,
-                                            ),
-                                            iconSize: 28,
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Spacer(),
+                                      Flexible(
+                                        flex: 6,
+                                        child: Text(
+                                          "Sources",
+                                          style: TextStyle(
+                                            fontSize: 28.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold
                                           )
+                                        ),
+                                      ),
+                                      Flexible(
+                                        flex: 1,
+                                        child: IconButton(
+                                          onPressed: () => overlayEntry.remove(),
+                                          icon: Icon(
+                                            Icons.close,
+                                            color: purple.shade500,
+                                          ),
+                                          iconSize: 28,
                                         )
-                                      ]
-                                    )
+                                      )
+                                    ]
                                   ),
                                   Expanded(
-                                    flex: 12,
                                     child: ListView.builder(
                                       itemCount: stakeholder.sources.length,
-                                      shrinkWrap: false,
+                                      shrinkWrap: true,
                                       itemBuilder: (BuildContext context, int index) {
                                         return Padding(
                                           padding: EdgeInsets.all(10),
@@ -164,14 +161,11 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Flexible(
-            child: tabBar,
-          ),
+          tabBar,
           Expanded(
-            flex: 12,
             child: ListView.builder(
               itemCount: _stakeholder.attitudes.length + 1,
-              shrinkWrap: false,
+              shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
                 return index == 0 ? Padding(
                   padding: EdgeInsets.only(left: 20, top: 20),
