@@ -33,7 +33,7 @@ class MultipleChoiceQuestion extends StatelessWidget {
         children: <Widget>[
           Spacer(),
           Expanded(
-            flex: 4,
+            flex: 8,
               child: SingleChildScrollView(
                   child: Text(
                       question.text,
@@ -48,7 +48,7 @@ class MultipleChoiceQuestion extends StatelessWidget {
           ),
           Spacer(),
           Flexible(
-            flex: 3,
+            flex: 7,
               child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: question.options.length,
@@ -60,6 +60,7 @@ class MultipleChoiceQuestion extends StatelessWidget {
                     ),
               )
           ),
+          Spacer()
         ],
       ),
     );

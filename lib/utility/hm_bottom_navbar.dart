@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/matrix/matrix.dart';
+import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -75,7 +76,7 @@ class HMBottomNavBar extends StatelessWidget {
             child: IconButton(
               onPressed: isScreeningSelected ? (){} : () {
                 debugPrint("Checklist Selected");
-                //Navigator.pushNamed(context, Screening.route);
+                Navigator.pushNamed(context, PerpetratorPresent.route);
               },
               icon: Icon(
                 isScreeningSelected ? MdiIcons.checkCircle : MdiIcons.checkCircleOutline,
