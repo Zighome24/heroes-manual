@@ -23,6 +23,85 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
 
   SIPTabBarState currentState = SIPTabBarState.ATTITUDES;
 
+  showOverlay(BuildContext context, Stakeholder stakeholder) {
+    OverlayState overlayState = Overlay.of(context);
+    OverlayEntry overlayEntry;
+    overlayEntry = OverlayEntry(
+        builder: (context) => Material(
+            type: MaterialType.transparency,
+            child: Container(
+                constraints: BoxConstraints.expand(),
+                color: Colors.grey.withOpacity(0.6),
+                child: Padding(
+                    padding: EdgeInsets.only(top: 85.0, bottom: 65.0, right: 15.0, left: 15.0),
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child: Padding(
+                            padding: EdgeInsets.all(15.0),
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Spacer(),
+                                        Flexible(
+                                          flex: 6,
+                                          child: Text(
+                                            "Sources",
+                                            style: TextStyle(
+                                              fontSize: 28.0,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold
+                                            )
+                                          ),
+                                        ),
+                                        Flexible(
+                                          flex: 1,
+                                          child: IconButton(
+                                            onPressed: () => overlayEntry.remove(),
+                                            icon: Icon(
+                                              Icons.close,
+                                              color: purple.shade500,
+                                            ),
+                                            iconSize: 28,
+                                          )
+                                        )
+                                      ]
+                                    )
+                                  ),
+                                  Expanded(
+                                    flex: 12,
+                                    child: ListView.builder(
+                                      itemCount: stakeholder.sources.length,
+                                      shrinkWrap: false,
+                                      itemBuilder: (BuildContext context, int index) {
+                                        return Padding(
+                                          padding: EdgeInsets.all(10),
+                                          child: Text(
+                                            stakeholder.sources[index],
+                                            style: TextStyle(
+                                              fontSize: 20
+                                            ),
+                                          )
+                                        );
+                                      }
+                                    ),
+                                  )
+                                ]
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    );
+    overlayState.insert(overlayEntry);
+  }
+
   @override
   Widget build(BuildContext context) {
     final Stakeholder _stakeholder = ModalRoute.of(context).settings.arguments as Stakeholder;
@@ -79,7 +158,8 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
         showLeading: true,
         leadingAction: () => Navigator.pop(context),
         showTrailing: true,
-        trailingAction: () {},
+        trailingAction: () => showOverlay(context, _stakeholder),
+        trailingIcon: Icons.info_outline,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,6 +168,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
             child: tabBar,
           ),
           Expanded(
+            flex: 12,
             child: ListView.builder(
               itemCount: _stakeholder.attitudes.length + 1,
               shrinkWrap: false,
@@ -107,17 +188,25 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                   child: currentState == SIPTabBarState.ATTITUDES ? Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        _stakeholder.attitudes[index-1].facet,
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                          color: Colors.black
+                      Container(
+                        decoration: BoxDecoration(
+                          color: accent.shade500,
+                          borderRadius: BorderRadius.all(Radius.circular(6))
+                        ),
+                        alignment: Alignment.center,
+                        constraints: BoxConstraints.expand(height: 30),
+                        child: Text(
+                          _stakeholder.attitudes[index-1].facet,
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            //decoration: TextDecoration.underline,
+                            color: Colors.black
+                          )
                         )
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 5, left: 10),
+                        padding: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           _stakeholder.attitudes[index-1].info,
                           style: TextStyle(
