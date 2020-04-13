@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'dart:core';
 import 'package:flutter/services.dart' show rootBundle;
 
-Future<String> loadLessons() {
-  return rootBundle.loadString('lib/data/dir/lessons.json');
+Future<String> loadTrainingString() {
+  return rootBundle.loadString('lib/data/dir/trainings.json');
 }
 
-Future<String> loadQuizzes() {
+Future<String> loadQuizzesString() {
   return rootBundle.loadString('lib/data/dir/quizzes.json');
 }
 
@@ -14,36 +14,45 @@ Future<String> loadQuizzes() {
 // TRAINING
 // ---------------------------------------------
 
-class Lesson {
+class Training {
   final List<Card> cards;
   final String summary;
   final String title;
+  final String sources;
 
-  Lesson({this.cards, this.summary, this.title});
+  Training({this.cards, this.summary, this.title, this.sources});
 
-  Lesson.fromJson(Map<String, dynamic> json)
+  Training.fromJson(Map<String, dynamic> json)
     : cards = ((json['cards']) as List).map((l) => Card.fromJson(l)).toList(),
       summary = (json['summary'] as String),
-      title = (json['title'] as String);
+      title = (json['title'] as String),
+      sources = (json['sources'] as String);
 
-  static List<Lesson> _loadLessons(String json) {
+  static List<Training> loadTrainings(String json) {
     return ((jsonDecode(json))["trainings"] as List<dynamic>)
-        .map((obj) => Lesson.fromJson(obj as Map<String, dynamic>)).toList();
+        .map((obj) => Training.fromJson(obj as Map<String, dynamic>)).toList();
   }
 
-  static Lesson _lessonFactory(String json) {
-    return Lesson.fromJson(jsonDecode(json));
+  static Training _trainingFactory(String json) {
+    return Training.fromJson(jsonDecode(json));
   }
 
-  static Future<Lesson> localLessonFactory(String lessonName) {
-    return loadLessons().then((json) =>
-        _loadLessons(json).firstWhere((training) => training.title == lessonName));
+  static Future<Training> localTrainingFactory(String trainingName) {
+    return loadTrainingString().then((json) =>
+        loadTrainings(json).firstWhere((training) => training.title == trainingName));
+  }
+
+  static Future<List<String>> loadTrainingNames() {
+    return loadTrainingString().then((value)
+    => Training.loadTrainings(value).map((training) => training.title).toList());
   }
 
   @override
   bool operator ==(other) {
-    return (other is Lesson)
+    return (other is Training)
         && this.summary == other.summary
+        && this.title == other.title
+        && this.sources == other.sources
         && this.cards.length == other.cards.length;
   }
 
@@ -52,18 +61,16 @@ class Lesson {
     return this.summary.hashCode * (this.cards.length + 1);
   }
 
-  static final emptyLesson = Lesson(cards: [], title: "", summary: "");
+  static final emptyTraining = Training(cards: [], title: "", summary: "", sources: "");
 }
 
 class Card {
   final String text;
-  final String source;
 
-  Card({this.text, this.source});
+  Card({this.text});
 
   Card.fromJson(Map<String, dynamic> json)
-    : text = (json['text'] as String),
-      source = (json['source'] as String);
+    : text = (json['text'] as String);
 }
 
 // ---------------------------------------------
@@ -74,31 +81,44 @@ class Quiz {
   final List<Question> questions;
   final String title;
   final String summary;
+  final String sources;
 
-  Quiz({this.questions, this.title, this.summary});
+  Quiz({this.questions, this.title, this.summary, this.sources});
 
   Quiz.fromJson(Map<String, dynamic> json)
     : questions = (json['questions'] as List).map((q) => Question.fromJson(q)).toList(),
       title = (json['title'] as String),
-      summary = (json['summary'] as String);
+      summary = (json['summary'] as String),
+      sources = (json['sources'] as String);
 
   static List<Quiz> _loadQuizzes(String json) {
     return ((jsonDecode(json))["quizzes"] as List<dynamic>)
         .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
   }
 
+  static List<Quiz> loadQuizzes(String json) {
+    return ((jsonDecode(json))["quizzes"] as List<dynamic>)
+        .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
+  }
+
+  static Future<List<String>> loadQuizNames() {
+    return loadQuizzesString().then((value)
+    => Quiz.loadQuizzes(value).map((quiz) => quiz.title).toList());
+  }
+  
   static Quiz _quizFactory(String json) {
     return Quiz.fromJson(jsonDecode(json));
   }
 
   static Future<Quiz> localQuizFactory(String quizName) {
-    return loadQuizzes().then((json) =>
+    return loadQuizzesString().then((json) =>
         _loadQuizzes(json).firstWhere((quiz) => quiz.title == quizName));
   }
+  
 
   @override
   bool operator ==(other) {
-    return (other is Lesson)
+    return (other is Training)
         && this.summary == other.summary
         && this.questions.length == other.cards.length;
   }
@@ -108,7 +128,7 @@ class Quiz {
     return this.summary.hashCode * (this.questions.length + 1);
   }
 
-  static final emptyQuiz = Quiz(questions: [], title: "", summary: "");
+  static final emptyQuiz = Quiz(questions: [], title: "", summary: "", sources: "");
 }
 
 /// @Question This represents the Question model, including its representative types
@@ -121,12 +141,6 @@ class Question {
   final String informativeMessage;
 
   Question({this.text, this.type, this.options, this.correct, this.informativeMessage});
-  //TODO: remove plain constructor, as it is simply for testing
-  /*Question.plain(String text, String type, String answer) {
-    this.text = text;
-    this.type = type;
-    this.answer = answer;
-  }*/
 
   Question.fromJson(Map<String, dynamic> json)
     : text = (json['text'] as String),

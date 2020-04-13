@@ -1,0 +1,1 @@
+const String safety_plan_info = "A safety plan is a personalized, practical plan that details way to stay safe while in a relationship, planning leave a relationship, or after leaving a relationship.\n\nGive this safety plan to the person in need for them to fill out and keep safe.\n\nDon't directly text or email this to a potential victim to avoid potential HIPAA violations.";

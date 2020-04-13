@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_manual/pages/about.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
-import 'package:heroes_manual/pages/lesson/lesson.dart';
+import 'package:heroes_manual/pages/safety_plan.dart';
+import 'package:heroes_manual/pages/tips_to_separate.dart';
+import 'package:heroes_manual/pages/training/training.dart';
+import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
 import 'package:heroes_manual/pages/quizzes/quiz_start.dart';
-import 'package:heroes_manual/pages/lesson/lesson_start.dart';
+import 'package:heroes_manual/pages/training/training_start.dart';
 import 'package:heroes_manual/pages/quizzes/quiz.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/hotlines.dart';
@@ -30,19 +32,23 @@ class MyApp extends StatelessWidget {
       routes: {
         // All of the navigation routes for the app will go here.
         '/' : (context) => MainMenu(),
+        MainMenu.route : (context) => MainMenu(),
+        //TODO: remove dev main menu
+        DevMainMenu.route : (context) => DevMainMenu(),
         Screening.route : (context) => Screening(),
         QuizStart.route : (context) => QuizStart(),
-        LessonStart.route : (context) => LessonStart(),
-        About.route : (context) => About(),
+        TrainingStart.route : (context) => TrainingStart(),
+        TipsToSeparate.route: (context) => TipsToSeparate(),
         Screening.route : (context) => Screening(),
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
         ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
         ExampleMCQuizQuestion.route : (context) => ExampleMCQuizQuestion(),
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
-        LessonPage.route : (context) => LessonPage(),
+        TrainingPage.route : (context) => TrainingPage(),
         QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
+        SafetyPlan.route : (context) => SafetyPlan(),
       },
     );
   }

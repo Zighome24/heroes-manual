@@ -1,29 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/data/data.dart';
-import 'package:heroes_manual/pages/lesson/lesson.dart';
-import 'package:heroes_manual/utility/colors.dart';
+import 'package:heroes_manual/pages/training/training.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 
-class LessonStart extends StatefulWidget {
+class TrainingStart extends StatefulWidget {
 
-  static const String route = '/lesson_start';
+  static const String route = '/training_start';
 
   @override
-  State<StatefulWidget> createState() => _LessonStartState();
+  State<StatefulWidget> createState() => _TrainingStartState();
 }
 
-class _LessonStartState extends State<LessonStart> {
+class _TrainingStartState extends State<TrainingStart> {
 
-  Lesson _lesson = Lesson.emptyLesson;
+  Training _training = Training.emptyTraining;
 
   @override
   Widget build(BuildContext context) {
-    final String lessonName = ModalRoute.of(context).settings.arguments;
+    final String trainingName = ModalRoute.of(context).settings.arguments;
 
-    Lesson.localLessonFactory(lessonName).then((value)
+    Training.localTrainingFactory(trainingName).then((value)
       {
-        setState(() { _lesson = value; });
+        setState(() { _training = value; });
       }
     );
 
@@ -32,10 +31,10 @@ class _LessonStartState extends State<LessonStart> {
         showLeading: true,
         leadingAction: () => Navigator.pop(context),
         showTrailing: false,
-        title: lessonName,
+        title: trainingName,
       ),
       body: Center(
-        child: _lesson == Lesson.emptyLesson ?
+        child: _training == Training.emptyTraining ?
           // Un-comment this and remove Container()
           /* Loading(
               indicator: LineScaleIndicator(),
@@ -47,22 +46,22 @@ class _LessonStartState extends State<LessonStart> {
               Container(
                 padding: const EdgeInsets.all(30.0),
                 child: new Text(
-                    lessonName,
+                    trainingName,
                     style: new TextStyle(fontSize: 30)
                 ),
               ),
               Container(
                 padding: const EdgeInsets.all(30.0),
                 child: new Text(
-                  _lesson.summary,
+                  _training.summary,
                   textAlign: TextAlign.center,
                 ),
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, LessonPage.route, arguments: _lesson);
+                  Navigator.pushNamed(context, TrainingPage.route, arguments: _training);
                 },
-                child: new Text('Start the Lesson!', textAlign: TextAlign.center),
+                child: new Text('Start the Training!', textAlign: TextAlign.center),
               ),
             ],
           ),
