@@ -48,23 +48,40 @@ class _ScreeningState extends State<Screening> {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    'Here is a list of questions to ask someone to determine '
-                        'if the person may have been a victim of domestic'
-                        ' violence.',
-                    style: new TextStyle(
-                      color: purple.shade500,
-                      fontSize: 25,
+                  child: Container(
+                    decoration: new BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [purple.shade600, Colors.deepPurple[400]],
+                          begin: Alignment.bottomRight,
+                          end: Alignment.topLeft
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        'Here is a list of questions to ask someone to determine '
+                            'if the person may have been a victim of domestic'
+                            ' violence.',
+                        style: new TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
-                Divider(
-                  color: purple.shade500,
-                  height: 5.0,
-                  thickness: 5.0,
-                ),
+
+//                Divider(
+//                  color: purple.shade500,
+//                  height: 5.0,
+//                  thickness: 5.0,
+//                ),
                 FlatButton(
-                  child: Text('Clear'),
+                  child: Text('Clear Selections',
+                    style: new TextStyle(
+                      color: purple.shade700)
+                    ),
                   onPressed: () => {
                    Screening.screeningTips.forEach((tip) => tip.selected = false)
                   },
@@ -96,6 +113,7 @@ class _ScreeningState extends State<Screening> {
                                   });
                                 },
                               ),
+
                             ),
                           ],
                         ),
