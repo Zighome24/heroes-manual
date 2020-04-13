@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/pages/exampleMCQuestion.dart';
 import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
+import 'package:heroes_manual/pages/matrix/matrix.dart';
+import 'package:heroes_manual/pages/matrix/stakeholder_info.dart';
+import 'package:heroes_manual/pages/safety_plan.dart';
 import 'package:heroes_manual/pages/tips_to_separate.dart';
 import 'package:heroes_manual/pages/training/training.dart';
 import 'package:heroes_manual/pages/dev_main_menu.dart';
@@ -49,6 +52,9 @@ class MyApp extends StatelessWidget {
         QuizPage.route : (context) => QuizPage(),
         Laws.route : (context) => Laws(),
         GeneralTipsToSeparate.route : (context) => GeneralTipsToSeparate(),
+        SafetyPlan.route : (context) => SafetyPlan(),
+        MatrixPage.route : (context) => MatrixPage(),
+        StakeholderInfoPage.route : (context) => StakeholderInfoPage(),
       },
     );
   }

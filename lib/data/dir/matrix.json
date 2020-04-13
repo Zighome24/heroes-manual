@@ -1,0 +1,48 @@
+{
+  "stakeholders": [
+    {
+      "title": "Victim",
+      "actions": [
+        "Recognize that abuse is not 'normal'.",
+        "Understand that 'no-one deserves to be treated like that'."
+      ],
+      "attitudes": [
+        {
+          "facet": "Normal life",
+          "info": "This is just how life is."
+        },
+        {
+          "facet": "Financial",
+          "info": "If I leave, I have no money to support myself."
+        }
+      ],
+      "sources": [
+        "Avanti Adhia, S. Bryn Austin,\nGarrett M. Fitzmaurice, David\nHemenway. “The Role of Intimate\nPartner Violence in Homicides of\nChildren Aged 2–14 Years.”\nAmerican Journal of Preventive\nMedicine, Volume 56, Issue 1\n(2019): 38-46.",
+        "Johnson, Holly, and Tina Hotton.\n&quot;Losing control: Homicide risk in\nestranged and intact intimate\nrelationships.&quot; Homicide studies 7,\nno. 1 (2003): 58-84.",
+        "Laskey, Philippa, Elizabeth A.\nBates, and Julie C. Taylor. &quot;A\nsystematic literature review of\nintimate partner violence\nvictimization: an inclusive review\nacross gender and\nsexuality.&quot; Aggression and Violent\nBehavior (2019)."
+      ]
+    },
+    {
+      "title": "Victim2",
+      "actions": [
+        "Recognize that abuse is not 'normal'.",
+        "Understand that 'no-one deserves to be treated like that'."
+      ],
+      "attitudes": [
+        {
+          "facet": "Normal life",
+          "info": "This is just how life is."
+        },
+        {
+          "facet": "Financial",
+          "info": "If I leave, I have no money to support myself."
+        }
+      ],
+      "sources": [
+        "Avanti Adhia, S. Bryn Austin,\nGarrett M. Fitzmaurice, David\nHemenway. “The Role of Intimate\nPartner Violence in Homicides of\nChildren Aged 2–14 Years.”\nAmerican Journal of Preventive\nMedicine, Volume 56, Issue 1\n(2019): 38-46.",
+        "Johnson, Holly, and Tina Hotton.\n&quot;Losing control: Homicide risk in\nestranged and intact intimate\nrelationships.&quot; Homicide studies 7,\nno. 1 (2003): 58-84.",
+        "Laskey, Philippa, Elizabeth A.\nBates, and Julie C. Taylor. &quot;A\nsystematic literature review of\nintimate partner violence\nvictimization: an inclusive review\nacross gender and\nsexuality.&quot; Aggression and Violent\nBehavior (2019)."
+      ]
+    }
+  ]
+}

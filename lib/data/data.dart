@@ -1,3 +1,4 @@
+import 'dart:collection';
 import 'dart:convert';
 import 'dart:core';
 import 'package:flutter/services.dart' show rootBundle;
@@ -8,6 +9,10 @@ Future<String> loadTrainingString() {
 
 Future<String> loadQuizzesString() {
   return rootBundle.loadString('lib/data/dir/quizzes.json');
+}
+
+Future<String> loadMatrixString() {
+  return rootBundle.loadString('lib/data/dir/matrix.json');
 }
 
 // ---------------------------------------------
@@ -28,7 +33,7 @@ class Training {
       title = (json['title'] as String),
       sources = (json['sources'] as String);
 
-  static List<Training> loadTrainings(String json) {
+  static List<Training> _loadTrainings(String json) {
     return ((jsonDecode(json))["trainings"] as List<dynamic>)
         .map((obj) => Training.fromJson(obj as Map<String, dynamic>)).toList();
   }
@@ -39,12 +44,12 @@ class Training {
 
   static Future<Training> localTrainingFactory(String trainingName) {
     return loadTrainingString().then((json) =>
-        loadTrainings(json).firstWhere((training) => training.title == trainingName));
+        _loadTrainings(json).firstWhere((training) => training.title == trainingName));
   }
 
   static Future<List<String>> loadTrainingNames() {
-    return loadTrainingString().then((value)
-    => Training.loadTrainings(value).map((training) => training.title).toList());
+    return loadTrainingString().then((value) =>
+        _loadTrainings(value).map((training) => training.title).toList());
   }
 
   @override
@@ -96,14 +101,9 @@ class Quiz {
         .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
   }
 
-  static List<Quiz> loadQuizzes(String json) {
-    return ((jsonDecode(json))["quizzes"] as List<dynamic>)
-        .map((obj) => Quiz.fromJson(obj as Map<String, dynamic>)).toList();
-  }
-
   static Future<List<String>> loadQuizNames() {
-    return loadQuizzesString().then((value)
-    => Quiz.loadQuizzes(value).map((quiz) => quiz.title).toList());
+    return loadQuizzesString().then((value) =>
+        _loadQuizzes(value).map((quiz) => quiz.title).toList());
   }
   
   static Quiz _quizFactory(String json) {
@@ -148,4 +148,76 @@ class Question {
       options = (json['options'] as List)?.map((str) => str as String)?.toList(),
       correct = (json['correct'] as String).trim(),
       informativeMessage = (json['info'] as String);
+}
+
+// ---------------------------------------------
+// MATRIX STUFF
+// ---------------------------------------------
+
+class Matrix {
+  final LinkedHashMap<String, Stakeholder> matrix;
+
+  Matrix({this.matrix});
+
+  static final Matrix emptyMatrix = new Matrix();
+
+  static Future<Matrix> localMatrixFactory() {
+    return loadMatrixString().then((json) => _loadStakeholders(json));
+  }
+
+  static Matrix _loadStakeholders(String json) {
+    List<Stakeholder> stakeholders = ((jsonDecode(json))["stakeholders"] as List<dynamic>)
+        .map((obj) => Stakeholder.fromJson(obj as Map<String, dynamic>)).toList();
+    return new Matrix(matrix: LinkedHashMap.fromIterable(stakeholders,
+        key: (elem) => (elem as Stakeholder).title,
+        value: (elem) => (elem as Stakeholder)));
+  }
+}
+
+class Stakeholder {
+  final String title;
+  final List<String> actions;
+  final List<Attitude> attitudes;
+  final List<String> sources;
+
+  Stakeholder({this.title, this.actions, this.attitudes, this.sources});
+
+  Stakeholder.fromJson(Map<String, dynamic> json)
+    : title = (json['title'] as String),
+      actions = (json['actions'] as List).map((str) => str as String).toList(),
+      attitudes = (json['attitudes'] as List).map((a) => Attitude.fromJson(a)).toList(),
+      sources = (json['sources'] as List).map((str) => str as String).toList();
+
+  @override
+  bool operator ==(other) {
+    return (other is Stakeholder)
+        && title == other.title && actions == other.actions
+        && attitudes == other.attitudes && sources == other.sources;
+  }
+
+  @override
+  int get hashCode {
+    return 17 * actions.hashCode * attitudes.hashCode
+        * title.hashCode * sources.hashCode;
+  }
+}
+
+class Attitude {
+  final String facet;
+  final String info;
+
+  Attitude({this.facet, this.info});
+
+  Attitude.fromJson(Map<String, dynamic> json)
+    : facet = (json['facet'] as String),
+      info = (json['info'] as String);
+
+  @override
+  bool operator ==(other) {
+    return (other is Attitude)
+        && other.facet == facet && other.info == other.info;
+  }
+
+  @override
+  int get hashCode => facet.hashCode * info.hashCode * 17;
 }
