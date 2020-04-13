@@ -80,7 +80,7 @@ class _ScreeningState extends State<Screening> {
                 FlatButton(
                   child: Text('Clear Selections',
                     style: new TextStyle(
-                      color: purple.shade700)
+                      color: purple.shade500)
                     ),
                   onPressed: () => {
                    Screening.screeningTips.forEach((tip) => tip.selected = false)
@@ -104,6 +104,7 @@ class _ScreeningState extends State<Screening> {
                                   Screening.screeningTips[index].name,
                                   style: TextStyle(
                                     fontSize: 20.0,
+                                    color: purple.shade700
                                   ),
                                 ),
                                 value: Screening.screeningTips[index].selected,
