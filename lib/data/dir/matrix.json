@@ -1,10 +1,13 @@
 {
   "stakeholders": [
     {
-      "title": "Victim",
+      "title": "Victims",
       "actions": [
         "Recognize that abuse is not 'normal'.",
-        "Understand that 'no-one deserves to be treated like that'."
+        "Understand that 'no-one deserves to be treated like that'.",
+        "Learn about abuse – the dangers of staying in an abusive relationship, what not to do, and how to leave/escape safely.",
+        "Identify support system: family, friends, co-workers that might help.",
+        "Seek help and advice from domestic violence hotlines, advocates, and other service providers."
       ],
       "attitudes": [
         {
@@ -14,6 +17,26 @@
         {
           "facet": "Financial",
           "info": "If I leave, I have no money to support myself."
+        },
+        {
+          "facet": "Fear",
+          "info": "If I try to leave, my abuser will kill me and harm my children."
+        },
+        {
+          "facet": "Love",
+          "info": "I love my abuser. Given time I can change him/her."
+        },
+        {
+          "facet": "Shame and Embarrassment",
+          "info": "Who can I tell, I am so embarrassed and ashamed."
+        },
+        {
+          "facet": "Family",
+          "info": "It's my duty to keep the family together."
+        },
+        {
+          "facet": "Hopelessness",
+          "info": "Why call the police? They come, but they don't help."
         }
       ],
       "sources": [
@@ -23,25 +46,201 @@
       ]
     },
     {
-      "title": "Victim2",
+      "title": "Perpetrators",
       "actions": [
-        "Recognize that abuse is not 'normal'.",
-        "Understand that 'no-one deserves to be treated like that'."
+        "Acknowledge action and accept responsibility.",
+        "Seek professional help.",
+        "Enroll in an anger management class."
       ],
       "attitudes": [
         {
-          "facet": "Normal life",
-          "info": "This is just how life is."
+          "facet": "Jealousy",
+          "info": "If I cannot have her/him, nobody can."
         },
         {
-          "facet": "Financial",
-          "info": "If I leave, I have no money to support myself."
+          "facet": "Control",
+          "info": "She went out without telling me. She refused to have sex with me."
+        },
+        {
+          "facet": "Low self esteem",
+          "info": "I cannot live without her."
+        },
+        {
+          "facet": "Anger",
+          "info": "She burned the food. I just lost my temper, I am sorry."
+        },
+        {
+          "facet": "Stressed",
+          "info": "She doesn’t do anything to help. All she does is nag."
+        },
+        {
+          "facet": "Charming/Justifying Actions",
+          "info": "It’s okay. I did not hit her."
         }
       ],
       "sources": [
-        "Avanti Adhia, S. Bryn Austin,\nGarrett M. Fitzmaurice, David\nHemenway. “The Role of Intimate\nPartner Violence in Homicides of\nChildren Aged 2–14 Years.”\nAmerican Journal of Preventive\nMedicine, Volume 56, Issue 1\n(2019): 38-46.",
-        "Johnson, Holly, and Tina Hotton.\n&quot;Losing control: Homicide risk in\nestranged and intact intimate\nrelationships.&quot; Homicide studies 7,\nno. 1 (2003): 58-84.",
-        "Laskey, Philippa, Elizabeth A.\nBates, and Julie C. Taylor. &quot;A\nsystematic literature review of\nintimate partner violence\nvictimization: an inclusive review\nacross gender and\nsexuality.&quot; Aggression and Violent\nBehavior (2019)."
+        "Hampton, Robert, William Oliver, and Lucia Magarian. \"Domestic violence in the African American community: An analysis of social and structural factors.\" Violence against women 9, no. 5 (2003): 533-557. ",
+        "Hester, Marianne, Nicole Westmarland, Geetanjali Gangoli, Mike Wilkinson, Caitriona O’Kelly, Andrew Kent, and Alana Diamond. \"Domestic violence perpetrators: identifying needs to inform early intervention.\" Bristol: University of Bristol in association with the Northern Rock Foundation and the Home Office (2006). ",
+        "Williams, Oliver J., William Oliver, and Marcus Pope. \"Domestic violence in the African American community.\" Journal of Aggression, Maltreatment & Trauma 16, no. 3 (2008): 229-237. ",
+        "https://sswr.confex.com/sswr/2019/webprogram/Paper36611.html "
+      ]
+    },
+    {
+      "title": "E-911 Call Takers (operators)",
+      "actions": [
+        "Information gathering – asking appropriate questions to gather needed information",
+        "Reassuring and calming caller – effective communication skills",
+        "Dealing effectively with special population – non-English speaking, LGB",
+        "Determining severity – assessment; knowledge of danger assessment tool",
+        "Decision-making – disposition of calls (connecting to services & resources)",
+        "Summarizing and documenting call",
+        "Recognizing workplace stresses – burnout and Post Traumatic Stress Disorder (PTSD)"
+      ],
+      "attitudes": [
+        {
+          "facet": "Acceptance of traditional gender roles",
+          "info": "She was out-of-line and should be a better wife."
+        },
+        {
+          "facet": "Private matter; not serious",
+          "info": "It’s just a lover’s quarrel. They can work it out."
+        },
+        {
+          "facet": "Uncertain",
+          "info": "How am I to determine who started the fight?"
+        },
+        {
+          "facet": "Weariness",
+          "info": "Here we go again. They just keep calling."
+        }
+      ],
+      "sources": [
+        "Kassis, Brittany P. \"911 Dispatchers: Their Role as Evidence Collectors.\" (2017). ",
+        "Meischke, Hendrika, Ian Painter, Michelle Lilly, Randal Beaton, Debra Revere, Becca Calhoun, K. Seeley, Yvonne Carslay, Cathy Moe, and Janet Baseman. \"An exploration of sources, symptoms and buffers of occupational stress in 9-1-1 emergency call centers.\" Ann Emerg Dispatch Response 3, no. 2 (2015): 28-35. ",
+        "Shah, Susan, Insha Rahman, and Anita Khashu. \"Overcoming Language Barriers.\" Solutions for law enforcement (2007): 1-17. ",
+        "Turner, Kimberly D., \"Effects of Stress on 9-1-1 Call-Takers and Police Dispatchers: A Study at the San Jose Police Department\" (2015). Master's Theses. 4562.  \nDOI: https://doi.org/10.31979/etd.3yxn-3pvm  \nhttps://scholarworks.sjsu.edu/etd_theses/4562 ",
+        "https://www.911.gov/issue_telecommunicatorsandtraining.html "
+      ]
+    },
+    {
+      "title": "Police Officers",
+      "actions": [
+        "Use caution approaching scene and check all parties for injuries.",
+        "Ascertain whereabouts of the abuser and assess dangerousness.",
+        "If abuser is present, separate the parties and interview them out of hearing range of each other.",
+        "Determine relationship of victim to suspect.",
+        "If present, what does abuser say happened? What does victim say? (Put each party’s response in quotes). Document any excited utterances and spontaneous statements.",
+        "Obtain statements from all parties, including witnesses and children (recorded statements preferred). Describe physical/emotional state of each party (crying, shaking, flushed face, etc.)",
+        "What did you observe related to the accounts of events/injuries?",
+        "Describe injuries (type, size, location, color).",
+        "Collect evidence and document/list damaged property (broken phone, torn clothing, bloody items, damaged walls, knocked over furniture, etc.)",
+        "Do children present or reside in the house? Contact appropriate authorizes, if warranted.",
+        "Take pictures of scene, victim, suspect, and children.",
+        "Determine who called 911? Obtain statement and 911 recording.",
+        "Obtain and note previous history of domestic violence.",
+        "Is there a protective order? Is the suspect on probation?",
+        "Obtain an expedited warrant, if suspect cannot be locate.",
+        "If medical attention required: Release signed? Obtain statements about the extent of injuries from medical personnel.",
+        "Do not discuss whether victim should prosecute.",
+        "Obtain name, address and phone number of someone (mother, best friend, relative, etc.), who will know how to reach victim."
+      ],
+      "attitudes": [
+        {
+          "facet": "Acceptance of traditional gender roles",
+          "info": "She was out-of-line and should be a better wife."
+        },
+        {
+          "facet": "Private matter; not serious",
+          "info": "It’s just a lover’s quarrel. They can work it out."
+        },
+        {
+          "facet": "Uncertain",
+          "info": "How am I to determine who started the fight?"
+        },
+        {
+          "facet": "Indecisive",
+          "info": "How do I determine whether arrest is appropriate?"
+        },
+        {
+          "facet": "Frustration",
+          "info": "Here we go again. I don’t understand why she/he doesn’t just leave."
+        },
+        {
+          "facet": "Not empathetic",
+          "info": "When victims refuse help and do not press charges, they deserve what they get."
+        },
+        {
+          "facet": "Impatient",
+          "info": "Dealing with these cases requires lots of time."
+        },
+        {
+          "facet": "Not responsible",
+          "info": "I’m not a social worker. I became an officer to find the bad guys."
+        },
+        {
+          "facet": "Stressed",
+          "info": "Domestic violence calls can be very dangerous. You never know if the abuser is still present. If their abuser is still there, you don’t know what they are going to do."
+        }
+      ],
+      "sources": [
+        "Belknap, Joanne. \"Law enforcement officers' attitudes about the appropriate responses to woman battering.\" International Review of Victimology 4, no. 1 (1995): 47-62. ",
+        "Blaney, Elizabeth. \"Police officers' views of specialized intimate partner violence training.\" Policing: an international journal of police strategies & management 33, no. 2 (2010): 354-375.",
+        "BUZAWA, EVES, and THOMAS AUSTIN. \"Determining police response to domestic violence victims.\" Victims of Crime and the Victimization Process 36, no. 5 (2013): 16. ",
+        "DeJong, Christina, Amanda Burgess-Proctor, and Lori Elis. \"Police officer perceptions of intimate partner violence: An analysis of observational data.\" Violence and victims 23, no. 6 (2008): 683-696. ",
+        "http://fcadv.org/sites/default/files/Domestic%20Violence%20Reference%20Card%20FINAL%206-27-13.pdf ",
+        "https://www.floridatechonline.com/blog/criminal-justice/police-women-a-potential-domestic-violence-solution/ ",
+        "https://www.theiacp.org/sites/default/files/all/i-j/IACPIntimatePartnerViolenceResponsePolicyandTrainingGuidelines2017.pdf",
+        "Huisman, Kimberly, Jeri Martinez, and Cathleen Wilson. \"Training police officers on domestic violence and racism: Challenges and strategies.\" Violence Against Women 11, no. 6 (2005): 792-821.",
+        "Lockwood, Daniel, and Ariane Prohaska. \"Police Officer Gender and Attitudes toward Intimate Partner Violence: How policy can eliminate stereotypes.\" International Journal of Criminal Justice Sciences 10, no. 1 (2015).",
+        "Miller, Amalia R., and Carmit Segal. \"Do female officers improve law enforcement quality? Effects on crime reporting and domestic violence escalation.\" University of Zurich, UBS International Center of Economics in Society, Working Paper 9 (2014).",
+        "O'Dell, Anne. \"Why do police arrest victims of domestic violence? The need for comprehensive training and investigative protocols.\" Journal of Aggression, Maltreatment & Trauma 15, no. 3-4 (2007): 53-73.",
+        "Rabe-Hemp, Cara E. \"Female officers and the ethic of care: Does officer gender impact police behaviors?.\" Journal of criminal justice 36, no. 5 (2008): 426-434.",
+        "Reaves, Brian A. Police response to domestic violence, 2006-2015. US Department of Justice, Office of Justice Programs, Bureau of Justice Statistics, 2017. ",
+        "Stalans, Loretta J., and Mary A. Finn. \"Gender differences in officers' perceptions and decisions about domestic violence cases.\" Women & Criminal Justice 11, no. 3 (2000): 1-24. ",
+        "Stover, Carla Smith, and Kimberly Lent. \"Training and certification for domestic violence service providers: The need for a national standard curriculum and training approach.\" Psychology of violence 4, no. 2 (2014): 117.",
+        "Townsend, Meg, Dana Hunt, Sarah Kuck, and Caity Baxter. \"Law enforcement response to domestic violence calls for service: Final report.\" Washington, DC: US Department of justice (2005). \n\nWhetstone, Thomas S. \"Measuring the impact of a domestic violence coordinated response team.\" Policing: An International Journal of Police Strategies & Management 24, no. 3 (2001): 371-398. "
+      ]
+    },
+    {
+      "title": "Emergency Medical Technicians (EMT) and Paramedics ",
+      "actions": [
+        "Front-line, providing pre-hospital care of injuries.",
+        "Assess the home environment.",
+        "Care for injuries first.",
+        "Offer resource if domestic violence is suspected.",
+        "Development of an assessment tool to determine risk for domestic violence."
+      ],
+      "attitudes": [
+        {
+          "facet": "Not responsible",
+          "info": "I’m a first responder to an injury call. I just take care of the injury."
+        },
+        {
+          "facet": "Suspect domestic violence",
+          "info": "All I can do is to encourage the victim to seek help."
+        },
+        {
+          "facet": "Unprepared",
+          "info": "I get an injury call, how am I supposed to diagnosis domestic violence?"
+        },
+        {
+          "facet": "Beyond duty:",
+          "info": "There is nothing about domestic violence on the forms I am required to fill out."
+        },
+        {
+          "facet": "Hopeless",
+          "info": "Victim didn’t want to go to the hospital, what am I supposed to do?"
+        },
+        {
+          "facet": "Unconcerned",
+          "info": "Couples get into fights, she probably was nagging him and he hit her."
+        }
+      ],
+      "sources": [
+        "Donnelly, Elizabeth A., Karen Oehme, and Rebecca Melvin. \"What do EMS personnel think about domestic violence? An exploration of attitudes and experiences after participation in training.\" Journal of forensic and legal medicine 38 (2016): 64-69. ",
+        "Mackey, Breanna. \"Paramedic identification and management of victims of intimate partner violence: A literature review.\" Australasian Journal of Paramedicine 14, no. 4 (2017). ",
+        "Katherine Thompson, M. C. H. S. \"Caring for Survivors of Interpersonal Violence in Prehospital Environments.\"",
+        "Weiss, Steven J., Amy A. Ernst, Don Blanton, David Sewell, and Todd G. Nick. \"EMT domestic violence knowledge and the results of an educational intervention.\" The American journal of emergency medicine 18, no. 2 (2000): 168-171."
       ]
     }
   ]
