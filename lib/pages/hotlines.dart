@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,14 +9,16 @@ import 'package:url_launcher/url_launcher.dart';
 class Hotlines extends StatelessWidget {
   static const String route = '/hotlines';
   static const List<String> hotlineNumbers = [
-    "tel://6789564895",
-    "tel://6789564895",
-    "tel://6789564895"
+    "tel://8007997233",
+    "tel://8006564673",
+    "tel://3038391852",
+    "tel://8003342836",
   ];
   static const List<String> hotlineTitles = [
-    "This is Alex's phone #",
-    "not an actual hotline",
-    "Call Alex"
+    "National Domestic Violence",
+    "National Sexual Assault",
+    "National Coalition Against DV",
+    "Georgia Statewide Domestic Violence",
   ];
 
   @override
@@ -36,7 +39,7 @@ class Hotlines extends StatelessWidget {
               child: Text(
                 'Important Hotlines',
                 style:
-                new TextStyle(color: Colors.deepPurpleAccent, fontSize: 30, fontWeight: FontWeight.bold),
+                new TextStyle(color: purple.shade500, fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
             Column(
@@ -66,7 +69,7 @@ class Hotlines extends StatelessWidget {
                                   child: Text(
                                     hotlineTitles[index],
                                     textAlign: TextAlign.left,
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 15),
                                   ),
                                 ),
                               ],

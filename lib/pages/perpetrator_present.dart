@@ -6,7 +6,12 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/not_separate_screening.dart';
-
+import 'package:heroes_manual/pages/screening_page.dart';
+import 'package:heroes_manual/utility/colors.dart';
+import 'package:flutter/widgets.dart';
+import 'package:heroes_manual/utility/hm_appbar.dart';
+import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:heroes_manual/pages/screening_page.dart';
 
 class PerpetratorPresent extends StatelessWidget {
   static const String route = '/perpetrator_present';
@@ -44,38 +49,79 @@ class PerpetratorPresent extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(30.0),
               child: Text('Are the perpetrator and victim separate?',
-                  style: TextStyle(fontSize: 25)),
+                  style: TextStyle(fontSize: 25, color: purple.shade500),
+                  textAlign: TextAlign.center,
+              ),
             ),
             ButtonBar(
               mainAxisSize: MainAxisSize.min,
               alignment: MainAxisAlignment.center,
               children: <Widget>[
-                RaisedButton(
-                  child: new Text(
-                    'Yes',
-                    style: TextStyle(fontSize: 20, color: purple.shade500),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: new BorderRadius.all(
+                      const Radius.circular(6.0),
+                    ),
+                    gradient: LinearGradient(
+                        colors: [purple.shade600, Colors.deepPurple[400]],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft
+                    ),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, Screening.route);
-                  },
+                  child: new FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, Screening.route);
+                    },
+                    padding: EdgeInsets.all(0.0),
+                    child: new Text(
+                      'Yes',
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  ),
                 ),
-                RaisedButton(
-                  child: Text(
-                    'Tips to Separate',
-                    style: TextStyle(fontSize: 20, color: purple.shade500),
+
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: new BorderRadius.all(
+                      const Radius.circular(6.0),
+                    ),
+                    gradient: LinearGradient(
+                        colors: [purple.shade600, Colors.deepPurple[400]],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft
+                    ),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, TipsToSeparate.route);
-                  },
+                  child: new FlatButton(
+                    child: Text(
+                      'Tips to Separate',
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, TipsToSeparate.route);
+                    },
+                  ),
                 ),
-                RaisedButton(
-                  child: Text(
-                    'Cannot Separate',
-                    style: TextStyle(fontSize: 20, color: purple.shade500),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: new BorderRadius.all(
+                      const Radius.circular(6.0),
+                    ),
+                    gradient: LinearGradient(
+                        colors: [purple.shade600, Colors.deepPurple[400]],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft
+                    ),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, NotSeparateScreening.route);
-                  },
+                  child: new FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, NotSeparateScreening.route);
+                    },
+                    padding: EdgeInsets.all(0.0),
+                    child: new Text(
+                      'Cannot Separate',
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  ),
                 ),
               ],
             ),
