@@ -32,7 +32,7 @@ class Organizations extends StatelessWidget {
                     // order of stacks affects click-ability
                     Center(
                       child: Text(
-                        'General Tips to Separate',
+                        'Important Organizations',
                         style: TextStyle(color: purple.shade500, fontSize: 30),
                         textAlign: TextAlign.center,
                       ),
