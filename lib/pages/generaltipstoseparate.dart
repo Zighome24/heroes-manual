@@ -3,27 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
+import 'package:heroes_manual/utility/strings.dart';
 
 class GeneralTipsToSeparate extends StatelessWidget {
   static const String route = '/generaltipstoseparate';
-  static const List<String> general_screening_tips = [
-    "Remain non-judgemental and supportive.",
-    "Make it clear that they are not alone.",
-    "Stress the importance of getting help.",
-    "Make it clear that there are resources.",
-    "Speaking slowly, making it clear you are not in a rush.",
-    "Avoid closed body language, such as crossed arms.",
-    "Never refer to them as a victim in questioning, as this can have a negative"
-        "connotation.",
-    "Maintain eye contact and keep body language open.",
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HMAppBar(
         showLeading: true,
-        showTrailing: true,
         leadingAction: () => Navigator.pop(context),
       ),
       body: Center(
