@@ -7,7 +7,6 @@ import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/pages/not_separate_screening.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
-import 'package:heroes_manual/utility/colors.dart';
 import 'package:flutter/widgets.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
@@ -101,7 +100,14 @@ class PerpetratorPresent extends StatelessWidget {
                     },
                   ),
                 ),
+              ]
+            ),
+            ButtonBar(
+              mainAxisSize: MainAxisSize.min,
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
                 Container(
+                  padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
                   decoration: BoxDecoration(
                     borderRadius: new BorderRadius.all(
                       const Radius.circular(6.0),

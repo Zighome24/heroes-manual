@@ -26,24 +26,28 @@ class NotSeparateScreening extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    padding: const EdgeInsets.all(20.0),
-                    alignment: Alignment.center,
-                    child: Stack(
-                      children: <Widget>[
-                        Center(
-                          child: Text(
-                            'Tips to Screen Victim When Perpetrator is Nearby',
-                            style: TextStyle(color: purple.shade500, fontSize: 30),
-                            textAlign: TextAlign.center,
-                          ),
-                        )
-                      ],
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: new BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Center(
+                            child: Text(
+                              'Tips to Screen Victim When Perpetrator is Nearby',
+                              style: TextStyle(color: Colors.white, fontSize: 30),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
+                      ),
                     ),
-                  ),
-                  Divider(
-                    color: background.shade600,
-                    thickness: 3.0,
                   ),
                   Expanded(
                     child: Padding(
