@@ -48,16 +48,32 @@ class MultipleChoiceQuestion extends StatelessWidget {
           ),
           Spacer(),
           Flexible(
-            flex: 7,
+            flex: 8,
               child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: question.options.length,
                 itemBuilder: (_, index) =>
-                    RaisedButton(
-                      onPressed: question.options[index] == question.correct ?
+                  Padding(
+                    padding: EdgeInsets.all(3.0),
+                    child: Container(
+                      padding: EdgeInsets.all(0.0),
+                      decoration: BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          const Radius.circular(6.0),
+                        ),
+                        gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                        ),
+                      ),
+                      child: FlatButton(
+                        onPressed: question.options[index] == question.correct ?
                         correctFunction : incorrectFunction,
-                      child: Text(question.options[index]),
-                    ),
+                        child: Text(question.options[index], style: TextStyle(color: Colors.white),),
+                      ),
+                    )
+                  )
               )
           ),
           Spacer()
