@@ -2,25 +2,192 @@
   "trainings": [
     {
       "title": "Economic Impact",
-      "summary": "Economic Impact on DV.",
+      "summary": "Economic Impact on DV",
       "cards":
       [
         {
-          "text": "The economic impact of DV is hard on the US."
+          "text": "Victims of intimate partner violence lose a total of 8.0 million days of paid work each year."
         },
         {
-          "text": "DV is bad because it is."
+          "text": "The cost of intimate partner violence exceeds $8.3 billion per year."
+        },
+        {
+          "text": "Between 21-60% of victims of intimate partner violence lose their due to reasons stemming from the abuse."
+        },
+        {
+          "text": "Between 2003 ad 2008, 142 women were murdered in their workplace by their abuser (78% of the total number of women killed in the workplace during this time)."
+        },
+        {
+          "text": "Because an abuse victim is less likely to be able to afford legal representation, they are at a disadvantage when involved in a child custody case, divorce proceedings, civil suits, or other legal matters."
         }
       ],
       "sources": "Sources go here"
     },
     {
-      "title": "Organizations",
-      "summary": "Organizations helping DV victims.",
+      "title": "Physical & Mental Impact",
+      "summary": "Physical & Mental Impact on DV victims",
       "cards":
       [
         {
-          "text": "You can reach the organization at 999"
+          "text": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
+        },
+        {
+          "text": "Studies show that there is a relationship between intimate partner violence, depression, and suicidal behavior."
+        },
+        {
+          "text": "Physical, mental, and sexual and reproductive health effects have been linked with intimate partner violence including adolescent pregnancy, unintended pregnancy in general, miscarriage, stillbirth, intrauterine hemorrhage, nutritional deficiency, abdominal pain and other gastrointestinal problems, neurological disorders, chronic pain, disability, anxiety and post-traumatic stress disorder (PTSD), as well as noncommunicable diseases such as hypertension, cancer and cardiovascular diseases."
+        },
+        {
+          "text": "Victims of domestic violence are at higher risk for developing addictions to alcohol, tobacco, or drugs."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "Georgia Statistics",
+      "summary": "Georgia Statistics on DV ",
+      "cards":
+      [
+        {
+          "text": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
+        },
+        {
+          "text": "27 counties in Georgia have no access to domestic violence services."
+        },
+        {
+          "text": "In 2014, 117 Georgians were killed in domestic violence-related incidents."
+        },
+        {
+          "text": "In 29% of these cases, children were witnesses."
+        },
+        {
+          "text": "Firearms were involved in 65% of Georgia domestic violence fatalities."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "National Statistics",
+      "summary": "National Statistics on DV ",
+      "cards":
+      [
+        {
+          "text": "1 in 4 women and 1 in 9 men experience severe intimate partner physical violence, intimate partner contact sexual violence, and/or intimate partner stalking."
+        },
+        {
+          "text": "1 in 3 women and 1 in 4 men have experienced some form of physical violence by an intimate partner."
+        },
+        {
+          "text": "1 in 7 women and 1 in 25 men have been injured by an intimate partner."
+        },
+        {
+          "text": "1 in 10 women have been raped by an intimate partner."
+        },
+        {
+          "text": "On average, there are more than 20,000 phone calls placed to domestic violence hotlines nationwide."
+        },
+        {
+          "text": "66.2% of female stalking victims reported stalking by a current or former intimate partner."
+        },
+        {
+          "text": "1 in 3 female murder victims and 1 in 20 male murder victims were killed by intimate partners."
+        },
+        {
+          "text": "72% of all murder-suicides are perpetrated by intimate partners. 94% of murder-suicide victims are female."
+        },
+        {
+          "text": "The presence of a gun in a domestic violence situation increases the risk of homicide by 500%."
+        },
+        {
+          "text": "19% of domestic violence involves a weapon."
+        },
+        {
+          "text": "Over 50% of abused women who leave their partners are hounded, badgered and forced to return home."
+        },
+        {
+          "text": "43% of dating college women reported experiencing abusive behaviors from their partner."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "Children & Teens",
+      "summary": "Children & Teen Statistics on DV ",
+      "cards":
+      [
+        {
+          "text": "1 in 15 children are exposed to intimate partner violence each year. 90% of these children are eyewitnesses to this violence."
+        },
+        {
+          "text": "1 in 3 children who witnessed domestic violence are also victims of child abuse."
+        },
+        {
+          "text": "Children’s immediate reaction to experiencing domestic violence include generalized anxiety, sleeplessness, aggression, difficulty concentrating, nightmares, high levels of activity, and separation anxiety."
+        },
+        {
+          "text": "Abusive partners use children to control victims. Abusive partners often threaten to gain sole custody, kill, kidnap or otherwise harm children if victims leave."
+        },
+        {
+          "text": "Children who witness intimate partner growing up are three times as likely as their peers to engage in violent behavior."
+        },
+        {
+          "text": "Children who witness incidents of domestic violence (a form of childhood trauma) are at greater risk of serious adult health problems including obesity, cancer, heart disease, depression, substance abuse, tobacco use and unintended pregnancies."
+        },
+        {
+          "text": "Courts award sole or joint custody to fathers in 70% of custody cases, despite the perception that mothers always win custody of children."
+        },
+        {
+          "text": "Fathers who batter the mothers of their children are twice as likely to seek sole custody of their children as non-abusive fathers."
+        },
+        {
+          "text": "38% of abusive fathers seeking sole custody were awarded either sole or joint custody of their children, despite the fact that there was a documented pattern of abuse of both the mother and the children."
+        },
+        {
+          "text": "Nearly 20.9% of female high school students and 13.4% of male high school students report being physically or sexually abused by a dating partner."
+        },
+        {
+          "text": "A 2014 study found 10% of teenage students in dating relationships were coerced into sexual intercourse in the previous year."
+        },
+        {
+          "text": "A 2013 study of 10th graders found that 35% had been either physically or verbally abused. 31% were perpetrators of physical or verbal abuse."
+        },
+        {
+          "text": "50% of youth reporting dating violence and rape also reported attempted suicide."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "Terminology & Technicalities",
+      "summary": "Terminology & Technicalities related to DV ",
+      "cards":
+      [
+        {
+          "text": "Family violence is a pattern of intentionally violent or controlling behavior used by a person against a family member or intimate partner to gain and maintain power and control over that person, during and/or after the relationship."
+        },
+        {
+          "text": "Family violence is also known as domestic violence, intimate partner violence, relationship violence, or interpersonal violence."
+        },
+        {
+          "text": "An intimate partner is defined as a spouse, a former spouse, a person who shares a child in common with the victim, or a person who cohabits or has cohabited with the victim."
+        },
+        {
+          "text": "Family members in a situation of violence can be defined as present or past spouses, parents of the same child, parents and children, stepparents and stepchildren, foster parents and foster children, or other persons living or formerly living in the same household."
+        },
+        {
+          "text": "Categories of family violence: Control, Physical Abuse, Sexual Abuse, Emotional Abuse & Intimidation, Isolation, Verbal Abuse (eg, Coercion, Threats, Blame), Economic Abuse, Stalking."
+        },
+        {
+          "text": "The cycle of abuse is typically three recurring phases: Tension Building, Acute or Crisis phase, Calm or Honeymoon Phase."
+        },
+        {
+          "text": "Tension Building: the relationship is tense, abuser can be easily set off by a variety of factors, “walking on eggshells,” feels something bad is about to happen."
+        },
+        {
+          "text": "Acute or Crisis Phase: abuser outbursts with some form of abuse, attempting to dominate their partner, fears for victim’s or children’s safety, drug and/or alcohol abuse."
+        },
+        {
+          "text": "Calm or Honeymoon Phase: abuser often apologizes ad shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”."
         }
       ],
       "sources": "Sources go here"
