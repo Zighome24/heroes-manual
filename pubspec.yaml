@@ -19,7 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  material_design_icons_flutter: 3.4.4795
+  material_design_icons_flutter: 4.0.5045
   # Un-comment this if you want to add the loading icon to lesson summary and quiz summary screen
   # loading: ^1.0.2
 
