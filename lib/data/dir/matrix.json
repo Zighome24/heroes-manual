@@ -59,23 +59,23 @@
         },
         {
           "facet": "Control",
-          "info": "She went out without telling me. She refused to have sex with me."
+          "info": "She/He went out without telling me. She/He refused to have sex with me."
         },
         {
           "facet": "Low self esteem",
-          "info": "I cannot live without her."
+          "info": "I cannot live without her/him."
         },
         {
           "facet": "Anger",
-          "info": "She burned the food. I just lost my temper, I am sorry."
+          "info": "She/He burned the food. I just lost my temper, I am sorry."
         },
         {
           "facet": "Stressed",
-          "info": "She doesn’t do anything to help. All she does is nag."
+          "info": "She/He doesn’t do anything to help. All she/he does is nag."
         },
         {
           "facet": "Charming/Justifying Actions",
-          "info": "It’s okay. I did not hit her."
+          "info": "It’s okay. I did not hit her/him."
         }
       ],
       "sources": [
@@ -99,7 +99,7 @@
       "attitudes": [
         {
           "facet": "Acceptance of traditional gender roles",
-          "info": "She was out-of-line and should be a better wife."
+          "info": "She/HE was out-of-line and should be a better wife/husband."
         },
         {
           "facet": "Private matter; not serious",
@@ -147,7 +147,7 @@
       "attitudes": [
         {
           "facet": "Acceptance of traditional gender roles",
-          "info": "She was out-of-line and should be a better wife."
+          "info": "She/He was out-of-line and should be a better wife/husband."
         },
         {
           "facet": "Private matter; not serious",
@@ -233,7 +233,7 @@
         },
         {
           "facet": "Unconcerned",
-          "info": "Couples get into fights, she probably was nagging him and he hit her."
+          "info": "Couples get into fights, she/he probably was nagging him/her and he/she hit her/him."
         }
       ],
       "sources": [
