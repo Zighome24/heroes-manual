@@ -114,7 +114,6 @@ class _ScreeningState extends State<Screening> {
                                   });
                                 },
                               ),
-
                             ),
                           ],
                         ),

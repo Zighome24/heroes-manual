@@ -3,13 +3,16 @@ import 'package:heroes_manual/pages/hotlines.dart';
 import 'package:heroes_manual/pages/laws.dart';
 import 'package:heroes_manual/pages/organizations.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
+import 'package:heroes_manual/pages/red_flags.dart';
 import 'package:heroes_manual/pages/safety_plan.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/generaltipstoseparate.dart';
 
 
 
-const resourceRoutes = [SafetyPlan.route, Organizations.route, Hotlines.route, Laws.route, GeneralTipsToSeparate.route];
+const resourceRoutes = [SafetyPlan.route, Organizations.route, Hotlines.route, Laws.route, GeneralTipsToSeparate.route, RedFlags.route];
+
+
 // TODO: debug routes for screening - remove for production
 const debugScreenRoutes = [Screening.route, PerpetratorPresent.route,
   DevMainMenu.route];
