@@ -63,11 +63,28 @@ class FillInBlankQuestion extends StatelessWidget {
                     ),
                     controller: textEditingController,
                   ),
-                  RaisedButton(
-                    child: Text(
-                        'Submit'
-                    ),
-                    onPressed: () => _validate(textEditingController.text),
+                  Padding(
+                    padding: EdgeInsets.all(7.0),
+                    child: Container(
+                      padding: EdgeInsets.all(0.0),
+                      decoration: BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          const Radius.circular(6.0),
+                        ),
+                        gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                        ),
+                      ),
+                      child: FlatButton(
+                        child: Text(
+                          'Submit',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        onPressed: () => _validate(textEditingController.text),
+                      )
+                    )
                   )
                 ]
               )
