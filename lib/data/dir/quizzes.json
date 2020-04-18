@@ -5,41 +5,524 @@
       "questions":
       [
         {
-          "text": "What is the cost of domestic violence?",
+          "text": "What is the cost of intimate partner violence exceeds how much per year?",
           "type": "mc",
           "options":
           [
-            "Human Lives",
-            "Money",
-            "Relationships",
-            "All of the above"
+            "$20.6 million",
+            "$8.3 billion",
+            "$10.5 billion",
+            "$15 billion"
           ],
-          "correct": "All of the above",
-          "info": "All parties involved in domestic violence are affected in some way or another."
+          "correct": "$8.3 billion",
+          "info": "The cost of intimate partner violence exceeds $8.3 billion per year."
         },
         {
-          "text": "2 + 2 = ?",
+          "text": "Victims of intimate partner violence lose a total of ______ million days of paid work each year.",
           "type": "f",
-          "correct": "4",
-          "info": "Just do the math, duh."
+          "correct": "8",
+          "info": "Victims of intimate partner violence lose a total of 8.0 million days of paid work each year."
+        },
+        {
+          "text": "What range of victims of intimate partner violence lose their jobs due to reasons stemming from the abuse?",
+          "type": "mc",
+          "options":
+          [
+            "10-15%",
+            "40-80%",
+            "21-60%",
+            "30-50%"
+          ],
+          "correct": "21-60%",
+          "info": "Between 21-60% of victims of intimate partner violence lose their due to reasons stemming from the abuse."
+        },
+        {
+          "text": "Between 2033 and 2008, what percent of women murdered in their workplace were murdered by their abusers?",
+          "type": "mc",
+          "options":
+          [
+            "25%",
+            "37%",
+            "55%",
+            "78%"
+          ],
+          "correct": "78%",
+          "info": "Between 2003 and 2008, 142 women were murdered in their workplace by their abuser (78% of the total number of women killed in the workplace during this time)."
+        },
+        {
+          "text": "Abuse victims are ______ likely to be able to afford legal representation.",
+          "type": "f",
+          "correct": "less",
+          "info": "Because an abuse victim is less likely to be able to afford legal representation, they are at a disadvantage when involved in a child custody case, divorce proceedings, civil suits, or other legal matters."
         }
       ],
-      "summary": "A quiz on the economic impact of DV.",
-      "sources": "Sources go here"
+      "summary": "A quiz on the economic impact of DV."
     },
     {
-      "title": "Organizations",
+      "title": "Physical & Mental Impact",
       "questions":
       [
         {
-          "text": "At what number can you reach the organization?",
+          "text": "People abused by their intimate partners are _______ vulnerable to contracting STIs.",
           "type": "f",
-          "correct": "999",
-          "info": "Its the number of the organization, they can be reached at."
+          "correct": "more",
+          "info": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
+        },
+        {
+          "text": "Intimate partner violence has studied to increase risk for ___________ among victims of abuse.",
+          "type": "mc",
+          "options":
+          [
+            "adolescent pregnancy",
+            "depression",
+            "post-traumatic stress disorder (PTSD)%",
+            "all of the above"
+          ],
+          "correct": "all of the above",
+          "info": "Physical, mental, and sexual and reproductive health effects have been linked with intimate partner violence including adolescent pregnancy, unintended pregnancy in general, miscarriage, stillbirth, intrauterine hemorrhage, nutritional deficiency, abdominal pain and other gastrointestinal problems, neurological disorders, chronic pain, disability, anxiety and post-traumatic stress disorder (PTSD), as well as noncommunicable diseases such as hypertension, cancer and cardiovascular diseases."
+        },
+        {
+          "text": "Victims of domestic violence are at ______ risk for developing addictions to alcohol, tobacco, or drugs.",
+          "type": "f",
+          "correct": "higher",
+          "info": "Victims of domestic violence are at higher risk for developing addictions to alcohol, tobacco, or drugs."
         }
       ],
-      "summary": "A quiz on the organizations that help DV.",
-      "sources": "Sources go here"
+      "summary": "A quiz on the physical and mental impact related to DV."
+    },
+    {
+      "title": "Georgia Statistics",
+      "questions":
+      [
+        {
+          "text": "_____% of Georgia women and ____% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime.",
+          "type": "mc",
+          "options":
+          [
+            "39.9, 35.1",
+            "35.1, 39.9",
+            "45.3, 53.7",
+            "53.7, 45.3"
+          ],
+          "correct": "39.9, 35.1",
+          "info": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
+        },
+        {
+          "text": "____ counties in Georgia have no access to domestic violence services.",
+          "type": "mc",
+          "options":
+          [
+            "10",
+            "12",
+            "19",
+            "27"
+          ],
+          "correct": "27",
+          "info": "27 counties in Georgia have no access to domestic violence services."
+        },
+        {
+          "text": "How many Georgians were killed in domestic violence-related incidents in 2014?",
+          "type": "mc",
+          "options":
+          [
+            "235",
+            "117",
+            "95",
+            "285"
+          ],
+          "correct": "117",
+          "info": "In 2014, 117 Georgians were killed in domestic violence-related incidents."
+        },
+        {
+          "text": "Children were witness to about _______ of the incidents in which Georgia residents were killed by domestic violence.",
+          "type": "mc",
+          "options":
+          [
+            "one half",
+            "one quarter",
+            "one third",
+            "three quarters"
+          ],
+          "correct": "one quarter",
+          "info": "In 29% of these cases, children were witnesses"
+        },
+        {
+          "text": "Firearms were involved in 65% of Georgia domestic violence fatalities.",
+          "type": "mc",
+          "options":
+          [
+            "33%",
+            "50%",
+            "65%",
+            "80%"
+          ],
+          "correct": "65%",
+          "info": "Firearms were involved in 65% of Georgia domestic violence fatalities."
+        }
+      ],
+      "summary": "A quiz on Georgia statistics related to DV."
+    },
+    {
+      "title": "National Statistics",
+      "questions":
+      [
+        {
+          "text": "1 in __ women and 1 in __ men experience severe intimate partner physical violence, intimate partner contact sexual violence, and/or intimate partner stalking.",
+          "type": "mc",
+          "options":
+          [
+            "4, 9",
+            "9, 4",
+            "3, 10",
+            "10, 3"
+          ],
+          "correct": "4, 9",
+          "info": "1 in 4 women and 1 in 9 men experience severe intimate partner physical violence, intimate partner contact sexual violence, and/or intimate partner stalking."
+        },
+        {
+          "text": "1 in __ women and 1 in __ men have experienced some form of physical violence by an intimate partner.",
+          "type": "mc",
+          "options":
+          [
+            "3, 4",
+            "4, 3",
+            "2, 5",
+            "5, 2"
+          ],
+          "correct": "3, 4",
+          "info": "1 in 3 women and 1 in 4 men have experienced some form of physical violence by an intimate partner."
+        },
+        {
+          "text": "1 in __ women and 1 in __ men have been injured by an intimate partner.",
+          "type": "mc",
+          "options":
+          [
+            "10, 20",
+            "20, 10",
+            "7, 25",
+            "25, 7"
+          ],
+          "correct": "7, 25",
+          "info": "1 in 10 women have been raped by an intimate partner."
+        },
+        {
+          "text": "On average, there are more than ______ phone calls placed to domestic violence hotlines nationwide.",
+          "type": "mc",
+          "options":
+          [
+            "10,000",
+            "20,000",
+            "50,000",
+            "75,000"
+          ],
+          "correct": "20,000",
+          "info": "On average, there are more than 20,000 phone calls placed to domestic violence hotlines nationwide."
+        },
+        {
+          "text": "_____% of female stalking victims reported stalking by a current or former intimate partner.",
+          "type": "mc",
+          "options":
+          [
+            "66.2",
+            "71.3",
+            "83.5",
+            "90.4"
+          ],
+          "correct": "66.2",
+          "info": "66.2% of female stalking victims reported stalking by a current or former intimate partner."
+        },
+        {
+          "text": "1 in __ female murder victims and 1 in __ male murder victims were killed by intimate partners.",
+          "type": "mc",
+          "options":
+          [
+            "20, 3",
+            "3, 20",
+            "6, 19",
+            "19, 6"
+          ],
+          "correct": "3, 20",
+          "info": "1 in 3 female murder victims and 1 in 20 male murder victims were killed by intimate partners."
+        },
+        {
+          "text": "__% of all murder-suicides are perpetrated by intimate partners.",
+          "type": "mc",
+          "options":
+          [
+            "45",
+            "56",
+            "64",
+            "72"
+          ],
+          "correct": "72",
+          "info": "72% of all murder-suicides are perpetrated by intimate partners. 94% of murder-suicide victims are female."
+        },
+        {
+          "text": "The presence of a gun in a domestic violence situation increases the risk of homicide by ____.",
+          "type": "mc",
+          "options":
+          [
+            "125%",
+            "250%",
+            "500%",
+            "650%"
+          ],
+          "correct": "500%",
+          "info": "The presence of a gun in a domestic violence situation increases the risk of homicide by 500%."
+        },
+        {
+          "text": "__% of domestic violence involves a weapon.",
+          "type": "mc",
+          "options":
+          [
+            "19",
+            "30",
+            "48",
+            "66"
+          ],
+          "correct": "19",
+          "info": "19% of domestic violence involves a weapon."
+        },
+        {
+          "text": "Over 50% of abused women who leave their partners are hounded, badgered and forced to return home.",
+          "type": "mc",
+          "options":
+          [
+            "a quarter",
+            "a third",
+            "a half",
+            "a quarter"
+          ],
+          "correct": "a half",
+          "info": "Over 50% of abused women who leave their partners are hounded, badgered and forced to return home."
+        },
+        {
+          "text": "43% of dating college women reported experiencing abusive behaviors from their partner.",
+          "type": "mc",
+          "options":
+          [
+            "36",
+            "43",
+            "54",
+            "60"
+          ],
+          "correct": "43",
+          "info": "43% of dating college women reported experiencing abusive behaviors from their partner."
+        }
+      ],
+      "summary": "A quiz on National statistics related to DV."
+    },
+    {
+      "title": "Children & Teens",
+      "questions":
+      [
+        {
+          "text": "1 in __ children are exposed to intimate partner violence each year.",
+          "type": "mc",
+          "options":
+          [
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "correct": "15",
+          "info": "1 in 15 children are exposed to intimate partner violence each year. 90% of these children are eyewitnesses to this violence."
+        },
+        {
+          "text": "1 in __ children who witnessed domestic violence are also victims of child abuse.",
+          "type": "mc",
+          "options":
+          [
+            "3",
+            "5",
+            "7",
+            "10"
+          ],
+          "correct": "3",
+          "info": "1 in 3 children who witnessed domestic violence are also victims of child abuse."
+        },
+        {
+          "text": "Children’s immediate reaction to experiencing domestic violence include _________.",
+          "type": "mc",
+          "options":
+          [
+            "anxiety",
+            "aggression",
+            "difficulty concentration",
+            "all of the above"
+          ],
+          "correct": "all of the above",
+          "info": "Children’s immediate reaction to experiencing domestic violence include generalized anxiety, sleeplessness, aggression, difficulty concentrating, nightmares, high levels of activity, and separation anxiety."
+        },
+        {
+          "text": "Abusive partners _____ use children to control victims.",
+          "type": "f",
+          "correct": "do",
+          "info": "Abusive partners use children to control victims. Abusive partners often threaten to gain sole custody, kill, kidnap or otherwise harm children if victims leave."
+        },
+        {
+          "text": "Children who witness intimate partner growing up are __ times as likely as their peers to engage in violent behavior.",
+          "type": "mc",
+          "options":
+          [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": "3",
+          "info": "Children who witness intimate partner growing up are three times as likely as their peers to engage in violent behavior."
+        },
+        {
+          "text": "Children who witness incidents of domestic violence (a form of childhood trauma) are at greater risk of serious adult health problems including __________.",
+          "type": "mc",
+          "options":
+          [
+            "obesity",
+            "unintended pregnancies",
+            "depression",
+            "all of the above"
+          ],
+          "correct": "all of the above",
+          "info": "Children who witness incidents of domestic violence (a form of childhood trauma) are at greater risk of serious adult health problems including obesity, cancer, heart disease, depression, substance abuse, tobacco use and unintended pregnancies."
+        },
+        {
+          "text": "Courts award sole or joint custody to fathers in __% of custody cases.",
+          "type": "mc",
+          "options":
+          [
+            "50",
+            "60",
+            "70",
+            "80"
+          ],
+          "correct": "70",
+          "info": "Courts award sole or joint custody to fathers in 70% of custody cases, despite the perception that mothers always win custody of children."
+        },
+        {
+          "text": "__% of abusive fathers seeking sole custody were awarded either sole or joint custody of their children.",
+          "type": "mc",
+          "options":
+          [
+            "25",
+            "38",
+            "43",
+            "57"
+          ],
+          "correct": "38",
+          "info": "38% of abusive fathers seeking sole custody were awarded either sole or joint custody of their children, despite the fact that there was a documented pattern of abuse of both the mother and the children."
+        },
+        {
+          "text": "__% of female high school students and __% of male high school students report being abused by a dating partner.",
+          "type": "mc",
+          "options":
+          [
+            "31.4, 19.4",
+            "19.4, 31.4",
+            "20.9, 13.4",
+            "13.4, 20.9"
+          ],
+          "correct": "20.9, 13.4",
+          "info": "Nearly 20.9% of female high school students and 13.4% of male high school students report being physically or sexually abused by a dating partner."
+        },
+        {
+          "text": "__% of teenage students in dating relationships were coerced into sexual intercourse in the previous year.",
+          "type": "mc",
+          "options":
+          [
+            "10",
+            "15",
+            "20",
+            "25"
+          ],
+          "correct": "10",
+          "info": "A 2014 study found 10% of teenage students in dating relationships were coerced into sexual intercourse in the previous year."
+        },
+        {
+          "text": "A 2013 study of 10th graders found that __% had been either physically or verbally abused.",
+          "type": "mc",
+          "options":
+          [
+            "25",
+            "30",
+            "35",
+            "40"
+          ],
+          "correct": "35",
+          "info": "A 2013 study of 10th graders found that 35% had been either physically or verbally abused. 31% were perpetrators of physical or verbal abuse."
+        },
+        {
+          "text": "__________ of youth reporting dating violence and rape also reported attempted suicide.",
+          "type": "mc",
+          "options":
+          [
+            "A quarter",
+            "A third",
+            "Half",
+            "Three quarters"
+          ],
+          "correct": "Half",
+          "info": "50% of youth reporting dating violence and rape also reported attempted suicide."
+        }
+      ],
+      "summary": "A quiz on children and teen statistics related to DV."
+    },
+    {
+      "title": "Terminology & Technicalities",
+      "questions":
+      [
+        {
+          "text": "_________ is a pattern of intentionally violent or controlling behavior used by a person against a family member or intimate partner to gain and maintain power and control over that person, during and/or after the relationship.",
+          "type": "f",
+          "correct": "Family violence",
+          "info": "Family violence is a pattern of intentionally violent or controlling behavior used by a person against a family member or intimate partner to gain and maintain power and control over that person, during and/or after the relationship."
+        },
+        {
+          "text": "An __________ is defined as a spouse, a former spouse, a person who shares a child in common with the victim, or a person who cohabits or has cohabited with the victim.",
+          "type": "f",
+          "correct": "intimate partner",
+          "info": "An intimate partner is defined as a spouse, a former spouse, a person who shares a child in common with the victim, or a person who cohabits or has cohabited with the victim."
+        },
+        {
+          "text": "___________ in a situation of violence can be defined as present or past spouses, parents of the same child, parents and children, stepparents and stepchildren, foster parents and foster children, or other persons living or formerly living in the same household.",
+          "type": "f",
+          "correct": "Family members",
+          "info": "Family members in a situation of violence can be defined as present or past spouses, parents of the same child, parents and children, stepparents and stepchildren, foster parents and foster children, or other persons living or formerly living in the same household."
+        },
+        {
+          "text": "The cycle of abuse is typically _____ recurring phases.",
+          "type": "mc",
+          "options":
+          [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": "3",
+          "info": "The cycle of abuse is typically three recurring phases: Tension Building, Acute or Crisis phase, Calm or Honeymoon Phase."
+        },
+        {
+          "text": "____________: the relationship is tense, abuser can be easily set off by a variety of factors, “walking on eggshells,” feels something bad is about to happen.",
+          "type": "f",
+          "correct": "Tension Building",
+          "info": "Tension Building: the relationship is tense, abuser can be easily set off by a variety of factors, “walking on eggshells,” feels something bad is about to happen."
+        },
+        {
+          "text": "____________: abuser outbursts with some form of abuse, attempting to dominate their partner, fears for victim’s or children’s safety, drug and/or alcohol abuse.",
+          "type": "f",
+          "correct": "Acute or Crisis Phase",
+          "info": "Acute or Crisis Phase: abuser outbursts with some form of abuse, attempting to dominate their partner, fears for victim’s or children’s safety, drug and/or alcohol abuse."
+        },
+        {
+          "text": "___________: abuser often apologizes ad shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”",
+          "type": "f",
+          "correct": "Calm or Honeymoon Phase",
+          "info": "Calm or Honeymoon Phase: abuser often apologizes ad shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”."
+        }
+      ],
+      "summary": "A quiz on terminology and technicalities related to DV."
     }
   ]
 }
