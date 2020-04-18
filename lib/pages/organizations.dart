@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:flutter/widgets.dart';
 import 'package:heroes_manual/utility/strings.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class Organizations extends StatelessWidget {
   static const String route = '/organizations';
@@ -75,19 +75,19 @@ class Organizations extends StatelessWidget {
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     physics: ScrollPhysics(),
-                    itemCount: organizationTitles.length,
+                    itemCount: orgsTitles.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
                         padding: const EdgeInsets.all(10.0),
                         alignment: Alignment.topLeft,
-                        //decoration: BoxDecoration(
-                        //    color: background.shade600
-                        //),
-                        child: Text(
-                          organizationTitles[index],
-                          style:
-                          TextStyle(color: purple.shade600, fontSize: 20),
-                          textAlign: TextAlign.center,
+                        child: GestureDetector (
+                          onTap: () => launch(orgsSites[index]),
+                          child: Text(
+                            orgsTitles[index],
+                            textAlign: TextAlign.center,
+                            style:
+                              TextStyle(color: purple.shade600, fontSize: 20),
+                          ),
                         ),
                       );
                     },
