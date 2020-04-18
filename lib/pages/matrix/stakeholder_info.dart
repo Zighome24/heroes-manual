@@ -244,7 +244,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                         fontSize: 18,
                         color: purple.shade700
                       ),
-                      
+
                     )
                   ),
                 );

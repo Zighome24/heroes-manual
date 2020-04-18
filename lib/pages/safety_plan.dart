@@ -3,6 +3,8 @@ import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/strings.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:heroes_manual/utility/colors.dart';
+
 
 class SafetyPlan extends StatelessWidget {
   static const String route = "/safety_plan";
@@ -18,26 +20,38 @@ class SafetyPlan extends StatelessWidget {
         body: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.all(35),
+              padding: EdgeInsets.all(15.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Padding(
+                  Container(
                     padding: EdgeInsets.all(15),
+
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [purple.shade600, Colors.deepPurple[400]],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft
+                      ),
+                    ),
                     child: Text(
                         "Safety Plan Information",
                         style: TextStyle(
                             fontSize: 28,
-                            color: Colors.black
+                            color: Colors.white
                         )
                     ),
                   ),
-                  Text(
-                    safety_plan_info,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    child: Text(
+                      safety_plan_info,
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: purple.shade700
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Column(
@@ -48,7 +62,8 @@ class SafetyPlan extends StatelessWidget {
                       Text(
                         "QR Code",
                         style: TextStyle(
-                            fontSize: 20
+                            fontSize: 20,
+                          color: purple.shade700
                         ),
                       ),
                       Divider(
