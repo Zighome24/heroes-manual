@@ -28,8 +28,6 @@ class Laws extends StatelessWidget {
                 decoration: new BoxDecoration(
                 gradient: LinearGradient(
                 colors: [purple.shade600, Colors.deepPurple[400]],
-//                begin: Alignment.bottomRight,
-//                end: Alignment.topLeft
                 ),
               ),
                   child: Padding(
@@ -57,9 +55,6 @@ class Laws extends StatelessWidget {
                       return Container(
                         padding: const EdgeInsets.all(10.0),
                         alignment: Alignment.topLeft,
-                        //decoration: BoxDecoration(
-                        //    color: background.shade600
-                        //),
                         child: Text(
                           GA_laws[index],
                           style:
@@ -82,8 +77,6 @@ class Laws extends StatelessWidget {
                   decoration: new BoxDecoration(
                     gradient: LinearGradient(
                       colors: [purple.shade600, Colors.deepPurple[400]],
-//                begin: Alignment.bottomRight,
-//                end: Alignment.topLeft
                     ),
                   ),
                   child: Padding(
@@ -111,9 +104,6 @@ class Laws extends StatelessWidget {
                       return Container(
                         padding: const EdgeInsets.all(10.0),
                         alignment: Alignment.topLeft,
-                        //decoration: BoxDecoration(
-                        //    color: background.shade600
-                        //),
                         child: Text(
                           NTL_laws[index],
                           style:

@@ -22,12 +22,15 @@ class RedFlags extends StatelessWidget {
       ),
       body: SafeArea(
         child: ClipRect(
-          child: SimpleVerticalTitledList(
-            pageTitle: "Red Flags",
-            pageSubTitle: red_flags_subtitle,
-            source: source_red_flags,
-            listItems: red_flags
-          ),
+          child: Container(
+
+            child: SimpleVerticalTitledList(
+                pageTitle: "Red Flags",
+                pageSubTitle: red_flags_subtitle,
+                source: source_red_flags,
+                listItems: red_flags
+            ),
+          )
         ),
       ),
       bottomNavigationBar: HMBottomNavBar(),
