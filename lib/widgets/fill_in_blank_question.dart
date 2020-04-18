@@ -52,7 +52,7 @@ class FillInBlankQuestion extends StatelessWidget {
             ),
             Spacer(),
             Flexible(
-              flex: 8,
+              flex: 12,
               child: Column(
                 children: <Widget>[
                   TextField(
