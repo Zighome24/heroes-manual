@@ -76,13 +76,6 @@ class TipsToSeparate extends StatelessWidget {
                   ),
                 ),
               ),
-              /*Container(
-                padding: const EdgeInsets.all(30.0),
-                child: Text(
-                  'Sources',
-                  style: TextStyle(color: purple.shade500, fontSize: 20),
-                ),
-              ),*/
             ],
           ),
         ),
