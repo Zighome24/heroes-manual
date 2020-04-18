@@ -27,32 +27,49 @@ class SimpleVerticalTitledList extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
-                padding: const EdgeInsets.all(10.0),
-                alignment: Alignment.center,
-                child: Text(pageTitle,
-                    style: new TextStyle(
-                        color: purple.shade500,
-                        fontSize: 35
-                    )
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(5.0),
-                alignment: Alignment.center,
-                child: Text(pageSubTitle,
-                  style: TextStyle(
-                    color: purple.shade600,
-                    fontSize: 20,
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [purple.shade600, Colors.deepPurple[400]],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft
+                    ),
                   ),
-                  textAlign: TextAlign.center,
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        padding: const EdgeInsets.all(10.0),
+                        alignment: Alignment.center,
+
+                        child: Text(pageTitle,
+                            style: new TextStyle(
+                                color: Colors.white,
+                                fontSize: 35
+                            )
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(5.0),
+                        alignment: Alignment.center,
+                        child: Text(pageSubTitle,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Divider(
                 color: background.shade600,
                 thickness: 3.0,
               ),
-
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),

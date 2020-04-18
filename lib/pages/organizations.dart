@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,6 +20,7 @@ class Organizations extends StatelessWidget {
         leadingAction: () => Navigator.pop(context),
       ),
       body: Center(
+
         child: ClipRect(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -58,7 +60,7 @@ class Organizations extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
                         padding: const EdgeInsets.all(10.0),
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.center,
                         child: GestureDetector (
                           onTap: () => launch(orgsSites[index]),
                           child: Text(

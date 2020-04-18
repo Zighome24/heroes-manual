@@ -31,57 +31,80 @@ class Hotlines extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+//          mainAxisAlignment: MainAxisAlignment.center,
+//          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Container(
-              padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
-              child: Text(
-                'Important Hotlines',
-                style:
-                new TextStyle(color: purple.shade500, fontSize: 30, fontWeight: FontWeight.bold),
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: IntrinsicHeight(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                        ),
+                      ),
+                      child: Text(
+                        'Important Hotlines',
+                        style: new TextStyle(
+                            color: Colors.white,
+                            fontSize: 30
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Align(
-                  alignment: Alignment.center,
-                  child: ListView.builder(
-                    padding: const EdgeInsets.fromLTRB(20.0, 10.0, 10.0, 10.0),
-                    shrinkWrap: true,
-                    itemCount: hotlineNumbers.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.all(20.0),
-                        child: GestureDetector(
-                          onTap: () => launch(hotlineNumbers[index]),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 50.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(Icons.phone),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 8.0),
-                                  child: Text(
-                                    hotlineTitles[index],
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(fontSize: 15),
-                                  ),
+            Expanded(
+              child: Column(
+//                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    ClipRect(
+                      child: ListView.builder(
+                        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 10.0),
+                        shrinkWrap: true,
+                        itemCount: hotlineNumbers.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+//                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.fromLTRB(5, 20.0, 5, 20),
+                            child: GestureDetector(
+                              onTap: () => launch(hotlineNumbers[index]),
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 50.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Icon(Icons.phone, color: purple.shade500,),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8.0),
+                                      child: Text(
+                                        hotlineTitles[index],
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(fontSize: 15, color: purple.shade500),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                          );
+                        },
+                      ),
+                    )
+
+                  ],
                 ),
-              ],
-            ),
+            )
           ],
         ),
       ),

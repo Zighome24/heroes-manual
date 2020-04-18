@@ -46,7 +46,7 @@ class _QuizState extends State<QuizPage> {
                         correct ? "Correct!" : "Incorrect.",
                         style: TextStyle(
                           fontSize: 28.0,
-                          color: Colors.black,
+                          color: purple.shade500,
                           fontWeight: FontWeight.bold)
                       ),
                     ),
@@ -65,15 +65,33 @@ class _QuizState extends State<QuizPage> {
                     ),
                     Flexible(
                       flex: 1,
-                      child: RaisedButton(
-                        child: (_question) < quiz.questions.length ?
-                          Text("Next Question") : Text("Finish Quiz"),
-                        onPressed: () => setState(() {
-                          _answers.add(correct);
-                          _question++;
-                          overlayEntry.remove();
-                        })
-                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: new BorderRadius.all(
+                            const Radius.circular(6.0),
+                          ),
+                          gradient: LinearGradient(
+                              colors: [purple.shade600, Colors.deepPurple[400]],
+                              begin: Alignment.bottomRight,
+                              end: Alignment.topLeft
+                          ),
+                        ),
+                        child: FlatButton(
+                            child: (_question) < quiz.questions.length ?
+                            Text(
+                              "Next Question",
+                              style: new TextStyle(color: Colors.white),
+                            ) : Text(
+                              "Finish Quiz",
+                              style: new TextStyle(color: Colors.white),
+                            ),
+                            onPressed: () => setState(() {
+                              _answers.add(correct);
+                              _question++;
+                              overlayEntry.remove();
+                            })
+                        ),
+                      )
                     )
                   ]
                 )
@@ -135,7 +153,7 @@ class _QuizState extends State<QuizPage> {
                       Text(
                         "Your score:",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: purple.shade500,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -146,7 +164,7 @@ class _QuizState extends State<QuizPage> {
                         child: Text(
                           "${_answers.fold(0, (count, answer) => answer ? count + 1 : count)} / ${_answers.length}",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: purple.shade700,
                             fontSize: 36.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -161,53 +179,85 @@ class _QuizState extends State<QuizPage> {
                   child: Wrap(
                       direction: Axis.horizontal,
                       alignment: WrapAlignment.center,
-                      spacing: 15.0,
-                      runSpacing: 5.0,
+                      spacing: 10.0,
+                      runSpacing: 10.0,
                       children: <Widget>[
-                        (_answers.fold(0, (count, answer) => answer ? count + 1 : count) != _answers.length) ? MaterialButton(
-                            onPressed: () {
-                              //remove correct questions
-                              for (var i = 0; i < _answers.length; i++) {
-                                if (_answers[i]) {
-                                  _quiz.questions.removeAt(i);
-                                }
-                              }
-                              _quiz.questions.shuffle();
-                              //set _question to 0
-                              setState(() {
-                                _answers = [];
-                                _question = 0;
-                              });
-                            },
-                            color: purple.shade500,
-                            child: Text(
-                                "Retry Missed Questions",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16
+                        (_answers.fold(0, (count, answer) => answer ? count + 1 : count) != _answers.length) ? Container(
+                            decoration: BoxDecoration(
+                              borderRadius: new BorderRadius.all(
+                                const Radius.circular(6.0),
+                              ),
+                              gradient: LinearGradient(
+                                  colors: [purple.shade600, Colors.deepPurple[400]],
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.topLeft
+                              ),
+                            ),
+                            child: FlatButton(
+                                onPressed: () {
+                                  //remove correct questions
+                                  for (var i = 0; i < _answers.length; i++) {
+                                    if (_answers[i]) {
+                                      _quiz.questions.removeAt(i);
+                                    }
+                                  }
+                                  _quiz.questions.shuffle();
+                                  //set _question to 0
+                                  setState(() {
+                                    _answers = [];
+                                    _question = 0;
+                                  });
+                                },
+                                child: Text(
+                                    "Retry Missed Questions",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16
+                                    )
                                 )
                             )
                         ) : Container(),
-                        MaterialButton(
-                            onPressed: () {
-                              _quiz.questions.shuffle();
-                              setState(() {
-                                _question = 0;
-                                _answers = [];
-                              });
-                            },
-                            color: purple.shade500,
-                            child: Text(
-                                "Retake the Quiz",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16
-                                )
-                            )
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: new BorderRadius.all(
+                              const Radius.circular(6.0),
+                            ),
+                            gradient: LinearGradient(
+                                colors: [purple.shade600, Colors.deepPurple[400]],
+                                begin: Alignment.bottomRight,
+                                end: Alignment.topLeft
+                            ),
+                          ),
+                          child: FlatButton(
+                              onPressed: () {
+                                _quiz.questions.shuffle();
+                                setState(() {
+                                  _question = 0;
+                                  _answers = [];
+                                });
+                              },
+                              child: Text(
+                                  "Retake the Quiz",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16
+                                  )
+                              )
+                          ),
                         ),
-                        MaterialButton(
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: new BorderRadius.all(
+                              const Radius.circular(6.0),
+                            ),
+                            gradient: LinearGradient(
+                                colors: [purple.shade600, Colors.deepPurple[400]],
+                                begin: Alignment.bottomRight,
+                                end: Alignment.topLeft
+                            ),
+                          ),
+                          child: FlatButton(
                             onPressed: () { Navigator.popAndPushNamed(context, TrainingStart.route, arguments: _quiz.title); },
-                            color: purple.shade500,
                             child: Text(
                                 "Go to training",
                                 style: TextStyle(
@@ -215,6 +265,7 @@ class _QuizState extends State<QuizPage> {
                                     fontSize: 16
                                 )
                             )
+                          )
                         )
                       ]
                   )
