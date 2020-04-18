@@ -16,6 +16,7 @@ class RedFlags extends StatelessWidget {
       appBar: HMAppBar(
         showTrailing: true,
         showLeading: true,
+        leadingAction: () => Navigator.pop(context),
         trailingAction: () => showOverlay(context),
         trailingIcon: Icons.info_outline,
       ),
