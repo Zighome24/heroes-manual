@@ -42,8 +42,6 @@ class MyApp extends StatelessWidget {
         Screening.route : (context) => Screening(),
         NotSeparateScreening.route : (context) => NotSeparateScreening(),
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
-        ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
-        ExampleMCQuizQuestion.route : (context) => ExampleMCQuizQuestion(),
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         TrainingPage.route : (context) => TrainingPage(),

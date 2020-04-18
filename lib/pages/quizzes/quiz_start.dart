@@ -34,12 +34,7 @@ class _QuizStartState extends State<QuizStart> {
       ),
       body: Center(
         child: _quiz == Quiz.emptyQuiz ?
-        // Un-comment this and remove Container()
-        /* Loading(
-            indicator: LineScaleIndicator(),
-            size: 50.0,
-            color: purple.shade500
-        ) */ Container() : Column(
+        Container() : Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
