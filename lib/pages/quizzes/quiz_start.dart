@@ -47,7 +47,7 @@ class _QuizStartState extends State<QuizStart> {
               padding: const EdgeInsets.all(20.0),
               child: new Text(
                   quizName,
-                  style: new TextStyle(fontSize: 30)
+                  style: new TextStyle(fontSize: 30, color: purple.shade600)
               ),
             ),
             Padding(
@@ -55,6 +55,7 @@ class _QuizStartState extends State<QuizStart> {
               child: new Text(
                 _quiz.summary,
                 textAlign: TextAlign.center,
+                style: new TextStyle(color: purple.shade600),
               ),
             ),
             Container(
