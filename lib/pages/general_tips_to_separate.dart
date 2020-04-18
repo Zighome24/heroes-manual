@@ -13,7 +13,6 @@ class General_Tips_To_Separate extends StatelessWidget {
     return Scaffold(
       appBar: HMAppBar(
         showLeading: true,
-        showTrailing: true,
         leadingAction: () => Navigator.pop(context),
       ),
       body: Center(
