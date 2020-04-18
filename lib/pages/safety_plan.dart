@@ -20,31 +20,41 @@ class SafetyPlan extends StatelessWidget {
         body: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.only(bottom: 15.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
+                  Padding(
                     padding: EdgeInsets.all(15),
-
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [purple.shade600, Colors.deepPurple[400]],
-                        begin: Alignment.bottomRight,
-                        end: Alignment.topLeft
+                    child: IntrinsicHeight(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  colors: [purple.shade600, Colors.deepPurple[400]],
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.topLeft
+                              ),
+                            ),
+                            child: Text(
+                              'Safety Plan Information',
+                              style: new TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    child: Text(
-                        "Safety Plan Information",
-                        style: TextStyle(
-                            fontSize: 28,
-                            color: Colors.white
-                        )
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    padding: EdgeInsets.all(15),
                     child: Text(
                       safety_plan_info,
                       style: TextStyle(
