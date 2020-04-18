@@ -182,7 +182,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
           tabBar,
           Expanded(
             child: ListView.builder(
-              itemCount: _stakeholder.attitudes.length + 1,
+              itemCount: (currentState == SIPTabBarState.ATTITUDES ? _stakeholder.attitudes.length : _stakeholder.actions.length) + 1,
               shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
                 return index == 0 ? Padding(
