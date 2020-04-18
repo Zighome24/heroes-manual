@@ -71,12 +71,6 @@ class _ScreeningState extends State<Screening> {
                     ),
                   ),
                 ),
-
-//                Divider(
-//                  color: purple.shade500,
-//                  height: 5.0,
-//                  thickness: 5.0,
-//                ),
                 FlatButton(
                   child: Text('Clear Selections',
                     style: new TextStyle(

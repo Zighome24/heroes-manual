@@ -45,27 +45,6 @@ class TipsToSeparate extends StatelessWidget {
                   ),
                 ),
               ),
-//              Container(
-//                padding: const EdgeInsets.all(20.0),
-//                alignment: Alignment.center,
-//                child: Stack(
-//                  children: <Widget>[
-//                    // may need to switch order of these children as render
-//                    // order of stacks affects click-ability
-//                    Center(
-//                      child: Text(
-//                        'Tips to Separate Victim and Perpetrator',
-//                        style: TextStyle(color: purple.shade500, fontSize: 30),
-//                        textAlign: TextAlign.center,
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Divider(
-//                color: background.shade600,
-//                thickness: 3.0,
-//              ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
@@ -97,13 +76,6 @@ class TipsToSeparate extends StatelessWidget {
                   ),
                 ),
               ),
-              /*Container(
-                padding: const EdgeInsets.all(30.0),
-                child: Text(
-                  'Sources',
-                  style: TextStyle(color: purple.shade500, fontSize: 20),
-                ),
-              ),*/
             ],
           ),
         ),
