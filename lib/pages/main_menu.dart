@@ -8,6 +8,7 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/data/data.dart';
 import 'package:heroes_manual/widgets/categorical_horizontal_scroller.dart';
 import 'package:heroes_manual/utility/main_menu_resc.dart';
+import 'package:heroes_manual/utility/strings.dart';
 
 class MainMenu extends StatefulWidget {
   static const String route = '/fancy_main_menu';
@@ -151,7 +152,7 @@ class _MainMenuState extends State<MainMenu> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Container(
-                                    padding: const EdgeInsets.all(30.0),
+                                    padding: const EdgeInsets.all(20.0),
                                     child: Text('Our project, Heroes\' Manual, aims to serve as a quick, '
                                         + 'intuitive guide that law enforcement officers and other '
                                         + 'service providers can use for resources and instruction '
@@ -166,9 +167,44 @@ class _MainMenuState extends State<MainMenu> {
                                         style: new TextStyle(color: purple.shade500, fontSize: 20))
                                 ),
                                 Container(
-                                    padding: const EdgeInsets.all(30.0),
-                                    child: Text('Sources',
-                                        style: new TextStyle(color: purple.shade500, fontSize: 20))
+                                  padding: const EdgeInsets.all(15.0),
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Sources',
+                                    style: TextStyle(color: purple.shade500, fontSize: 30),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Divider(
+                                  color: background.shade600,
+                                  thickness: 3.0,
+                                ),
+                                Container( //make list of sources from strings.dart
+                                  //flex: 8,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(7.0),
+                                    child: ListView.separated(
+                                      shrinkWrap: true,
+                                      scrollDirection: Axis.vertical,
+                                      physics: ScrollPhysics(),
+                                      itemCount: sources.length,
+                                      itemBuilder: (BuildContext context, int index) {
+                                        return Container(
+                                          padding: const EdgeInsets.all(7.0),
+                                          alignment: Alignment.topLeft,
+                                          child: Text(
+                                            sources[index],
+                                            style: TextStyle(color: purple.shade600, fontSize: 20),
+                                          ),
+                                        );
+                                      },
+                                      separatorBuilder: (BuildContext context, int index)
+                                      => Divider(
+                                        color: background.shade600,
+                                        thickness: 3.0,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
