@@ -32,7 +32,7 @@ class Hotlines extends StatelessWidget {
       body: Center(
         child: Column(
 //          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+//          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
               padding: EdgeInsets.all(15),
@@ -67,14 +67,15 @@ class Hotlines extends StatelessWidget {
 //                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    ListView.builder(
-                        padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+                    ClipRect(
+                      child: ListView.builder(
+                        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 10.0),
                         shrinkWrap: true,
                         itemCount: hotlineNumbers.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Container(
-                            alignment: Alignment.center,
-                            padding: const EdgeInsets.all(20.0),
+//                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.fromLTRB(5, 20.0, 5, 20),
                             child: GestureDetector(
                               onTap: () => launch(hotlineNumbers[index]),
                               child: Padding(
@@ -83,13 +84,13 @@ class Hotlines extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
-                                    Icon(Icons.phone),
+                                    Icon(Icons.phone, color: purple.shade500,),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 8.0),
                                       child: Text(
                                         hotlineTitles[index],
                                         textAlign: TextAlign.left,
-                                        style: TextStyle(fontSize: 15),
+                                        style: TextStyle(fontSize: 15, color: purple.shade500),
                                       ),
                                     ),
                                   ],
@@ -99,6 +100,8 @@ class Hotlines extends StatelessWidget {
                           );
                         },
                       ),
+                    )
+
                   ],
                 ),
             )
