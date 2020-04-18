@@ -46,7 +46,7 @@ class _QuizState extends State<QuizPage> {
                         correct ? "Correct!" : "Incorrect.",
                         style: TextStyle(
                           fontSize: 28.0,
-                          color: Colors.black,
+                          color: purple.shade500,
                           fontWeight: FontWeight.bold)
                       ),
                     ),
@@ -65,15 +65,33 @@ class _QuizState extends State<QuizPage> {
                     ),
                     Flexible(
                       flex: 1,
-                      child: RaisedButton(
-                        child: (_question) < quiz.questions.length ?
-                          Text("Next Question") : Text("Finish Quiz"),
-                        onPressed: () => setState(() {
-                          _answers.add(correct);
-                          _question++;
-                          overlayEntry.remove();
-                        })
-                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: new BorderRadius.all(
+                            const Radius.circular(6.0),
+                          ),
+                          gradient: LinearGradient(
+                              colors: [purple.shade600, Colors.deepPurple[400]],
+                              begin: Alignment.bottomRight,
+                              end: Alignment.topLeft
+                          ),
+                        ),
+                        child: FlatButton(
+                            child: (_question) < quiz.questions.length ?
+                            Text(
+                              "Next Question",
+                              style: new TextStyle(color: Colors.white),
+                            ) : Text(
+                              "Finish Quiz",
+                              style: new TextStyle(color: Colors.white),
+                            ),
+                            onPressed: () => setState(() {
+                              _answers.add(correct);
+                              _question++;
+                              overlayEntry.remove();
+                            })
+                        ),
+                      )
                     )
                   ]
                 )
