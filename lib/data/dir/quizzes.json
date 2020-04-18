@@ -5,7 +5,7 @@
       "questions":
       [
         {
-          "text": "What is the cost of intimate partner violence exceeds how much per year?",
+          "text": "The cost of intimate partner violence exceeds how much per year?",
           "type": "mc",
           "options":
           [
@@ -37,7 +37,7 @@
           "info": "Between 21-60% of victims of intimate partner violence lose their due to reasons stemming from the abuse."
         },
         {
-          "text": "Between 2033 and 2008, what percent of women murdered in their workplace were murdered by their abusers?",
+          "text": "Between 2003 and 2008, what percent of women murdered in their workplace were murdered by their abusers?",
           "type": "mc",
           "options":
           [
@@ -69,7 +69,7 @@
           "info": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
         },
         {
-          "text": "Intimate partner violence has studied to increase risk for ___________ among victims of abuse.",
+          "text": "Intimate partner violence has been studied to increase risk for ___________ among victims of abuse.",
           "type": "mc",
           "options":
           [
@@ -104,7 +104,7 @@
             "45.3, 53.7",
             "53.7, 45.3"
           ],
-          "correct": "39.9, 35.1",
+          "correct": "35.1, 39.9",
           "info": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
         },
         {
@@ -349,7 +349,7 @@
           [
             "anxiety",
             "aggression",
-            "difficulty concentration",
+            "difficulty concentrating",
             "all of the above"
           ],
           "correct": "all of the above",
@@ -516,10 +516,10 @@
           "info": "Acute or Crisis Phase: abuser outbursts with some form of abuse, attempting to dominate their partner, fears for victim’s or children’s safety, drug and/or alcohol abuse."
         },
         {
-          "text": "___________: abuser often apologizes ad shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”",
+          "text": "___________: abuser often apologizes and shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”",
           "type": "f",
           "correct": "Calm or Honeymoon Phase",
-          "info": "Calm or Honeymoon Phase: abuser often apologizes ad shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”."
+          "info": "Calm or Honeymoon Phase: abuser often apologizes and shows an abnormal amount of affection, abuser says they’ll “get help,” victim is reminded of “person they fell in love with”."
         }
       ],
       "summary": "A quiz on terminology and technicalities related to DV."
