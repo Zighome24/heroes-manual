@@ -37,7 +37,7 @@ class Organizations extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
-                      'Tips to Separate Victim and Perpetrator',
+                      'Important Organizations',
                       style: new TextStyle(
                         color: Colors.white,
                         fontSize: 30,
