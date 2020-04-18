@@ -5,8 +5,8 @@ import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
 import 'package:heroes_manual/utility/colors.dart';
 import 'package:heroes_manual/utility/strings.dart';
 
-class GeneralTipsToSeparate extends StatelessWidget {
-  static const String route = '/generaltipstoseparate';
+class General_Tips_To_Separate extends StatelessWidget {
+  static const String route = '/general_tips_to_separate';
 
   @override
   Widget build(BuildContext context) {
