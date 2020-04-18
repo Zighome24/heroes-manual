@@ -76,7 +76,14 @@ class PerpetratorPresent extends StatelessWidget {
                     },
                   ),
                 ),
+              ]
+            ),
+            ButtonBar(
+              mainAxisSize: MainAxisSize.min,
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
                 Container(
+                  padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
                   decoration: BoxDecoration(
                     borderRadius: new BorderRadius.all(
                       const Radius.circular(6.0),

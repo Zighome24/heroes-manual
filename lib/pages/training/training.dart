@@ -75,6 +75,7 @@ class _TrainingState extends State<TrainingPage> {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontSize: 20.0,
+                                    color: purple.shade700
                                   )
                                 )
                               )
@@ -120,35 +121,63 @@ class _TrainingState extends State<TrainingPage> {
             (_card + 1) == _training.cards.length ? Padding(
               padding: EdgeInsets.only(bottom: 15.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  MaterialButton(
-                    onPressed: () { Navigator.popAndPushNamed(context, QuizStart.route, arguments: _training.title); },
-                    color: purple.shade500,
-                    child: Text(
-                      "Quiz me!",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          const Radius.circular(6.0),
+                        ),
+                        gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
+                        ),
+                      ),
+                      child: FlatButton(
+                        onPressed: () { Navigator.popAndPushNamed(context, QuizStart.route, arguments: _training.title); },
+                        child: Text(
+                          "Quiz me!",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  MaterialButton(
-                    onPressed: () {
-                      setState(() {
-                        _training.cards.shuffle();
-                        _card = 0;
-                      });
-                    },
-                    color: purple.shade500,
-                    child: Text(
-                      "Restart!",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: new BorderRadius.all(
+                              const Radius.circular(6.0),
+                            ),
+                            gradient: LinearGradient(
+                                colors: [purple.shade600, Colors.deepPurple[400]],
+                                begin: Alignment.bottomRight,
+                                end: Alignment.topLeft
+                            ),
+                          ),
+                          child: FlatButton(
+                              onPressed: () {
+                                setState(() {
+                                  _training.cards.shuffle();
+                                  _card = 0;
+                                });
+                              },
+                              child: Text(
+                                  "Restart!",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16
+                                  )
+                              )
+                          )
                       )
-                    )
                   )
                 ],
               )

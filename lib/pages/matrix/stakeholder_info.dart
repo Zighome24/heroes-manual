@@ -53,7 +53,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                                           "Sources",
                                           style: TextStyle(
                                             fontSize: 28.0,
-                                            color: Colors.black,
+                                            color: purple.shade500,
                                             fontWeight: FontWeight.bold
                                           )
                                         ),
@@ -64,7 +64,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                                           onPressed: () => overlayEntry.remove(),
                                           icon: Icon(
                                             Icons.close,
-                                            color: purple.shade500,
+                                            color: purple.shade700,
                                           ),
                                           iconSize: 28,
                                         )
@@ -81,7 +81,8 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                                           child: Text(
                                             stakeholder.sources[index],
                                             style: TextStyle(
-                                              fontSize: 20
+                                              fontSize: 20,
+                                              color: purple.shade700
                                             ),
                                           )
                                         );
@@ -104,7 +105,6 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
     final Stakeholder _stakeholder = ModalRoute.of(context).settings.arguments as Stakeholder;
 
     Widget tabBar = Container(
-      color: purple.shade500,
       constraints: BoxConstraints(
           maxHeight: tabBarHeight
       ),
@@ -112,15 +112,24 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Expanded(
-            child: FlatButton(
-              onPressed: currentState == SIPTabBarState.ATTITUDES
-                  ? () { debugPrint("Attitude already choosen"); }
-                  : () { setState(() { currentState = SIPTabBarState.ATTITUDES; });},
-              child: Icon(
-                currentState == SIPTabBarState.ATTITUDES ? MdiIcons.face
-                    : MdiIcons.faceOutline,
-                size: tabBarHeight / 2,
-                color: Colors.white,
+            child: Container(
+              decoration: new BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [purple.shade600, Colors.deepPurple[400]],
+                  begin: Alignment.bottomRight,
+                  end: Alignment.topLeft
+                ),
+              ),
+              child: FlatButton(
+                onPressed: currentState == SIPTabBarState.ATTITUDES
+                    ? () { debugPrint("Attitude already choosen"); }
+                    : () { setState(() { currentState = SIPTabBarState.ATTITUDES; });},
+                child: Icon(
+                  currentState == SIPTabBarState.ATTITUDES ? MdiIcons.face
+                      : MdiIcons.faceOutline,
+                  size: tabBarHeight / 2,
+                  color: Colors.white,
+                )
               )
             )
           ),
@@ -133,15 +142,24 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
             ),
           ),
           Expanded(
-            child: FlatButton(
-              onPressed: currentState == SIPTabBarState.ACTIONS
-                  ? () { debugPrint("Action already choosen"); }
-                  : () { setState(() { currentState = SIPTabBarState.ACTIONS; });},
-              child: Icon(
-                currentState == SIPTabBarState.ACTIONS ? MdiIcons.accountTieVoice
-                    : MdiIcons.accountTieVoiceOutline,
-                size: tabBarHeight / 2,
-                color: Colors.white,
+            child: Container(
+              decoration: new BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [purple.shade600, Colors.deepPurple[400]],
+                  begin: Alignment.bottomRight,
+                  end: Alignment.topLeft
+                ),
+              ),
+              child: FlatButton(
+                onPressed: currentState == SIPTabBarState.ACTIONS
+                    ? () { debugPrint("Action already choosen"); }
+                    : () { setState(() { currentState = SIPTabBarState.ACTIONS; });},
+                child: Icon(
+                  currentState == SIPTabBarState.ACTIONS ? MdiIcons.accountTieVoice
+                      : MdiIcons.accountTieVoiceOutline,
+                  size: tabBarHeight / 2,
+                  color: Colors.white,
+                )
               )
             )
           )
@@ -168,14 +186,15 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
               shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
                 return index == 0 ? Padding(
-                  padding: EdgeInsets.only(left: 20, top: 20),
+                  padding: EdgeInsets.all(20),
                   child: Text(
                     currentState == SIPTabBarState.ATTITUDES ? "Attitudes, Perspective, Challenges, Issues, Barriers, Obstacles, and Views" : "Actions",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 24,
-                        color: Colors.black
+                        color: purple.shade700
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ) : Padding(
                   padding: EdgeInsets.all(10),
@@ -183,19 +202,26 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Container(
-                        decoration: BoxDecoration(
-                          color: accent.shade500,
-                          borderRadius: BorderRadius.all(Radius.circular(6))
+                        padding: EdgeInsets.all(5.0),
+                        decoration: new BoxDecoration(
+                          borderRadius: new BorderRadius.all(
+                            const Radius.circular(6.0),
+                          ),
+                          gradient: LinearGradient(
+                              colors: [purple.shade600, Colors.deepPurple[400]],
+                              begin: Alignment.bottomRight,
+                              end: Alignment.topLeft
+                          ),
                         ),
                         alignment: Alignment.center,
                         constraints: BoxConstraints.expand(height: 30),
                         child: Text(
                           _stakeholder.attitudes[index-1].facet,
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             //decoration: TextDecoration.underline,
-                            color: Colors.black
+                            color: Colors.white
                           )
                         )
                       ),
@@ -205,7 +231,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                           _stakeholder.attitudes[index-1].info,
                           style: TextStyle(
                               fontSize: 17,
-                              color: Colors.black
+                              color: purple.shade700
                           )
                         )
                       )
@@ -215,8 +241,10 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                     child: Text(
                       _stakeholder.actions[index-1],
                       style: TextStyle(
-                        fontSize: 18
+                        fontSize: 18,
+                        color: purple.shade700
                       ),
+
                     )
                   ),
                 );
