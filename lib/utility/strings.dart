@@ -80,3 +80,40 @@ const List<String> red_flags = ["Jealous",
   "Has an uncontrollable temper"];
 // TODO: fill in red flags source
 const String source_red_flags = "";
+
+const List<String> GA_laws = [
+  'Family Violence Act:\n'
+      + 'The law protects against physical, sexual, and emotional abuse among '
+      + 'family members.\n'
+      + 'Family members in this situation of violence can be defined as present '
+      + 'or past spouses, parents of the same child, parents and children, '
+      + 'stepparents and stepchildren, foster parents and foster children, '
+      + 'or other persons living or formerly living in the same household.\n'
+      + 'Violation of protective orders can results in a misdemeanor charge with '
+      + 'up to 12 months in jail and a \$1000 fine.\n'
+      + 'Violation of protective orders can also be considered stalking and can '
+      + 'be sentenced as either misdemeanor or felony.',
+  'Georgia Code Title 19:\n'
+      + 'Deals with petitioning for protective orders, basically the judge has '
+      + 'the final say in if the petition gets granted and what the terms are '
+      + 'of it \(especially regarding taking guns & licenses from the '
+      + 'perpetrator of violence.\)'
+];
+const List<String> NTL_laws = [
+  'Violence Against Women Act (VAWA):\n'
+      +'It is a federal crime to cross state lines and physically injure an '
+      + '\"intimate partner,\" to stalk or harrass, and to violate a '
+      + 'qualifying Protection Order',
+  'Gun Control Act:\n'
+      + 'Declares it a federal crime to possess a firearm and/or ammunition '
+      + 'while subject to a qualifying protection and after conviction of a '
+      + 'qualifying misdemeanor crime of domestic violence.\n'
+      + 'A misdemeanor will "qualify" if the conviction was for a crime '
+      + 'committed by an intimate partner, parent or guardian of the victim '
+      + 'that required the use of attempted use of physical force or the '
+      + 'threatened use of a deadly weapon - fairly case by case, the US '
+      + 'Attorney\'s Office examines each case.\n'
+      + 'An intimate partner is defined as a spouse, a former spouse, a person '
+      + 'who shares a child in common with the victim, or a person who '
+      + 'cohabits or has cohabited with the victim.'
+];
