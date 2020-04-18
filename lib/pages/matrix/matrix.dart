@@ -35,13 +35,13 @@ class _MatrixPageState extends State<MatrixPage> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 15),
+            padding: EdgeInsets.fromLTRB(0.0, 30, 0.0, 10.0),
             child: Text(
               "Stakeholders",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 28,
-                  color: Colors.black
+                  color: purple.shade500
               ),
             ),
           ),
@@ -53,17 +53,30 @@ class _MatrixPageState extends State<MatrixPage> {
                   List<String> stakeholders = _matrix.matrix.keys.toList();
                   return Padding(
                     padding: EdgeInsets.only(bottom: 10.0),
-                    child: RaisedButton(
-                      onPressed: () { Navigator.pushNamed(context, StakeholderInfoPage.route, arguments: _matrix.matrix[stakeholders[index]]); },
-                      child: Text(
-                        stakeholders[index],
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: purple.shade500
+                    child: Container(
+                      decoration: new BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          const Radius.circular(6.0),
+                        ),
+                        gradient: LinearGradient(
+                            colors: [purple.shade600, Colors.deepPurple[400]],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft
                         ),
                       ),
-                    ),
+                      child: FlatButton(
+                        onPressed: () { Navigator.pushNamed(context, StakeholderInfoPage.route, arguments: _matrix.matrix[stakeholders[index]]); },
+                        child: Text(
+                          stakeholders[index],
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+                          ),
+                        ),
+                      ),
+                    )
+
                   );
                 }
             ),
