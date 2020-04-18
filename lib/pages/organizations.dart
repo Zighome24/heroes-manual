@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_manual/utility/hm_appbar.dart';
 import 'package:heroes_manual/utility/hm_bottom_navbar.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:heroes_manual/utility/colors.dart';
+import 'package:flutter/widgets.dart';
+import 'package:heroes_manual/utility/strings.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Organizations extends StatelessWidget {
   static const String route = '/organizations';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,38 +17,69 @@ class Organizations extends StatelessWidget {
         showLeading: true,
         showTrailing: true,
         leadingAction: () => Navigator.pop(context),
-        trailingAction: () => debugPrint("something goes here, check task in Zenhub"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-                'Will be a list of organizations',
-                style: new TextStyle(
-                    color: Colors.deepPurpleAccent,
-                    fontSize: 20
-                )
-            ),
-            ListView(
-              shrinkWrap: true,
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.label),
-                  title: Text('Organization 1'),
+        child: ClipRect(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  decoration: new BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [purple.shade600, Colors.deepPurple[400]],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      'Important Organizations',
+                      style: new TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
-                ListTile(
-                  leading: Icon(Icons.label),
-                  title: Text('Organization 2'),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
+                  child: ListView.separated(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    physics: ScrollPhysics(),
+                    itemCount: orgsTitles.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        padding: const EdgeInsets.all(10.0),
+                        alignment: Alignment.topLeft,
+                        child: GestureDetector (
+                          onTap: () => launch(orgsSites[index]),
+                          child: Text(
+                            orgsTitles[index],
+                            textAlign: TextAlign.center,
+                            style:
+                              TextStyle(color: purple.shade600, fontSize: 20),
+                          ),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (BuildContext context, int index)
+                    => Divider(
+                      color: background.shade600,
+                      thickness: 3.0,
+                    ),
+                  ),
                 ),
-                ListTile(
-                  leading: Icon(Icons.label),
-                  title: Text('Organization 3'),
-                ),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: HMBottomNavBar(),
