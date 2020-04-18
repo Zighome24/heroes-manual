@@ -205,3 +205,36 @@ const List<String> red_flags = ["Jealous",
   "Has an uncontrollable temper"];
 // TODO: fill in red flags source
 const String source_red_flags = "";
+
+const List<String> orgsTitles = [
+  "Georgia Coalition Against Domestic Violence (GCADV)",
+  "Georgia Commision on Family Violence (GCFV)",
+  "National Coalition Against Domestic Violence (NCADV)",
+  "Center for Disease Control and Prevention (CDC) : Preventing Intimate Partner Violence",
+  "Office on Women’s Health",
+  "U.S. Department of Justice",
+  "Americans Overseas Domestic Violence Crisis Center",
+  "Georgia Domestic Violence Shelters",
+  "Greatist",
+  "Family Violence Prevention Fund",
+  "Men Stopping Violence",
+  "National Center on Domestic Violence, Trauma, & Mental Health",
+  "National Clearinghouse for the Defense of Battered Women",
+  "National Network to End Domestic Violence",
+];
+const List<String> orgsSites = [
+  "https://gcadv.org/ ",
+  "https://gcfv.georgia.gov/ ",
+  "https://ncadv.org/ ",
+  "https://www.cdc.gov/violenceprevention/intimatepartnerviolence/fastfact.html",
+  "https://www.womenshealth.gov/relationships-and-safety ",
+  "https://www.justice.gov/ovw/domestic-violence",
+  "http://www.866uswomen.org",
+  "https://gcadv.org/get-help/find-a-domestic-violence-center-near-you/",
+  "https://greatist.com/happiness/stop-domestic-violence-organizations",
+  "https://www.endabuse.org",
+  "https://www.menstoppingviolence.org",
+  "http://www.nationalcenterdvtraumamh.org/resources/national-domestic-violence-organizations/",
+  "https://www.ncdbw.org/",
+  "https://www.bwjp.org/resource-center/resource-results/national-network-to-end-domestic-violence.html",
+];
