@@ -36,12 +36,10 @@ class RedFlags extends StatelessWidget {
       bottomNavigationBar: HMBottomNavBar(),
     );
   }
-
   showOverlay(BuildContext context) {
     OverlayState overlayState = Overlay.of(context);
     OverlayEntry overlayEntry;
     overlayEntry =
-//    return Overlay.of(context).insert(
     OverlayEntry(
         builder: (context) => Material(
             type: MaterialType.transparency,
@@ -58,7 +56,6 @@ class RedFlags extends StatelessWidget {
                             padding: EdgeInsets.all(15.0),
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                    crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
                                   Flexible(
                                       flex: 1,

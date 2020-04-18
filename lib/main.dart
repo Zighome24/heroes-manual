@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_manual/pages/exampleMCQuestion.dart';
-import 'package:heroes_manual/pages/exampleQuizQuestion.dart';
 import 'package:heroes_manual/pages/matrix/matrix.dart';
 import 'package:heroes_manual/pages/matrix/stakeholder_info.dart';
 import 'package:heroes_manual/pages/safety_plan.dart';
 import 'package:heroes_manual/pages/tips_to_separate.dart';
 import 'package:heroes_manual/pages/not_separate_screening.dart';
-import 'package:heroes_manual/pages/tips_to_separate.dart';
-import 'package:heroes_manual/pages/safety_plan.dart';
 import 'package:heroes_manual/pages/training/training.dart';
-import 'package:heroes_manual/pages/dev_main_menu.dart';
 import 'package:heroes_manual/pages/main_menu.dart';
 import 'package:heroes_manual/pages/screening_page.dart';
 import 'package:heroes_manual/pages/perpetrator_present.dart';
@@ -40,7 +35,6 @@ class MyApp extends StatelessWidget {
         '/' : (context) => MainMenu(),
         MainMenu.route : (context) => MainMenu(),
         //TODO: remove dev main menu
-        DevMainMenu.route : (context) => DevMainMenu(),
         Screening.route : (context) => Screening(),
         QuizStart.route : (context) => QuizStart(),
         TrainingStart.route : (context) => TrainingStart(),
@@ -48,8 +42,6 @@ class MyApp extends StatelessWidget {
         Screening.route : (context) => Screening(),
         NotSeparateScreening.route : (context) => NotSeparateScreening(),
         PerpetratorPresent.route : (context) => PerpetratorPresent(),
-        ExampleQuizQuestion.route : (context) => ExampleQuizQuestion(),
-        ExampleMCQuizQuestion.route : (context) => ExampleMCQuizQuestion(),
         Hotlines.route : (context) => Hotlines(),
         Organizations.route : (context) => Organizations(),
         TrainingPage.route : (context) => TrainingPage(),
