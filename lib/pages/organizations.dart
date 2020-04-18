@@ -58,7 +58,7 @@ class Organizations extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
                         padding: const EdgeInsets.all(10.0),
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.center,
                         child: GestureDetector (
                           onTap: () => launch(orgsSites[index]),
                           child: Text(
