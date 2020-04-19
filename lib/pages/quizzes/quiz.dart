@@ -135,7 +135,7 @@ class _QuizState extends State<QuizPage> {
         appBar: HMAppBar(
           showLeading: true,
           leadingAction: () => Navigator.pop(context),
-          showTrailing: true,
+          showTrailing: false,
           trailingAction: null,
           title: _quiz.title,
         ),
