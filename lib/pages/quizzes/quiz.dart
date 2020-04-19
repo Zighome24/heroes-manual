@@ -52,16 +52,21 @@ class _QuizState extends State<QuizPage> {
                     ),
                     Flexible(
                       flex: 3,
-                      child: SingleChildScrollView(
-                        child: Text(
-                          correct ? "Well done!"
-                              : quiz.questions[_question].informativeMessage,
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: purple.shade500),
-                          softWrap: true,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 20, right: 20),
+                        child: SingleChildScrollView(
+                          child: Text(
+                            correct ? "Well done!"
+                                : quiz.questions[_question].informativeMessage,
+                            style: TextStyle(
+                                fontSize: 18.0,
+                                color: purple.shade500),
+                            softWrap: true,
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                      ),
+                      )
+
                     ),
                     Flexible(
                       flex: 1,
