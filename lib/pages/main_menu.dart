@@ -38,7 +38,7 @@ class _MainMenuState extends State<MainMenu> {
 
     return Scaffold(
       appBar: HMAppBar(
-        showTrailing: true,
+        showTrailing: false,
         showLeading: true,
         leadingAction: () => showOverlay(context),
         leadingIcon: Icons.info_outline,
