@@ -1,168 +1,6 @@
 {
   "quizzes": [
     {
-      "title": "Economic Impact",
-      "questions":
-      [
-        {
-          "text": "The cost of intimate partner violence exceeds how much per year?",
-          "type": "mc",
-          "options":
-          [
-            "$20.6 million",
-            "$8.3 billion",
-            "$10.5 billion",
-            "$15 billion"
-          ],
-          "correct": "$8.3 billion",
-          "info": "The cost of intimate partner violence exceeds $8.3 billion per year."
-        },
-        {
-          "text": "Victims of intimate partner violence lose a total of ______ million days of paid work each year.",
-          "type": "f",
-          "correct": "8",
-          "info": "Victims of intimate partner violence lose a total of 8.0 million days of paid work each year."
-        },
-        {
-          "text": "What range of victims of intimate partner violence lose their jobs due to reasons stemming from the abuse?",
-          "type": "mc",
-          "options":
-          [
-            "10-15%",
-            "40-80%",
-            "21-60%",
-            "30-50%"
-          ],
-          "correct": "21-60%",
-          "info": "Between 21-60% of victims of intimate partner violence lose their due to reasons stemming from the abuse."
-        },
-        {
-          "text": "Between 2003 and 2008, what percent of women murdered in their workplace were murdered by their abusers?",
-          "type": "mc",
-          "options":
-          [
-            "25%",
-            "37%",
-            "55%",
-            "78%"
-          ],
-          "correct": "78%",
-          "info": "Between 2003 and 2008, 142 women were murdered in their workplace by their abuser (78% of the total number of women killed in the workplace during this time)."
-        },
-        {
-          "text": "Abuse victims are ______ likely to be able to afford legal representation.",
-          "type": "f",
-          "correct": "less",
-          "info": "Because an abuse victim is less likely to be able to afford legal representation, they are at a disadvantage when involved in a child custody case, divorce proceedings, civil suits, or other legal matters."
-        }
-      ],
-      "summary": "A quiz on the economic impact of DV."
-    },
-    {
-      "title": "Physical & Mental Impact",
-      "questions":
-      [
-        {
-          "text": "People abused by their intimate partners are _______ vulnerable to contracting STIs.",
-          "type": "f",
-          "correct": "more",
-          "info": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
-        },
-        {
-          "text": "Intimate partner violence has been studied to increase risk for ___________ among victims of abuse.",
-          "type": "mc",
-          "options":
-          [
-            "adolescent pregnancy",
-            "depression",
-            "post-traumatic stress disorder (PTSD)%",
-            "all of the above"
-          ],
-          "correct": "all of the above",
-          "info": "Physical, mental, and sexual and reproductive health effects have been linked with intimate partner violence including adolescent pregnancy, unintended pregnancy in general, miscarriage, stillbirth, intrauterine hemorrhage, nutritional deficiency, abdominal pain and other gastrointestinal problems, neurological disorders, chronic pain, disability, anxiety and post-traumatic stress disorder (PTSD), as well as noncommunicable diseases such as hypertension, cancer and cardiovascular diseases."
-        },
-        {
-          "text": "Victims of domestic violence are at ______ risk for developing addictions to alcohol, tobacco, or drugs.",
-          "type": "f",
-          "correct": "higher",
-          "info": "Victims of domestic violence are at higher risk for developing addictions to alcohol, tobacco, or drugs."
-        }
-      ],
-      "summary": "A quiz on the physical and mental impact related to DV."
-    },
-    {
-      "title": "Georgia Statistics",
-      "questions":
-      [
-        {
-          "text": "_____% of Georgia women and ____% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime.",
-          "type": "mc",
-          "options":
-          [
-            "39.9, 35.1",
-            "35.1, 39.9",
-            "45.3, 53.7",
-            "53.7, 45.3"
-          ],
-          "correct": "35.1, 39.9",
-          "info": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
-        },
-        {
-          "text": "____ counties in Georgia have no access to domestic violence services.",
-          "type": "mc",
-          "options":
-          [
-            "10",
-            "12",
-            "19",
-            "27"
-          ],
-          "correct": "27",
-          "info": "27 counties in Georgia have no access to domestic violence services."
-        },
-        {
-          "text": "How many Georgians were killed in domestic violence-related incidents in 2014?",
-          "type": "mc",
-          "options":
-          [
-            "235",
-            "117",
-            "95",
-            "285"
-          ],
-          "correct": "117",
-          "info": "In 2014, 117 Georgians were killed in domestic violence-related incidents."
-        },
-        {
-          "text": "Children were witness to about _______ of the incidents in which Georgia residents were killed by domestic violence.",
-          "type": "mc",
-          "options":
-          [
-            "one half",
-            "one quarter",
-            "one third",
-            "three quarters"
-          ],
-          "correct": "one quarter",
-          "info": "In 29% of these cases, children were witnesses"
-        },
-        {
-          "text": "Firearms were involved in 65% of Georgia domestic violence fatalities.",
-          "type": "mc",
-          "options":
-          [
-            "33%",
-            "50%",
-            "65%",
-            "80%"
-          ],
-          "correct": "65%",
-          "info": "Firearms were involved in 65% of Georgia domestic violence fatalities."
-        }
-      ],
-      "summary": "A quiz on Georgia statistics related to DV."
-    },
-    {
       "title": "National Statistics",
       "questions":
       [
@@ -311,6 +149,168 @@
         }
       ],
       "summary": "A quiz on National statistics related to DV."
+    },
+    {
+      "title": "Georgia Statistics",
+      "questions":
+      [
+        {
+          "text": "_____% of Georgia women and ____% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime.",
+          "type": "mc",
+          "options":
+          [
+            "39.9, 35.1",
+            "35.1, 39.9",
+            "45.3, 53.7",
+            "53.7, 45.3"
+          ],
+          "correct": "35.1, 39.9",
+          "info": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
+        },
+        {
+          "text": "____ counties in Georgia have no access to domestic violence services.",
+          "type": "mc",
+          "options":
+          [
+            "10",
+            "12",
+            "19",
+            "27"
+          ],
+          "correct": "27",
+          "info": "27 counties in Georgia have no access to domestic violence services."
+        },
+        {
+          "text": "How many Georgians were killed in domestic violence-related incidents in 2014?",
+          "type": "mc",
+          "options":
+          [
+            "235",
+            "117",
+            "95",
+            "285"
+          ],
+          "correct": "117",
+          "info": "In 2014, 117 Georgians were killed in domestic violence-related incidents."
+        },
+        {
+          "text": "Children were witness to about _______ of the incidents in which Georgia residents were killed by domestic violence.",
+          "type": "mc",
+          "options":
+          [
+            "one half",
+            "one quarter",
+            "one third",
+            "three quarters"
+          ],
+          "correct": "one quarter",
+          "info": "In 29% of these cases, children were witnesses"
+        },
+        {
+          "text": "Firearms were involved in 65% of Georgia domestic violence fatalities.",
+          "type": "mc",
+          "options":
+          [
+            "33%",
+            "50%",
+            "65%",
+            "80%"
+          ],
+          "correct": "65%",
+          "info": "Firearms were involved in 65% of Georgia domestic violence fatalities."
+        }
+      ],
+      "summary": "A quiz on Georgia statistics related to DV."
+    },
+    {
+      "title": "Physical & Mental Impact",
+      "questions":
+      [
+        {
+          "text": "People abused by their intimate partners are _______ vulnerable to contracting STIs.",
+          "type": "f",
+          "correct": "more",
+          "info": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
+        },
+        {
+          "text": "Intimate partner violence has been studied to increase risk for ___________ among victims of abuse.",
+          "type": "mc",
+          "options":
+          [
+            "adolescent pregnancy",
+            "depression",
+            "post-traumatic stress disorder (PTSD)%",
+            "all of the above"
+          ],
+          "correct": "all of the above",
+          "info": "Physical, mental, and sexual and reproductive health effects have been linked with intimate partner violence including adolescent pregnancy, unintended pregnancy in general, miscarriage, stillbirth, intrauterine hemorrhage, nutritional deficiency, abdominal pain and other gastrointestinal problems, neurological disorders, chronic pain, disability, anxiety and post-traumatic stress disorder (PTSD), as well as noncommunicable diseases such as hypertension, cancer and cardiovascular diseases."
+        },
+        {
+          "text": "Victims of domestic violence are at ______ risk for developing addictions to alcohol, tobacco, or drugs.",
+          "type": "f",
+          "correct": "higher",
+          "info": "Victims of domestic violence are at higher risk for developing addictions to alcohol, tobacco, or drugs."
+        }
+      ],
+      "summary": "A quiz on the physical and mental impact related to DV."
+    },
+    {
+      "title": "Economic Impact",
+      "questions":
+      [
+        {
+          "text": "The cost of intimate partner violence exceeds how much per year?",
+          "type": "mc",
+          "options":
+          [
+            "$20.6 million",
+            "$8.3 billion",
+            "$10.5 billion",
+            "$15 billion"
+          ],
+          "correct": "$8.3 billion",
+          "info": "The cost of intimate partner violence exceeds $8.3 billion per year."
+        },
+        {
+          "text": "Victims of intimate partner violence lose a total of ______ million days of paid work each year.",
+          "type": "f",
+          "correct": "8",
+          "info": "Victims of intimate partner violence lose a total of 8.0 million days of paid work each year."
+        },
+        {
+          "text": "What range of victims of intimate partner violence lose their jobs due to reasons stemming from the abuse?",
+          "type": "mc",
+          "options":
+          [
+            "10-15%",
+            "40-80%",
+            "21-60%",
+            "30-50%"
+          ],
+          "correct": "21-60%",
+          "info": "Between 21-60% of victims of intimate partner violence lose their due to reasons stemming from the abuse."
+        },
+        {
+          "text": "Between 2003 and 2008, what percent of women murdered in their workplace were murdered by their abusers?",
+          "type": "mc",
+          "options":
+          [
+            "25%",
+            "37%",
+            "55%",
+            "78%"
+          ],
+          "correct": "78%",
+          "info": "Between 2003 and 2008, 142 women were murdered in their workplace by their abuser (78% of the total number of women killed in the workplace during this time)."
+        },
+        {
+          "text": "Abuse victims are ______ likely to be able to afford legal representation.",
+          "type": "f",
+          "correct": "less",
+          "info": "Because an abuse victim is less likely to be able to afford legal representation, they are at a disadvantage when involved in a child custody case, divorce proceedings, civil suits, or other legal matters."
+        }
+      ],
+      "summary": "A quiz on the economic impact of DV."
     },
     {
       "title": "Children & Teens",
