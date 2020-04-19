@@ -57,7 +57,7 @@ class _TrainingStartState extends State<TrainingStart> {
                 child: new Text(
                   _training.summary,
                   textAlign: TextAlign.center,
-                  style: new TextStyle(color: purple.shade600)
+                  style: new TextStyle(color: purple.shade600, fontSize: 17)
                 ),
               ),
               Container(
