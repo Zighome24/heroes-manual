@@ -47,7 +47,7 @@ class _MatrixPageState extends State<MatrixPage> {
           ),
           Expanded(
             child: ListView.builder(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(20),
                 itemCount: _matrix.matrix.length,
                 itemBuilder: (BuildContext context, int index) {
                   List<String> stakeholders = _matrix.matrix.keys.toList();

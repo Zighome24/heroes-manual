@@ -197,7 +197,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                     textAlign: TextAlign.center,
                   ),
                 ) : Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
                   child: currentState == SIPTabBarState.ATTITUDES ? Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -244,7 +244,7 @@ class StakeholderInfoPageState extends State<StakeholderInfoPage> {
                         fontSize: 18,
                         color: purple.shade700
                       ),
-
+                      textAlign: TextAlign.center,
                     )
                   ),
                 );
