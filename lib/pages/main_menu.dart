@@ -51,6 +51,26 @@ class _MainMenuState extends State<MainMenu> {
                 physics: ScrollPhysics(),
                 padding: const EdgeInsets.all(8),
                 children: <Widget>[
+                  CategoricalHorizontalScroller(
+                    categoryTitle: 'Screening',
+                    routes: true,
+                    elementTitlesOrRoutes: screenRoutes,
+                  ),
+                  Divider(
+                    color: Colors.white,
+                    height: 10,
+                    thickness: 10,
+                  ),
+                  CategoricalHorizontalScroller(
+                    categoryTitle: 'Resources',
+                    elementTitlesOrRoutes: resourceRoutes,
+                    routes: true,
+                  ),
+                  Divider(
+                    color: Colors.white,
+                    height: 10,
+                    thickness: 10,
+                  ),
                   _trainings.length == 0 ? Container() :
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Training',
@@ -70,27 +90,6 @@ class _MainMenuState extends State<MainMenu> {
                     elementTitlesOrRoutes: _quizzes,
                     routeTo: QuizStart.route,
                   ),
-                  Divider(
-                    color: Colors.white,
-                    height: 10,
-                    thickness: 10,
-                  ),
-                  CategoricalHorizontalScroller(
-                    categoryTitle: 'Resources',
-                    elementTitlesOrRoutes: resourceRoutes,
-                    routes: true,
-                    //
-                  ),
-                  Divider(
-                    color: Colors.white,
-                    height: 10,
-                    thickness: 10,
-                  ),
-                  CategoricalHorizontalScroller(
-                    categoryTitle: 'Screening',
-                    routes: true,
-                    elementTitlesOrRoutes: screenRoutes,
-                  )
                 ],
               )
           )
