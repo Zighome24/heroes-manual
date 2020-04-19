@@ -73,6 +73,7 @@ class _MatrixPageState extends State<MatrixPage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     )
