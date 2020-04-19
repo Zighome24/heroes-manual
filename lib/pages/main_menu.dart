@@ -53,7 +53,7 @@ class _MainMenuState extends State<MainMenu> {
                 children: <Widget>[
                   _trainings.length == 0 ? Container() :
                   CategoricalHorizontalScroller(
-                    categoryTitle: 'Trainings',
+                    categoryTitle: 'Training',
                     routes: false,
                     elementTitlesOrRoutes: _trainings,
                     routeTo: TrainingStart.route,
@@ -87,7 +87,7 @@ class _MainMenuState extends State<MainMenu> {
                     thickness: 10,
                   ),
                   CategoricalHorizontalScroller(
-                    categoryTitle: 'Screenings',
+                    categoryTitle: 'Screening',
                     routes: true,
                     elementTitlesOrRoutes: screenRoutes,
                   )
