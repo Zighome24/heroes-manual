@@ -1,72 +1,6 @@
 {
   "trainings": [
     {
-      "title": "Economic Impact",
-      "summary": "Economic Impact on DV",
-      "cards":
-      [
-        {
-          "text": "Victims of intimate partner violence lose a total of 8.0 million days of paid work each year."
-        },
-        {
-          "text": "The cost of intimate partner violence exceeds $8.3 billion per year."
-        },
-        {
-          "text": "Between 21-60% of victims of intimate partner violence lose their jobs due to reasons stemming from the abuse."
-        },
-        {
-          "text": "Between 2003 and 2008, 142 women were murdered in their workplace by their abuser (78% of the total number of women killed in the workplace during this time)."
-        },
-        {
-          "text": "Because an abuse victim is less likely to be able to afford legal representation, they are at a disadvantage when involved in a child custody case, divorce proceedings, civil suits, or other legal matters."
-        }
-      ],
-      "sources": "Sources go here"
-    },
-    {
-      "title": "Physical & Mental Impact",
-      "summary": "Physical & Mental Impact on DV victims",
-      "cards":
-      [
-        {
-          "text": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
-        },
-        {
-          "text": "Studies show that there is a relationship between intimate partner violence, depression, and suicidal behavior."
-        },
-        {
-          "text": "Physical, mental, and sexual and reproductive health effects have been linked with intimate partner violence including adolescent pregnancy, unintended pregnancy in general, miscarriage, stillbirth, intrauterine hemorrhage, nutritional deficiency, abdominal pain and other gastrointestinal problems, neurological disorders, chronic pain, disability, anxiety and post-traumatic stress disorder (PTSD), as well as noncommunicable diseases such as hypertension, cancer and cardiovascular diseases."
-        },
-        {
-          "text": "Victims of domestic violence are at higher risk for developing addictions to alcohol, tobacco, or drugs."
-        }
-      ],
-      "sources": "Sources go here"
-    },
-    {
-      "title": "Georgia Statistics",
-      "summary": "Georgia Statistics on DV ",
-      "cards":
-      [
-        {
-          "text": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
-        },
-        {
-          "text": "27 counties in Georgia have no access to domestic violence services."
-        },
-        {
-          "text": "In 2014, 117 Georgians were killed in domestic violence-related incidents."
-        },
-        {
-          "text": "In 29% of these cases, children were witnesses."
-        },
-        {
-          "text": "Firearms were involved in 65% of Georgia domestic violence fatalities."
-        }
-      ],
-      "sources": "Sources go here"
-    },
-    {
       "title": "National Statistics",
       "summary": "National Statistics on DV ",
       "cards":
@@ -106,6 +40,72 @@
         },
         {
           "text": "43% of dating college women reported experiencing abusive behaviors from their partner."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "Georgia Statistics",
+      "summary": "Georgia Statistics on DV ",
+      "cards":
+      [
+        {
+          "text": "35.1% of Georgia women and 39.9% of Georgia men experience intimate partner violence, sexual violence, or stalking in their lifetime."
+        },
+        {
+          "text": "27 counties in Georgia have no access to domestic violence services."
+        },
+        {
+          "text": "In 2014, 117 Georgians were killed in domestic violence-related incidents."
+        },
+        {
+          "text": "In 29% of these cases, children were witnesses."
+        },
+        {
+          "text": "Firearms were involved in 65% of Georgia domestic violence fatalities."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "Physical & Mental Impact",
+      "summary": "Physical & Mental Impact on DV victims",
+      "cards":
+      [
+        {
+          "text": "People abused by their intimate partners are more vulnerable to contracting HIV or other STIs due to forced intercourse or prolonged exposure to stress."
+        },
+        {
+          "text": "Studies show that there is a relationship between intimate partner violence, depression, and suicidal behavior."
+        },
+        {
+          "text": "Physical, mental, and sexual and reproductive health effects have been linked with intimate partner violence including adolescent pregnancy, unintended pregnancy in general, miscarriage, stillbirth, intrauterine hemorrhage, nutritional deficiency, abdominal pain and other gastrointestinal problems, neurological disorders, chronic pain, disability, anxiety and post-traumatic stress disorder (PTSD), as well as noncommunicable diseases such as hypertension, cancer and cardiovascular diseases."
+        },
+        {
+          "text": "Victims of domestic violence are at higher risk for developing addictions to alcohol, tobacco, or drugs."
+        }
+      ],
+      "sources": "Sources go here"
+    },
+    {
+      "title": "Economic Impact",
+      "summary": "Economic Impact on DV",
+      "cards":
+      [
+        {
+          "text": "Victims of intimate partner violence lose a total of 8.0 million days of paid work each year."
+        },
+        {
+          "text": "The cost of intimate partner violence exceeds $8.3 billion per year."
+        },
+        {
+          "text": "Between 21-60% of victims of intimate partner violence lose their jobs due to reasons stemming from the abuse."
+        },
+        {
+          "text": "Between 2003 and 2008, 142 women were murdered in their workplace by their abuser (78% of the total number of women killed in the workplace during this time)."
+        },
+        {
+          "text": "Because an abuse victim is less likely to be able to afford legal representation, they are at a disadvantage when involved in a child custody case, divorce proceedings, civil suits, or other legal matters."
         }
       ],
       "sources": "Sources go here"
