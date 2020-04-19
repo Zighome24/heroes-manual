@@ -23,10 +23,10 @@ class SafetyPlan extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 15.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(10),
                     child: IntrinsicHeight(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -54,11 +54,11 @@ class SafetyPlan extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(20),
                     child: Text(
                       safety_plan_info,
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 15,
                           color: purple.shade700
                       ),
                       textAlign: TextAlign.center,
@@ -68,7 +68,7 @@ class SafetyPlan extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset("lib/images/safety_plan.png"),
+                      Image.asset("lib/images/safety_plan.png", height: 150, width: 150,),
                       Text(
                         "QR Code",
                         style: TextStyle(

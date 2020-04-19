@@ -50,7 +50,7 @@ class _QuizStartState extends State<QuizStart> {
               child: new Text(
                 _quiz.summary,
                 textAlign: TextAlign.center,
-                style: new TextStyle(color: purple.shade600),
+                style: new TextStyle(color: purple.shade600, fontSize: 17),
               ),
             ),
             Container(
