@@ -54,7 +54,7 @@ class SafetyPlan extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(20),
                     child: Text(
                       safety_plan_info,
                       style: TextStyle(
