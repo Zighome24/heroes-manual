@@ -76,9 +76,11 @@ class _ScreeningState extends State<Screening> {
                     style: new TextStyle(
                       color: purple.shade500)
                     ),
-                  onPressed: () => {
-                   Screening.screeningTips.forEach((tip) => tip.selected = false)
-                  },
+                  onPressed: () => setState(() {
+                    Screening.screeningTips.forEach(
+                            (tip) => tip.selected = false
+                    );
+                  })
                 ),
                 ListView.builder(
                   scrollDirection: Axis.vertical,
@@ -119,7 +121,7 @@ class _ScreeningState extends State<Screening> {
             ),
           ),
         ),
-      
+
       bottomNavigationBar: HMBottomNavBar(isScreeningSelected: true),
     );
   }
