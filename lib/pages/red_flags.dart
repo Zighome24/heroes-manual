@@ -14,11 +14,9 @@ class RedFlags extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HMAppBar(
-        showTrailing: true,
+        showTrailing: false,
         showLeading: true,
         leadingAction: () => Navigator.pop(context),
-        trailingAction: () => showOverlay(context),
-        trailingIcon: Icons.info_outline,
       ),
       body: SafeArea(
         child: ClipRect(
