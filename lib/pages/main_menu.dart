@@ -143,36 +143,119 @@ class _MainMenuState extends State<MainMenu> {
                           padding: EdgeInsets.only(top: 15.0),
                           child: SingleChildScrollView(
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+//                              mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Container(
-                                    padding: const EdgeInsets.all(20.0),
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      style: new TextStyle(
+                                        fontSize: 15.0,
+                                        color: purple.shade500,
+                                      ),
+                                      children: <TextSpan>[
+                                        new TextSpan(text: 'Disclaimer:', style: new TextStyle(fontWeight: FontWeight.bold)),
+                                        new TextSpan(text: ' The information contained in this application is '
+                                          + 'derived from the domestic violence literature as listed under Sources. Every '
+                                          + 'effort has been made to provide relevant, accurate, and evidence-based information.'
+                                          + 'The authors assume no liability for any injury, death, or property damage associated'
+                                          + 'with the application’s use. Further, the use of this application is not intended to '
+                                          + 'replace professional help, counseling, and/or treatment. Users are encouraged to seek '
+                                          + 'additional information from qualified professionals as needed to assure their safety '
+                                          + 'and well-being at all times.', ),
+                                      ],
+                                    ),
+                                  )
+
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: IntrinsicHeight(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                                      children: <Widget>[
+                                        Container(
+                                          padding: EdgeInsets.all(15),
+                                          decoration: BoxDecoration(
+                                              gradient: LinearGradient(
+                                                  colors: [purple.shade600, Colors.deepPurple[400]],
+                                                  begin: Alignment.bottomRight,
+                                                  end: Alignment.topLeft
+                                              )
+                                          ),
+                                          child: Text(
+                                            'About the App',
+                                            style: new TextStyle(color: Colors.white, fontSize: 25),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ),
+
+                                Container(
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Text('Our project, Heroes\' Manual, aims to serve as a quick, '
                                         + 'intuitive guide that law enforcement officers and other '
                                         + 'service providers can use for resources and instruction '
                                         + 'on handling domestic violence situations.',
                                         //  or some standardized/uniform font style for the app
-                                        style: new TextStyle(color: purple.shade500, fontSize: 20))
+                                        style: new TextStyle(color: purple.shade500, fontSize: 20),
+                                        textAlign: TextAlign.center)
                                 ),
                                 Container(
-                                    padding: const EdgeInsets.all(20.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Text('Junior Design Team 9317:\nAlex Levine, Sophie Marcus'
                                         + ', Sirila Padi, Paula Ruiz, Justin Ziegler',
-                                        style: new TextStyle(color: purple.shade500, fontSize: 20))
+                                        style: new TextStyle(color: purple.shade500, fontSize: 20),
+                                        textAlign: TextAlign.center)
                                 ),
                                 Container(
-                                  padding: const EdgeInsets.all(15.0),
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'Sources',
-                                    style: TextStyle(color: purple.shade500, fontSize: 30),
-                                    textAlign: TextAlign.center,
-                                  ),
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Text('Sponsor: Ann McClellan',
+                                        style: new TextStyle(color: purple.shade500, fontSize: 20),
+                                        textAlign: TextAlign.center,)
                                 ),
-                                Divider(
-                                  color: background.shade600,
-                                  thickness: 3.0,
+                                Padding(
+                                    padding: EdgeInsets.all(5),
+                                    child: IntrinsicHeight(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                                        children: <Widget>[
+                                          Container(
+                                            padding: EdgeInsets.all(15),
+                                            decoration: BoxDecoration(
+                                                gradient: LinearGradient(
+                                                    colors: [purple.shade600, Colors.deepPurple[400]],
+                                                    begin: Alignment.bottomRight,
+                                                    end: Alignment.topLeft
+                                                )
+                                            ),
+                                            child: Text(
+                                              'Sources',
+                                              style: new TextStyle(color: Colors.white, fontSize: 25),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
                                 ),
+//                                Container(
+//                                  padding: const EdgeInsets.all(15.0),
+//                                  alignment: Alignment.center,
+//                                  child: Text(
+//                                    'Sources',
+//                                    style: TextStyle(color: purple.shade500, fontSize: 30),
+//                                    textAlign: TextAlign.center,
+//                                  ),
+//                                ),
+//                                Divider(
+//                                  color: background.shade600,
+//                                  thickness: 3.0,
+//                                ),
                                 Container( //make list of sources from strings.dart
                                   //flex: 8,
                                   child: Padding(
