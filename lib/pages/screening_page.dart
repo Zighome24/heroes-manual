@@ -37,7 +37,7 @@ class _ScreeningState extends State<Screening> {
     return Scaffold(
       appBar: HMAppBar(
         showLeading: true,
-        showTrailing: true,
+        showTrailing: false,
         leadingAction: () => Navigator.pop(context),
       ),
       body: Center(

@@ -13,7 +13,7 @@ class NotSeparateScreening extends StatelessWidget {
     return Scaffold(
         appBar: HMAppBar(
           showLeading: true,
-          showTrailing: true,
+          showTrailing: false,
           leadingAction: () => Navigator.pop(context),
           trailingIcon: Icons.info_outline,
           trailingAction: () => showOverlay(context),
