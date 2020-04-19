@@ -9,8 +9,7 @@ import 'package:heroes_manual/pages/general_tips_to_separate.dart';
 
 
 
-const resourceRoutes = [SafetyPlan.route, Organizations.route, Hotlines.route, Laws.route, General_Tips_To_Separate.route, RedFlags.route];
+const resourceRoutes = [Hotlines.route, SafetyPlan.route, RedFlags.route, Organizations.route, Laws.route];
 
 
-// TODO: debug routes for screening - remove for production
-const debugScreenRoutes = [Screening.route, PerpetratorPresent.route];
+const screenRoutes = [Screening.route, PerpetratorPresent.route, General_Tips_To_Separate.route];
