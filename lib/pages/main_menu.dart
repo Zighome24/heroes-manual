@@ -138,7 +138,7 @@ class _MainMenuState extends State<MainMenu> {
                         )
                       ),
                       Expanded(
-                        flex: 9,
+                        flex: 20,
                         child: Padding(
                           padding: EdgeInsets.only(top: 15.0),
                           child: SingleChildScrollView(
@@ -155,8 +155,8 @@ class _MainMenuState extends State<MainMenu> {
                                         style: new TextStyle(color: purple.shade500, fontSize: 20))
                                 ),
                                 Container(
-                                    padding: const EdgeInsets.all(30.0),
-                                    child: Text('Junior Design Team 9317:\n Alex Levine, Sophie Marcus'
+                                    padding: const EdgeInsets.all(20.0),
+                                    child: Text('Junior Design Team 9317:\nAlex Levine, Sophie Marcus'
                                         + ', Sirila Padi, Paula Ruiz, Justin Ziegler',
                                         style: new TextStyle(color: purple.shade500, fontSize: 20))
                                 ),
