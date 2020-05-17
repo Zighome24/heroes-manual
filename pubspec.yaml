@@ -13,6 +13,7 @@ description: A mobile application designed to update the Heroes Manual Applicati
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+
 environment:
   sdk: ">=2.1.0 <3.0.0"
 
@@ -29,9 +30,14 @@ dependencies:
   url_launcher: ^5.4.2
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.7.5"
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
