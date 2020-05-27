@@ -56,21 +56,21 @@ class _MainMenuState extends State<MainMenu> {
                     routes: true,
                     elementTitlesOrRoutes: screenRoutes,
                   ),
-                  Divider(
-                    color: accent,
-                    height: 10,
-                    thickness: 10,
-                  ),
+//                  Divider(
+//                    color: accent,
+//                    height: 10,
+//                    thickness: 10,
+//                  ),
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Resources',
                     elementTitlesOrRoutes: resourceRoutes,
                     routes: true,
                   ),
-                  Divider(
-                    color: accent,
-                    height: 10,
-                    thickness: 10,
-                  ),
+//                  Divider(
+//                    color: accent,
+//                    height: 10,
+//                    thickness: 10,
+//                  ),
                   _trainings.length == 0 ? Container() :
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Training',
@@ -78,11 +78,11 @@ class _MainMenuState extends State<MainMenu> {
                     elementTitlesOrRoutes: _trainings,
                     routeTo: TrainingStart.route,
                   ),
-                  Divider(
-                    color: accent,
-                    height: 10,
-                    thickness: 10,
-                  ),
+//                  Divider(
+//                    color: accent,
+//                    height: 10,
+//                    thickness: 10,
+//                  ),
                   _quizzes.length == 0 ? Container() :
                   CategoricalHorizontalScroller(
                     categoryTitle: 'Quizzes',
