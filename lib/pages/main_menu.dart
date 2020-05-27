@@ -57,7 +57,7 @@ class _MainMenuState extends State<MainMenu> {
                     elementTitlesOrRoutes: screenRoutes,
                   ),
                   Divider(
-                    color: Colors.white,
+                    color: accent,
                     height: 10,
                     thickness: 10,
                   ),
@@ -67,7 +67,7 @@ class _MainMenuState extends State<MainMenu> {
                     routes: true,
                   ),
                   Divider(
-                    color: Colors.white,
+                    color: accent,
                     height: 10,
                     thickness: 10,
                   ),
@@ -79,7 +79,7 @@ class _MainMenuState extends State<MainMenu> {
                     routeTo: TrainingStart.route,
                   ),
                   Divider(
-                    color: Colors.white,
+                    color: accent,
                     height: 10,
                     thickness: 10,
                   ),
